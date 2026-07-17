@@ -763,17 +763,42 @@ let currentSort = { col: 'dist', dir: 'asc' };
 let currentPage = 1;
 const PAGE_SIZE = 50;
 
+// ── Load pre-baked prices from JSON (committed to repo) ─
+async function loadBakedPrices() {
+  try {
+    const resp = await fetch('./data/live-prices.json');
+    if (!resp.ok) return false;
+    const data = await resp.json();
+    Object.values(data.prices || {}).forEach(p => {
+      if (p.price != null) {
+        stockPrices[p.ticker] = {
+          price: p.price,
+          prevClose: p.prevClose,
+          change: p.change,
+          changePct: p.changePct
+        };
+      }
+    });
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
 // ── Fetch live prices for top 50 via Yahoo Finance ──────
 async function fetchTop50Prices() {
-  // Use the /chart endpoint for each ticker (CORS-compatible in browser)
-  // Batch in groups of 8 to balance parallelism with reliability
-  const BATCH = 8;
+  // Primary: load from pre-baked static JSON (always works)
+  const baked = await loadBakedPrices();
+
+  // Progressive enhancement: try live Yahoo Finance fetch
+  // Batch in groups of 5 to avoid rate limiting; works from some origins
+  const BATCH = 5;
   for (let i = 0; i < TOP50.length; i += BATCH) {
     const batch = TOP50.slice(i, i + BATCH);
     await Promise.allSettled(batch.map(async (s) => {
       try {
         const resp = await fetch(
-          `https://query1.finance.yahoo.com/v8/finance/chart/${s.ticker}?interval=1d&range=2d`,
+          `https://query2.finance.yahoo.com/v8/finance/chart/${s.ticker}?interval=1d&range=2d`,
           { headers: { 'User-Agent': 'Mozilla/5.0' } }
         );
         if (!resp.ok) return;
@@ -787,7 +812,7 @@ async function fetchTop50Prices() {
         const changePct = prevClose > 0 ? (change / prevClose) * 100 : 0;
         stockPrices[s.ticker] = { price, prevClose, change, changePct };
       } catch (err) {
-        // skip failed symbols silently
+        // silent - baked prices are already loaded
       }
     }));
   }
