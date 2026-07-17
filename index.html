@@ -246,6 +246,93 @@
     .filter-btn.active-resistance { background: var(--down-dim); border-color: var(--down); color: var(--down); }
     .filter-btn.active-all { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
 
+    /* ── Stock Table ─────────────────────────────────── */
+    .stock-table-wrap {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 28px;
+    }
+    .stock-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .stock-table thead th {
+      padding: 10px 14px;
+      text-align: left;
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-card);
+      white-space: nowrap;
+      cursor: pointer;
+      user-select: none;
+      transition: color 0.1s;
+    }
+    .stock-table thead th:hover { color: var(--text-secondary); }
+    .stock-table thead th.sorted { color: var(--accent); }
+    .stock-table thead th .sort-icon { margin-left: 4px; opacity: 0.5; font-size: 0.55rem; }
+    .stock-table thead th.sorted .sort-icon { opacity: 1; }
+    .stock-table thead th:last-child { text-align: right; }
+
+    .stock-table tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background 0.1s;
+      cursor: pointer;
+    }
+    .stock-table tbody tr:last-child { border-bottom: none; }
+    .stock-table tbody tr:hover { background: var(--bg-card-hover); }
+    .stock-table tbody tr.hidden { display: none; }
+
+    .stock-table tbody td {
+      padding: 11px 14px;
+      font-size: 0.82rem;
+      vertical-align: middle;
+    }
+    .stock-table tbody td:last-child { text-align: right; }
+
+    .stock-ticker {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 2px 7px;
+      white-space: nowrap;
+    }
+    .stock-company {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-left: 8px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 160px;
+    }
+    .stock-price {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+    .stock-change {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 2px 7px;
+      border-radius: 5px;
+      white-space: nowrap;
+    }
+    .stock-change.up { background: var(--up-dim); color: var(--up); }
+    .stock-change.down { background: var(--down-dim); color: var(--down); }
+    .stock-change.neutral { background: rgba(255,255,255,0.05); color: var(--text-secondary); }
+
     /* ── SR Table ────────────────────────────────────── */
     .sr-table-wrap {
       background: var(--bg-surface);
@@ -427,6 +514,7 @@
       main { padding: 20px 16px 50px; }
       .ticker-hero { grid-template-columns: 1fr; gap: 10px; }
       .ticker-value { font-size: 1.5rem; }
+      .stock-table-wrap { display: none; }
       .sr-table-wrap { display: none; }
       .mobile-cards { display: flex; flex-direction: column; gap: 10px; }
       .controls { gap: 8px; }
@@ -543,20 +631,49 @@
     <div id="chart"></div>
   </div>
 
+  <!-- Top 50 Stocks -->
+  <div class="section-title">Top 50 Stocks</div>
+
+  <div class="controls" style="margin-bottom:14px;">
+    <div class="search-wrap">
+      <svg viewBox="0 0 16 16" fill="none"><circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 10.5L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <input class="search-input" id="search" type="text" placeholder="Search ticker or company…">
+    </div>
+  </div>
+
+  <div class="stock-table-wrap">
+    <table class="stock-table">
+      <thead>
+        <tr>
+          <th data-sort="ticker">Ticker <span class="sort-icon">↕</span></th>
+          <th data-sort="company">Company <span class="sort-icon">↕</span></th>
+          <th data-sort="price">Price <span class="sort-icon">↕</span></th>
+          <th data-sort="change">Change <span class="sort-icon">↕</span></th>
+        </tr>
+      </thead>
+      <tbody id="stock-tbody">
+        <tr><td colspan="4" class="state-message"><div class="spinner"></div><p>Loading top 50 stocks…</p></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Mobile Cards -->
+  <div class="mobile-cards" id="mobile-cards"></div>
+
   <!-- S/R Levels -->
-  <div class="section-title">Support &amp; Resistance Levels</div>
+  <div class="section-title" style="margin-top:32px;">Support &amp; Resistance Levels</div>
 
   <div class="controls">
     <div class="search-wrap">
       <svg viewBox="0 0 16 16" fill="none"><circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 10.5L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      <input class="search-input" id="search" type="text" placeholder="Search ticker…">
+      <input class="search-input" id="search-sr" type="text" placeholder="Search S/R ticker…">
     </div>
     <button class="filter-btn active-all" id="filter-all">All</button>
     <button class="filter-btn" id="filter-support">Support</button>
     <button class="filter-btn" id="filter-resistance">Resistance</button>
   </div>
 
-  <!-- Desktop Table -->
+  <!-- Desktop S/R Table -->
   <div class="sr-table-wrap">
     <table class="sr-table">
       <thead>
@@ -580,19 +697,213 @@
     </div>
   </div>
 
-  <!-- Mobile Cards -->
-  <div class="mobile-cards" id="mobile-cards"></div>
-
 </main>
 
 <script>
+// ── Top 50 S&P 500 Stocks (major index constituents) ──
+const TOP50 = [
+  { ticker: 'AAPL',  company: 'Apple' },
+  { ticker: 'MSFT',  company: 'Microsoft' },
+  { ticker: 'NVDA',  company: 'NVIDIA' },
+  { ticker: 'AMZN',  company: 'Amazon.com' },
+  { ticker: 'META',  company: 'Meta Platforms' },
+  { ticker: 'GOOGL', company: 'Alphabet' },
+  { ticker: 'GOOG',  company: 'Alphabet' },
+  { ticker: 'BRK.B', company: 'Berkshire Hathaway' },
+  { ticker: 'LLY',   company: 'Eli Lilly' },
+  { ticker: 'AVGO', company: 'Broadcom' },
+  { ticker: 'JPM',   company: 'JPMorgan Chase' },
+  { ticker: 'V',     company: 'Visa' },
+  { ticker: 'XOM',   company: 'Exxon Mobil' },
+  { ticker: 'MA',    company: 'Mastercard' },
+  { ticker: 'UNH',   company: 'UnitedHealth' },
+  { ticker: 'JNJ',   company: 'Johnson & Johnson' },
+  { ticker: 'PG',    company: 'Procter & Gamble' },
+  { ticker: 'HD',    company: 'Home Depot' },
+  { ticker: 'ABBV',  company: 'AbbVie' },
+  { ticker: 'MRK',   company: 'Merck' },
+  { ticker: 'CVX',   company: 'Chevron' },
+  { ticker: 'COST',  company: 'Costco' },
+  { ticker: 'PEP',   company: 'PepsiCo' },
+  { ticker: 'ADBE',  company: 'Adobe' },
+  { ticker: 'KO',    company: 'Coca-Cola' },
+  { ticker: 'CRM',   company: 'Salesforce' },
+  { ticker: 'WMT',   company: 'Walmart' },
+  { ticker: 'BAC',   company: 'Bank of America' },
+  { ticker: 'TMO',   company: 'Thermo Fisher' },
+  { ticker: 'MCD',   company: 'McDonald\'s' },
+  { ticker: 'CSCO',  company: 'Cisco Systems' },
+  { ticker: 'ABT',   company: 'Abbott Labs' },
+  { ticker: 'DHR',   company: 'Danaher' },
+  { ticker: 'ACN',   company: 'Accenture' },
+  { ticker: 'NKE',   company: 'Nike' },
+  { ticker: 'TXN',   company: 'Texas Instruments' },
+  { ticker: 'PM',    company: 'Philip Morris' },
+  { ticker: 'NEE',   company: 'NextEra Energy' },
+  { ticker: 'UPS',   company: 'United Parcel Service' },
+  { ticker: 'RTX',   company: 'RTX Corporation' },
+  { ticker: 'ORCL',  company: 'Oracle' },
+  { ticker: 'HON',   company: 'Honeywell' },
+  { ticker: 'AMGN',  company: 'Amgen' },
+  { ticker: 'IBM',   company: 'IBM' },
+  { ticker: 'CAT',   company: 'Caterpillar' },
+  { ticker: 'BA',    company: 'Boeing' },
+  { ticker: 'GE',    company: 'General Electric' },
+  { ticker: 'SBUX',  company: 'Starbucks' },
+  { ticker: 'INTC',  company: 'Intel' },
+];
+
 // ── State ──────────────────────────────────────────────
+let stockPrices = {};  // ticker -> { price, change, changePct, prevClose }
+let stockSort = { col: 'ticker', dir: 'asc' };
 let allRows = [];
 let filteredRows = [];
-let currentFilter = 'all';  // all | support | resistance
+let currentFilter = 'all';
 let currentSort = { col: 'dist', dir: 'asc' };
 let currentPage = 1;
 const PAGE_SIZE = 50;
+
+// ── Fetch live prices for top 50 via Yahoo Finance ──────
+async function fetchTop50Prices() {
+  const symbols = TOP50.map(s => s.ticker).join(',');
+  try {
+    // Yahoo Finance quote endpoint for multiple symbols
+    const resp = await fetch(
+      `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${encodeURIComponent(symbols)}`,
+      { headers: { 'User-Agent': 'Mozilla/5.0', 'Accept': 'application/json' } }
+    );
+    const json = await resp.json();
+    const quotes = json?.quoteResponse?.result || [];
+
+    quotes.forEach(q => {
+      const price = q.regularMarketPrice ?? 0;
+      const prevClose = q.regularMarketPreviousClose ?? q.chartPreviousClose ?? 0;
+      const change = q.regularMarketChange ?? 0;
+      const changePct = prevClose > 0 ? (change / prevClose) * 100 : 0;
+      stockPrices[q.symbol] = { price, prevClose, change, changePct };
+    });
+
+    renderStockTable();
+    updateTimestamp();
+  } catch (e) {
+    console.warn('Top 50 fetch failed, trying individual:', e.message);
+    // Fallback: fetch individually in parallel batches
+    await fetchTop50Individually();
+  }
+}
+
+async function fetchTop50Individually() {
+  const batchSize = 5;
+  for (let i = 0; i < TOP50.length; i += batchSize) {
+    const batch = TOP50.slice(i, i + batchSize);
+    await Promise.all(batch.map(async (s) => {
+      try {
+        const resp = await fetch(
+          `https://query1.finance.yahoo.com/v8/finance/chart/${s.ticker}?interval=1d&range=2d`,
+          { headers: { 'User-Agent': 'Mozilla/5.0' } }
+        );
+        const json = await resp.json();
+        const result = json?.chart?.result?.[0];
+        if (!result) return;
+        const meta = result.meta;
+        const price = meta.regularMarketPrice ?? 0;
+        const prevClose = meta.previousClose ?? meta.chartPreviousClose ?? 0;
+        const change = price - prevClose;
+        const changePct = prevClose > 0 ? (change / prevClose) * 100 : 0;
+        stockPrices[s.ticker] = { price, prevClose, change, changePct };
+      } catch (err) {
+        // skip failed symbols silently
+      }
+    }));
+  }
+  renderStockTable();
+  updateTimestamp();
+}
+
+// ── Render Top 50 Table ────────────────────────────────
+function renderStockTable() {
+  const q = document.getElementById('search').value.toLowerCase().trim();
+  const tbody = document.getElementById('stock-tbody');
+  const mobileCards = document.getElementById('mobile-cards');
+
+  // Sort
+  const sorted = [...TOP50].filter(s => {
+    if (!q) return true;
+    return s.ticker.toLowerCase().includes(q) || s.company.toLowerCase().includes(q);
+  });
+
+  sorted.sort((a, b) => {
+    let av, bv;
+    if (stockSort.col === 'ticker') { av = a.ticker; bv = b.ticker; return stockSort.dir === 'asc' ? av.localeCompare(bv) : bv.localeCompare(av); }
+    if (stockSort.col === 'company') { av = a.company; bv = b.company; return stockSort.dir === 'asc' ? av.localeCompare(bv) : bv.localeCompare(av); }
+    const pa = stockPrices[a.ticker] || {};
+    const pb = stockPrices[b.ticker] || {};
+    if (stockSort.col === 'price') { av = pa.price || 0; bv = pb.price || 0; }
+    if (stockSort.col === 'change') { av = pa.changePct || 0; bv = pb.changePct || 0; }
+    return stockSort.dir === 'asc' ? av - bv : bv - av;
+  });
+
+  if (sorted.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="4" class="state-message"><p>No matching stocks found.</p></td></tr>';
+    mobileCards.innerHTML = '';
+    return;
+  }
+
+  // Desktop rows
+  tbody.innerHTML = sorted.map(s => {
+    const d = stockPrices[s.ticker] || {};
+    const price = d.price != null ? d.price.toFixed(2) : '—';
+    const isUp = d.change >= 0;
+    const isNeutral = d.change == null || d.change === 0;
+    let changeHtml;
+    if (d.change == null) {
+      changeHtml = '<span class="stock-change neutral">—</span>';
+    } else {
+      changeHtml = `<span class="stock-change ${isNeutral ? 'neutral' : (isUp ? 'up' : 'down')}">${isUp ? '▲' : '▼'} ${Math.abs(d.change).toFixed(2)} (${isUp ? '+' : ''}${d.changePct.toFixed(2)}%)</span>`;
+    }
+    return `<tr data-ticker="${s.ticker}">
+      <td><span class="stock-ticker">${s.ticker}</span></td>
+      <td><span class="stock-company">${s.company}</span></td>
+      <td><span class="stock-price">${d.price != null ? '$' + price : '—'}</span></td>
+      <td>${changeHtml}</td>
+    </tr>`;
+  }).join('');
+
+  // Mobile cards
+  mobileCards.innerHTML = sorted.map(s => {
+    const d = stockPrices[s.ticker] || {};
+    const price = d.price != null ? d.price.toFixed(2) : '—';
+    const isUp = d.change >= 0;
+    const isNeutral = d.change == null || d.change === 0;
+    let changeHtml;
+    if (d.change == null) {
+      changeHtml = '<span class="stock-change neutral">—</span>';
+    } else {
+      changeHtml = `<span class="stock-change ${isNeutral ? 'neutral' : (isUp ? 'up' : 'down')}">${isUp ? '▲' : '▼'} ${Math.abs(d.changePct).toFixed(2)}%</span>`;
+    }
+    return `<div class="mobile-card" data-ticker="${s.ticker}" style="background:var(--bg-surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px;cursor:pointer;">
+      <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px;">
+        <div>
+          <div style="font-family:var(--font-mono);font-size:0.9rem;font-weight:500;">${s.ticker}</div>
+          <div style="font-size:0.7rem;color:var(--text-muted);margin-top:2px;">${s.company}</div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-family:var(--font-mono);font-size:0.95rem;font-weight:500;">${d.price != null ? '$' + price : '—'}</div>
+          ${changeHtml}
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+
+  // Update sort icons
+  document.querySelectorAll('.stock-table thead th').forEach(th => {
+    th.classList.toggle('sorted', th.dataset.sort === stockSort.col);
+    const icon = th.querySelector('.sort-icon');
+    if (icon) {
+      icon.textContent = th.dataset.sort === stockSort.col ? (stockSort.dir === 'asc' ? '↑' : '↓') : '↕';
+    }
+  });
+}
 
 // ── Fetch S&P 500 live data via Yahoo Finance ───────────
 async function fetchLiveData() {
@@ -655,17 +966,18 @@ async function fetchLiveData() {
       vixEl.innerHTML = `<span class="ticker-change ${vixUp ? 'up' : 'down'}">${vixUp ? '▲' : '▼'} ${Math.abs(vixChange).toFixed(2)} (${vixUp ? '+' : ''}${vixPct.toFixed(2)}%)</span>`;
       document.getElementById('vix-card').className = `ticker-card ${vixUp ? 'up' : 'down'}`;
     }
-
-    const now = new Date();
-    document.getElementById('ts').textContent = 'Updated ' + now.toLocaleTimeString();
   } catch (e) {
-    console.warn('Live data fetch failed, using fallback:', e.message);
-    // Fallback values shown while data loads
+    console.warn('Hero data fetch failed:', e.message);
     document.getElementById('spy-price').textContent = '—';
     document.getElementById('spx-price').textContent = '—';
     document.getElementById('vix-price').textContent = '—';
-    document.getElementById('ts').textContent = 'Market closed';
   }
+}
+
+function updateTimestamp() {
+  const now = new Date();
+  const el = document.getElementById('ts');
+  if (el) el.textContent = 'Updated ' + now.toLocaleTimeString();
 }
 
 // ── Load S/R data ───────────────────────────────────────
@@ -674,10 +986,9 @@ async function loadSRData() {
     const resp = await fetch('./data/results.json');
     const data = await resp.json();
     document.getElementById('ts').textContent =
-      'S/R Data: ' + new Date(data.generated_at).toLocaleString() + ' UTC';
+      'Updated ' + new Date().toLocaleTimeString() + ' · S/R: ' + new Date(data.generated_at).toLocaleString() + ' UTC';
     buildRows(data.results);
     applyFilter();
-    // Now that we have S/R data, redraw lines for the current chart
     if (typeof drawSRLines === 'function' && typeof currentTicker !== 'undefined') {
       drawSRLines(currentTicker, candleSeries);
     }
@@ -704,7 +1015,7 @@ function buildRows(results) {
 
 // ── Filter ─────────────────────────────────────────────
 function applyFilter() {
-  const q = document.getElementById('search').value.toLowerCase().trim();
+  const q = document.getElementById('search-sr').value.toLowerCase().trim();
   filteredRows = allRows.filter(row => {
     if (currentFilter === 'support' && row.type !== 'support') return false;
     if (currentFilter === 'resistance' && row.type !== 'resistance') return false;
@@ -732,7 +1043,7 @@ function applySort(col) {
     if (col === 'dist') { av = a.distPct; bv = b.distPct; }
     return currentSort.dir === 'asc' ? av - bv : bv - av;
   });
-  document.querySelectorAll('thead th').forEach(th => {
+  document.querySelectorAll('.sr-table thead th').forEach(th => {
     th.classList.toggle('sorted', th.dataset.sort === currentSort.col);
     const icon = th.querySelector('.sort-icon');
     if (icon) icon.textContent = th.dataset.sort === currentSort.col ? (currentSort.dir === 'asc' ? '↑' : '↓') : '↕';
@@ -749,11 +1060,9 @@ function render() {
   const page = filteredRows.slice(start, start + PAGE_SIZE);
 
   const tbody = document.getElementById('sr-tbody');
-  const mobileCards = document.getElementById('mobile-cards');
 
   if (filteredRows.length === 0) {
     tbody.innerHTML = `<tr><td colspan="6" class="state-message"><p>No matching levels found.</p></td></tr>`;
-    mobileCards.innerHTML = '';
   } else {
     tbody.innerHTML = page.map(row => {
       const distClass = row.distPct < 0.01 ? 'tight' : row.distPct < 0.025 ? 'near' : 'mid';
@@ -763,7 +1072,7 @@ function render() {
       const otherHtml = otherLevels.length
         ? otherLevels.slice(0, 3).map(l => `<div class="level-item"><strong>${l}</strong></div>`).join('')
         : '<div class="level-item">—</div>';
-      return `<tr>
+      return `<tr data-ticker="${row.ticker}">
         <td><div class="ticker-cell">
           <span class="ticker-badge">${row.ticker}</span>
           <span class="ticker-price">$${row.price.toFixed(2)}</span>
@@ -774,31 +1083,6 @@ function render() {
         <td><span class="dist-cell ${distClass}">${(row.distPct * 100).toFixed(2)}%</span></td>
         <td><div class="sr-levels-cell">${otherHtml}</div></td>
       </tr>`;
-    }).join('');
-
-    mobileCards.innerHTML = page.map(row => {
-      const distClass = row.distPct < 0.01 ? 'tight' : row.distPct < 0.025 ? 'near' : 'mid';
-      return `<div class="mobile-card" style="background:var(--bg-surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px;">
-        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px;">
-          <div>
-            <div style="font-family:var(--font-mono);font-size:0.9rem;font-weight:500;">${row.ticker}</div>
-            <div style="font-size:0.72rem;color:var(--text-muted);margin-top:2px;">$${row.price.toFixed(2)}</div>
-          </div>
-          <span class="type-badge ${row.type}">${row.type === 'support' ? '▲ Support' : '▼ Resistance'}</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:10px;">
-          <div>
-            <div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;">Level</div>
-            <div style="font-family:var(--font-mono);font-size:0.95rem;font-weight:500;margin-top:2px;">$${row.level.toFixed(2)}</div>
-          </div>
-          <div>
-            <div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;">Distance</div>
-            <div style="font-family:var(--font-mono);font-size:0.82rem;font-weight:500;margin-top:2px;">
-              <span class="dist-cell ${distClass}">${(row.distPct * 100).toFixed(2)}%</span>
-            </div>
-          </div>
-        </div>
-      </div>`;
     }).join('');
   }
 
@@ -813,17 +1097,15 @@ let chart = null;
 let candleSeries = null;
 let srLineIndex = {};
 let currentTicker = 'SPY';
-let srDataCache = {}; // ticker -> { supports: [], resistances: [] }
+let srDataCache = {};
 
 function getSRForTicker(ticker) {
-  // allRows is flat per-level; find the first row for this ticker to get the full raw object
   const found = allRows.find(r => r.ticker === ticker);
   if (!found) return null;
   return { supports: found.raw.supports, resistances: found.raw.resistances };
 }
 
 function drawSRLines(ticker, series) {
-  // Remove old price lines
   Object.values(srLineIndex).forEach(line => series.removePriceLine(line));
   srLineIndex = {};
 
@@ -836,7 +1118,7 @@ function drawSRLines(ticker, series) {
       price: price,
       color: isSupport ? '#00d4aa' : '#ff4757',
       lineWidth: 1,
-      lineStyle: 2, // Dashed
+      lineStyle: 2,
       axisLabelVisible: true,
       title: isSupport ? ' S' : ' R',
     });
@@ -880,7 +1162,6 @@ async function initChart() {
 
   await loadChartTicker('SPY');
 
-  // Resize observer
   const resizeObserver = new ResizeObserver(() => {
     chart.applyOptions({ width: container.clientWidth });
   });
@@ -891,7 +1172,6 @@ async function loadChartTicker(ticker) {
   currentTicker = ticker;
   document.getElementById('chart-ticker').innerHTML = `${ticker} <span>Loading…</span>`;
 
-  // Update badge
   const sr = getSRForTicker(ticker);
   const badge = document.getElementById('chart-badge');
   if (sr && (sr.supports.length || sr.resistances.length)) {
@@ -940,17 +1220,14 @@ async function loadChartTicker(ticker) {
   }
 }
 
-// Wire row clicks to update chart
+// ── Wire row clicks to update chart ─────────────────────
 function wireTableClicks() {
   document.addEventListener('click', (e) => {
-    const row = e.target.closest('tr');
-    if (!row) return;
-    const badge = row.querySelector('.ticker-badge');
-    if (!badge) return;
-    const ticker = badge.textContent.trim();
+    const row = e.target.closest('tr[data-ticker]');
+    const card = e.target.closest('.mobile-card[data-ticker]');
+    const ticker = row?.dataset.ticker || card?.dataset.ticker;
     if (ticker && ticker !== currentTicker) {
       loadChartTicker(ticker);
-      // Scroll to chart
       document.getElementById('chart-wrapper').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
@@ -958,16 +1235,38 @@ function wireTableClicks() {
 
 // ── Init ────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-  loadSRData();
+  fetchTop50Prices();
   fetchLiveData();
+  loadSRData();
   initChart();
   wireTableClicks();
-  // Refresh live data every 60s
+  // Refresh every 60s
+  setInterval(fetchTop50Prices, 60000);
   setInterval(fetchLiveData, 60000);
 });
 
 // ── Event Listeners ─────────────────────────────────────
-document.getElementById('search').addEventListener('input', applyFilter);
+
+// Stock table search
+document.getElementById('search').addEventListener('input', () => {
+  renderStockTable();
+});
+
+// Stock table sort
+document.querySelectorAll('.stock-table thead th[data-sort]').forEach(th => {
+  th.addEventListener('click', () => {
+    if (stockSort.col === th.dataset.sort) {
+      stockSort.dir = stockSort.dir === 'asc' ? 'desc' : 'asc';
+    } else {
+      stockSort.col = th.dataset.sort;
+      stockSort.dir = 'asc';
+    }
+    renderStockTable();
+  });
+});
+
+// S/R search (separate input)
+document.getElementById('search-sr').addEventListener('input', applyFilter);
 
 document.getElementById('filter-all').addEventListener('click', () => {
   currentFilter = 'all';
@@ -988,7 +1287,7 @@ document.getElementById('filter-resistance').addEventListener('click', () => {
   applyFilter();
 });
 
-document.querySelectorAll('thead th[data-sort]').forEach(th => {
+document.querySelectorAll('.sr-table thead th[data-sort]').forEach(th => {
   th.addEventListener('click', () => applySort(th.dataset.sort));
 });
 
