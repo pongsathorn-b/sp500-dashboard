@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S&P 500 Top 10 Tickers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-base: #060b14;
+      --bg-surface: #0c1524;
+      --bg-card: #111e30;
+      --bg-card-hover: #162436;
+      --border: rgba(255,255,255,0.07);
+      --border-bright: rgba(255,255,255,0.13);
+      --accent: #00d4aa;
+      --accent-dim: rgba(0,212,170,0.12);
+      --up: #00d4aa;
+      --down: #ff4757;
+      --text-primary: #e8edf5;
+      --text-secondary: #7a8ba0;
+      --text-muted: #4a5a70;
+      --font-display: 'Syne', system-ui, sans-serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-base);
+      color: var(--text-primary);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .header {
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+    }
+
+    .header-title span {
+      color: var(--accent);
+    }
+
+    .live-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-dim);
+      border: 1px solid rgba(0,212,170,0.2);
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    .live-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+
+    .main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 16px 60px;
+    }
+
+    .page-intro {
+      margin-bottom: 28px;
+    }
+
+    .page-intro h1 {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 5vw, 2.2rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .page-intro h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    .page-intro p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .stocks-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .stocks-table thead th {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-card);
+    }
+
+    .stocks-table thead th:last-child,
+    .stocks-table thead th:nth-last-child(2) {
+      text-align: right;
+    }
+
+    .stocks-table tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+
+    .stocks-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .stocks-table tbody tr:hover {
+      background: var(--bg-card-hover);
+    }
+
+    .stocks-table tbody td {
+      padding: 14px 16px;
+      vertical-align: middle;
+    }
+
+    .ticker-cell {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .ticker-symbol {
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      letter-spacing: 0.02em;
+    }
+
+    .ticker-name {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 180px;
+    }
+
+    .price-cell {
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .change-cell {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .change-positive { color: var(--up); }
+    .change-negative { color: var(--down); }
+
+    /* Loading skeleton */
+    .skeleton-row td { padding: 14px 16px; }
+    .skeleton {
+      height: 14px;
+      background: linear-gradient(90deg, var(--bg-card) 25%, var(--bg-card-hover) 50%, var(--bg-card) 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.4s ease-in-out infinite;
+      border-radius: 4px;
+    }
+    .skeleton-sm { width: 60%; height: 10px; }
+    .skeleton-lg { width: 80%; height: 14px; }
+
+    @keyframes shimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    /* Error state */
+    .error-state {
+      text-align: center;
+      padding: 60px 24px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .error-state h3 { font-family: var(--font-display); margin-bottom: 8px; color: var(--down); }
+    .error-state p { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 20px; }
+    .retry-btn {
+      background: var(--accent-dim);
+      border: 1px solid rgba(0,212,170,0.3);
+      color: var(--accent);
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .retry-btn:hover { background: rgba(0,212,170,0.2); }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+    }
+
+    .footer a { color: var(--text-muted); text-decoration: none; }
+    .footer a:hover { color: var(--accent); }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+      .ticker-name { display: none; }
+      .stocks-table thead th { padding: 10px 12px; font-size: 0.6rem; }
+      .stocks-table tbody td { padding: 12px 12px; }
+      .price-cell { font-size: 0.85rem; }
+      .change-cell { font-size: 0.72rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-title">S&P&nbsp;500 <span>Tickers</span></div>
+    <div class="live-badge">
+      <div class="live-dot"></div>
+      Live
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="page-intro">
+      <h1>Top 10 <em>S&P 500</em><br>Stocks by Symbol</h1>
+      <p>Real-time prices sourced from Yahoo Finance. Sorted alphabetically by ticker symbol.</p>
+    </div>
+
+    <table class="stocks-table" id="stocks-table">
+      <thead>
+        <tr>
+          <th>Ticker</th>
+          <th>Price</th>
+          <th>Day Change</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+        <!-- Populated by JS -->
+      </tbody>
+    </table>
+
+    <div id="error-state" class="error-state" style="display:none">
+      <h3>Failed to load prices</h3>
+      <p>Could not reach Yahoo Finance. Check your connection and try again.</p>
+      <button class="retry-btn" onclick="fetchStocks()">Retry</button>
+    </div>
+
+    <footer class="footer">
+      Data from <a href="https://finance.yahoo.com" target="_blank" rel="noopener">Yahoo Finance</a> &mdash; no API key required
+    </footer>
+  </main>
+
+  <script>
+    // Top 10 S&P 500 stocks by ticker symbol (alphabetically)
+    const TICKERS = ['AAPL', 'AMZN', 'AVGO', 'BRK-B', 'GOOGL', 'JPM', 'LLY', 'META', 'MSFT', 'NVDA'];
+
+    const tableBody = document.getElementById('table-body');
+    const errorState = document.getElementById('error-state');
+
+    function fmt(n, decimals = 2) {
+      return new Intl.NumberFormat('en-US', {
+        minimumFractionDigits: decimals,
+        maximumFractionDigits: decimals
+      }).format(n);
+    }
+
+    function fmtChange(change, pct) {
+      const sign = change >= 0 ? '+' : '';
+      return `${sign}${fmt(change, 2)} (${sign}${fmt(pct, 2)}%)`;
+    }
+
+    function buildSkeleton() {
+      return TICKERS.map(() => `
+        <tr class="skeleton-row">
+          <td><div class="skeleton skeleton-lg" style="width:70px"></div><div class="skeleton skeleton-sm" style="margin-top:4px"></div></td>
+          <td><div class="skeleton" style="width:80px;margin-left:auto"></div></td>
+          <td><div class="skeleton" style="width:90px;margin-left:auto"></div></td>
+        </tr>
+      `).join('');
+    }
+
+    function buildRow(ticker, meta, quote) {
+      const price = meta.regularMarketPrice;
+      const prevClose = meta.previousClose || meta.regularMarketPreviousClose;
+      const change = meta.regularMarketChange;
+      const changePct = meta.regularMarketChangePercent;
+      const isUp = change >= 0;
+      const changeClass = isUp ? 'change-positive' : 'change-negative';
+      const changeText = change !== undefined ? fmtChange(change, changePct) : '—';
+
+      return `
+        <tr>
+          <td>
+            <div class="ticker-cell">
+              <span class="ticker-symbol">${ticker}</span>
+              <span class="ticker-name">${meta.longName || meta.symbol || ticker}</span>
+            </div>
+          </td>
+          <td class="price-cell">$${fmt(price)}</td>
+          <td class="change-cell ${changeClass}">${changeText}</td>
+        </tr>
+      `;
+    }
+
+    async function fetchStocks() {
+      tableBody.innerHTML = buildSkeleton();
+      errorState.style.display = 'none';
+
+      try {
+        const rows = await Promise.all(
+          TICKERS.map(async (ticker) => {
+            const url = `https://query1.finance.yahoo.com/v8/finance/chart/${ticker}?interval=1d&range=1d`;
+            const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+            if (!res.ok) throw new Error(`HTTP ${res.status} for ${ticker}`);
+            const data = await res.json();
+            const result = data.chart.result[0];
+            return buildRow(ticker, result.meta, result.indicators.quote[0]);
+          })
+        );
+
+        tableBody.innerHTML = rows.join('');
+      } catch (err) {
+        console.error('fetchStocks error:', err);
+        tableBody.innerHTML = '';
+        errorState.style.display = 'block';
+      }
+    }
+
+    fetchStocks();
+    // Refresh every 60 seconds
+    setInterval(fetchStocks, 60_000);
+  </script>
+
+</body>
+</html>
