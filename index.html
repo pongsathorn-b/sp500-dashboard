@@ -677,6 +677,10 @@ async function loadSRData() {
       'S/R Data: ' + new Date(data.generated_at).toLocaleString() + ' UTC';
     buildRows(data.results);
     applyFilter();
+    // Now that we have S/R data, redraw lines for the current chart
+    if (typeof drawSRLines === 'function' && typeof currentTicker !== 'undefined') {
+      drawSRLines(currentTicker, candleSeries);
+    }
   } catch (e) {
     document.getElementById('sr-tbody').innerHTML =
       '<tr><td colspan="6" class="state-message"><div class="spinner"></div><p>Failed to load S/R data.</p></td></tr>';
