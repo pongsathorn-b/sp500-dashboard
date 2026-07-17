@@ -1,0 +1,8427 @@
+{
+  "generated_at": "2026-07-16T18:11:53.815999+00:00Z",
+  "total_tickers_processed": 503,
+  "results": [
+    {
+      "ticker": "UHS",
+      "close": 148.02,
+      "nearest_sr_pct": 0.0135,
+      "num_supports": 2,
+      "num_resistances": 4,
+      "supports": [
+        140.0,
+        159.0
+      ],
+      "resistances": [
+        148.0,
+        162.0,
+        175.0,
+        184.0
+      ]
+    },
+    {
+      "ticker": "AMZN",
+      "close": 254.96,
+      "nearest_sr_pct": 0.0157,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        226.0,
+        255.0
+      ],
+      "resistances": [
+        250.0,
+        275.0,
+        279.0
+      ]
+    },
+    {
+      "ticker": "USB",
+      "close": 63.01,
+      "nearest_sr_pct": 0.0159,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        52.0,
+        53.0
+      ],
+      "resistances": [
+        55.0,
+        57.0,
+        63.0
+      ]
+    },
+    {
+      "ticker": "ROK",
+      "close": 461.92,
+      "nearest_sr_pct": 0.0173,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        395.0,
+        419.0,
+        440.0,
+        456.0
+      ],
+      "resistances": [
+        462.0,
+        468.0,
+        497.0
+      ]
+    },
+    {
+      "ticker": "MCD",
+      "close": 264.95,
+      "nearest_sr_pct": 0.0189,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        265.0,
+        270.0,
+        272.0
+      ],
+      "resistances": [
+        283.0,
+        287.0,
+        289.0
+      ]
+    },
+    {
+      "ticker": "RL",
+      "close": 374.08,
+      "nearest_sr_pct": 0.0214,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        316.0,
+        354.0
+      ],
+      "resistances": [
+        374.0,
+        391.0,
+        421.0
+      ]
+    },
+    {
+      "ticker": "OKE",
+      "close": 91.03,
+      "nearest_sr_pct": 0.033,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        83.0,
+        84.0,
+        85.0
+      ],
+      "resistances": [
+        90.0,
+        91.0,
+        92.0,
+        96.0
+      ]
+    },
+    {
+      "ticker": "VMC",
+      "close": 289.11,
+      "nearest_sr_pct": 0.038,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        252.0,
+        270.0
+      ],
+      "resistances": [
+        289.0,
+        306.0,
+        321.0
+      ]
+    },
+    {
+      "ticker": "BX",
+      "close": 127.05,
+      "nearest_sr_pct": 0.0394,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        107.0,
+        112.0,
+        113.0,
+        117.0
+      ],
+      "resistances": [
+        120.0,
+        127.0,
+        130.0
+      ]
+    },
+    {
+      "ticker": "KKR",
+      "close": 100.95,
+      "nearest_sr_pct": 0.0495,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        88.0,
+        91.0,
+        97.0
+      ],
+      "resistances": [
+        99.0,
+        101.0,
+        106.0
+      ]
+    },
+    {
+      "ticker": "NWSA",
+      "close": 27.98,
+      "nearest_sr_pct": 0.0715,
+      "num_supports": 3,
+      "num_resistances": 1,
+      "supports": [
+        24.0,
+        25.0,
+        26.0
+      ],
+      "resistances": [
+        28.0
+      ]
+    },
+    {
+      "ticker": "CVS",
+      "close": 105.91,
+      "nearest_sr_pct": 0.085,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        89.0,
+        102.0
+      ],
+      "resistances": [
+        98.0,
+        106.0
+      ]
+    },
+    {
+      "ticker": "AMGN",
+      "close": 358.32,
+      "nearest_sr_pct": 0.0893,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        318.0,
+        321.0,
+        322.0,
+        334.0
+      ],
+      "resistances": [
+        344.0,
+        358.0,
+        375.0
+      ]
+    },
+    {
+      "ticker": "ERIE",
+      "close": 210.19,
+      "nearest_sr_pct": 0.0904,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        203.0,
+        209.0,
+        210.0
+      ],
+      "resistances": [
+        228.0,
+        233.0,
+        263.0
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "close": 395.63,
+      "nearest_sr_pct": 0.0935,
+      "num_supports": 4,
+      "num_resistances": 4,
+      "supports": [
+        349.0,
+        397.0,
+        400.0,
+        410.0
+      ],
+      "resistances": [
+        396.0,
+        427.0,
+        432.0,
+        466.0
+      ]
+    },
+    {
+      "ticker": "GRMN",
+      "close": 241.76,
+      "nearest_sr_pct": 0.0993,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        224.0,
+        229.0,
+        231.0,
+        234.0
+      ],
+      "resistances": [
+        242.0,
+        249.0,
+        250.0
+      ]
+    },
+    {
+      "ticker": "DD",
+      "close": 134.86,
+      "nearest_sr_pct": 0.1038,
+      "num_supports": 4,
+      "num_resistances": 4,
+      "supports": [
+        131.0,
+        133.0,
+        135.0,
+        138.0
+      ],
+      "resistances": [
+        142.0,
+        149.0,
+        152.0,
+        154.0
+      ]
+    },
+    {
+      "ticker": "TPL",
+      "close": 413.44,
+      "nearest_sr_pct": 0.1064,
+      "num_supports": 3,
+      "num_resistances": 5,
+      "supports": [
+        348.0,
+        361.0,
+        375.0
+      ],
+      "resistances": [
+        413.0,
+        414.0,
+        444.0,
+        449.0,
+        454.0
+      ]
+    },
+    {
+      "ticker": "MCO",
+      "close": 504.46,
+      "nearest_sr_pct": 0.107,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        426.0,
+        438.0,
+        441.0
+      ],
+      "resistances": [
+        466.0,
+        472.0,
+        505.0
+      ]
+    },
+    {
+      "ticker": "TSLA",
+      "close": 394.46,
+      "nearest_sr_pct": 0.1166,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        364.0,
+        369.0,
+        380.0,
+        394.0
+      ],
+      "resistances": [
+        433.0,
+        446.0,
+        453.0
+      ]
+    },
+    {
+      "ticker": "PCAR",
+      "close": 123.15,
+      "nearest_sr_pct": 0.1218,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        107.0,
+        108.0,
+        116.0
+      ],
+      "resistances": [
+        123.0,
+        126.0
+      ]
+    },
+    {
+      "ticker": "URI",
+      "close": 1047.28,
+      "nearest_sr_pct": 0.1222,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        911.0,
+        919.0,
+        1046.0
+      ],
+      "resistances": [
+        976.0,
+        1107.0,
+        1144.0
+      ]
+    },
+    {
+      "ticker": "FANG",
+      "close": 189.76,
+      "nearest_sr_pct": 0.1265,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        170.0,
+        186.0,
+        190.0
+      ],
+      "resistances": [
+        211.0,
+        212.0,
+        213.0
+      ]
+    },
+    {
+      "ticker": "BRK-B",
+      "close": 488.35,
+      "nearest_sr_pct": 0.1331,
+      "num_supports": 2,
+      "num_resistances": 4,
+      "supports": [
+        464.0,
+        468.0
+      ],
+      "resistances": [
+        489.0,
+        491.0,
+        500.0,
+        513.0
+      ]
+    },
+    {
+      "ticker": "AVY",
+      "close": 156.79,
+      "nearest_sr_pct": 0.1339,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        152.0,
+        156.0,
+        157.0,
+        158.0
+      ],
+      "resistances": [
+        162.0,
+        168.0,
+        169.0
+      ]
+    },
+    {
+      "ticker": "APO",
+      "close": 121.83,
+      "nearest_sr_pct": 0.1395,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        114.0,
+        119.0,
+        122.0
+      ],
+      "resistances": [
+        123.0,
+        135.0,
+        136.0,
+        142.0
+      ]
+    },
+    {
+      "ticker": "HLT",
+      "close": 328.48,
+      "nearest_sr_pct": 0.1461,
+      "num_supports": 4,
+      "num_resistances": 2,
+      "supports": [
+        308.0,
+        309.0,
+        328.0,
+        329.0
+      ],
+      "resistances": [
+        343.0,
+        358.0
+      ]
+    },
+    {
+      "ticker": "NOC",
+      "close": 525.22,
+      "nearest_sr_pct": 0.1485,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        494.0,
+        526.0,
+        537.0
+      ],
+      "resistances": [
+        553.0,
+        560.0,
+        561.0
+      ]
+    },
+    {
+      "ticker": "PEG",
+      "close": 79.88,
+      "nearest_sr_pct": 0.1502,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        75.0,
+        76.0
+      ],
+      "resistances": [
+        80.0,
+        81.0,
+        84.0
+      ]
+    },
+    {
+      "ticker": "DIS",
+      "close": 97.15,
+      "nearest_sr_pct": 0.1544,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        97.0,
+        99.0,
+        101.0
+      ],
+      "resistances": [
+        104.0,
+        110.0
+      ]
+    },
+    {
+      "ticker": "ZBH",
+      "close": 90.14,
+      "nearest_sr_pct": 0.1553,
+      "num_supports": 5,
+      "num_resistances": 3,
+      "supports": [
+        79.0,
+        80.0,
+        81.0,
+        84.0,
+        86.0
+      ],
+      "resistances": [
+        87.0,
+        90.0,
+        93.0
+      ]
+    },
+    {
+      "ticker": "TKO",
+      "close": 185.7,
+      "nearest_sr_pct": 0.1616,
+      "num_supports": 4,
+      "num_resistances": 5,
+      "supports": [
+        180.0,
+        181.0,
+        186.0,
+        193.0
+      ],
+      "resistances": [
+        189.0,
+        196.0,
+        211.0,
+        216.0,
+        219.0
+      ]
+    },
+    {
+      "ticker": "DVN",
+      "close": 42.93,
+      "nearest_sr_pct": 0.1631,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        40.0,
+        42.0,
+        43.0,
+        44.0
+      ],
+      "resistances": [
+        47.0,
+        50.0,
+        52.0
+      ]
+    },
+    {
+      "ticker": "TEL",
+      "close": 201.34,
+      "nearest_sr_pct": 0.1689,
+      "num_supports": 5,
+      "num_resistances": 4,
+      "supports": [
+        192.0,
+        193.0,
+        194.0,
+        200.0,
+        201.0
+      ],
+      "resistances": [
+        206.0,
+        217.0,
+        221.0,
+        224.0
+      ]
+    },
+    {
+      "ticker": "GD",
+      "close": 365.63,
+      "nearest_sr_pct": 0.1723,
+      "num_supports": 4,
+      "num_resistances": 4,
+      "supports": [
+        305.0,
+        332.0,
+        334.0,
+        339.0
+      ],
+      "resistances": [
+        350.0,
+        352.0,
+        365.0,
+        381.0
+      ]
+    },
+    {
+      "ticker": "EMR",
+      "close": 136.25,
+      "nearest_sr_pct": 0.1835,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        128.0,
+        134.0,
+        135.0,
+        136.0
+      ],
+      "resistances": [
+        146.0,
+        149.0,
+        153.0
+      ]
+    },
+    {
+      "ticker": "TDY",
+      "close": 624.15,
+      "nearest_sr_pct": 0.1843,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        600.0,
+        606.0,
+        623.0
+      ],
+      "resistances": [
+        637.0,
+        642.0,
+        675.0
+      ]
+    },
+    {
+      "ticker": "TGT",
+      "close": 138.29,
+      "nearest_sr_pct": 0.2097,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        117.0,
+        121.0,
+        124.0,
+        125.0
+      ],
+      "resistances": [
+        131.0,
+        138.0,
+        143.0
+      ]
+    },
+    {
+      "ticker": "GOOG",
+      "close": 370.21,
+      "nearest_sr_pct": 0.2134,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        334.0,
+        344.0,
+        379.0
+      ],
+      "resistances": [
+        371.0,
+        374.0,
+        404.0
+      ]
+    },
+    {
+      "ticker": "CPAY",
+      "close": 363.16,
+      "nearest_sr_pct": 0.2313,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        298.0,
+        321.0,
+        340.0
+      ],
+      "resistances": [
+        364.0,
+        365.0,
+        367.0
+      ]
+    },
+    {
+      "ticker": "SRE",
+      "close": 92.78,
+      "nearest_sr_pct": 0.2371,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        86.0,
+        88.0,
+        89.0
+      ],
+      "resistances": [
+        92.0,
+        93.0,
+        95.0,
+        96.0
+      ]
+    },
+    {
+      "ticker": "LII",
+      "close": 548.67,
+      "nearest_sr_pct": 0.2424,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        474.0,
+        492.0
+      ],
+      "resistances": [
+        541.0,
+        550.0,
+        587.0
+      ]
+    },
+    {
+      "ticker": "FIS",
+      "close": 41.1,
+      "nearest_sr_pct": 0.2433,
+      "num_supports": 2,
+      "num_resistances": 4,
+      "supports": [
+        37.0,
+        41.0
+      ],
+      "resistances": [
+        41.0,
+        43.0,
+        44.0,
+        47.0
+      ]
+    },
+    {
+      "ticker": "NDSN",
+      "close": 287.77,
+      "nearest_sr_pct": 0.2676,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        269.0,
+        278.0,
+        280.0,
+        287.0
+      ],
+      "resistances": [
+        289.0,
+        296.0,
+        308.0
+      ]
+    },
+    {
+      "ticker": "GL",
+      "close": 181.51,
+      "nearest_sr_pct": 0.27,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        148.0,
+        151.0,
+        175.0
+      ],
+      "resistances": [
+        156.0,
+        158.0,
+        182.0
+      ]
+    },
+    {
+      "ticker": "HWM",
+      "close": 279.24,
+      "nearest_sr_pct": 0.2722,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        244.0,
+        251.0,
+        259.0
+      ],
+      "resistances": [
+        263.0,
+        280.0,
+        281.0,
+        291.0
+      ]
+    },
+    {
+      "ticker": "BF-B",
+      "close": 25.07,
+      "nearest_sr_pct": 0.2792,
+      "num_supports": 2,
+      "num_resistances": 1,
+      "supports": [
+        24.0,
+        25.0
+      ],
+      "resistances": [
+        28.0
+      ]
+    },
+    {
+      "ticker": "TXT",
+      "close": 88.75,
+      "nearest_sr_pct": 0.2817,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        86.0,
+        88.0,
+        89.0
+      ],
+      "resistances": [
+        94.0,
+        95.0,
+        98.0
+      ]
+    },
+    {
+      "ticker": "HII",
+      "close": 277.79,
+      "nearest_sr_pct": 0.2844,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        275.0,
+        277.0,
+        287.0,
+        310.0
+      ],
+      "resistances": [
+        296.0,
+        303.0,
+        338.0
+      ]
+    },
+    {
+      "ticker": "RMD",
+      "close": 198.57,
+      "nearest_sr_pct": 0.2871,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        180.0,
+        185.0,
+        198.0
+      ],
+      "resistances": [
+        197.0,
+        212.0,
+        222.0
+      ]
+    },
+    {
+      "ticker": "PEP",
+      "close": 135.4,
+      "nearest_sr_pct": 0.2954,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        135.0,
+        139.0
+      ],
+      "resistances": [
+        148.0,
+        149.0,
+        158.0
+      ]
+    },
+    {
+      "ticker": "DHI",
+      "close": 151.55,
+      "nearest_sr_pct": 0.2969,
+      "num_supports": 4,
+      "num_resistances": 2,
+      "supports": [
+        134.0,
+        143.0,
+        144.0,
+        148.0
+      ],
+      "resistances": [
+        152.0,
+        171.0
+      ]
+    },
+    {
+      "ticker": "ABT",
+      "close": 89.27,
+      "nearest_sr_pct": 0.3024,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        81.0,
+        84.0,
+        86.0
+      ],
+      "resistances": [
+        89.0,
+        92.0,
+        97.0
+      ]
+    },
+    {
+      "ticker": "RSG",
+      "close": 217.34,
+      "nearest_sr_pct": 0.3037,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        196.0,
+        197.0,
+        203.0
+      ],
+      "resistances": [
+        213.0,
+        218.0
+      ]
+    },
+    {
+      "ticker": "ORLY",
+      "close": 82.73,
+      "nearest_sr_pct": 0.3264,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        83.0,
+        85.0,
+        88.0,
+        90.0
+      ],
+      "resistances": [
+        92.0,
+        94.0,
+        101.0
+      ]
+    },
+    {
+      "ticker": "MTD",
+      "close": 1316.55,
+      "nearest_sr_pct": 0.338,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        1023.0,
+        1114.0,
+        1229.0,
+        1245.0
+      ],
+      "resistances": [
+        1198.0,
+        1321.0,
+        1347.0
+      ]
+    },
+    {
+      "ticker": "XOM",
+      "close": 144.51,
+      "nearest_sr_pct": 0.3391,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        135.0,
+        143.0,
+        145.0
+      ],
+      "resistances": [
+        155.0,
+        164.0
+      ]
+    },
+    {
+      "ticker": "LEN",
+      "close": 85.29,
+      "nearest_sr_pct": 0.34,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        81.0,
+        84.0,
+        85.0,
+        88.0
+      ],
+      "resistances": [
+        91.0,
+        93.0,
+        95.0
+      ]
+    },
+    {
+      "ticker": "AEE",
+      "close": 111.38,
+      "nearest_sr_pct": 0.3412,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        104.0,
+        105.0,
+        107.0
+      ],
+      "resistances": [
+        111.0,
+        115.0,
+        118.0
+      ]
+    },
+    {
+      "ticker": "CIEN",
+      "close": 418.46,
+      "nearest_sr_pct": 0.3489,
+      "num_supports": 5,
+      "num_resistances": 3,
+      "supports": [
+        404.0,
+        417.0,
+        424.0,
+        461.0,
+        499.0
+      ],
+      "resistances": [
+        495.0,
+        599.0,
+        638.0
+      ]
+    },
+    {
+      "ticker": "LULU",
+      "close": 117.42,
+      "nearest_sr_pct": 0.3577,
+      "num_supports": 4,
+      "num_resistances": 1,
+      "supports": [
+        104.0,
+        109.0,
+        111.0,
+        117.0
+      ],
+      "resistances": [
+        136.0
+      ]
+    },
+    {
+      "ticker": "NXPI",
+      "close": 279.01,
+      "nearest_sr_pct": 0.362,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        267.0,
+        278.0,
+        284.0
+      ],
+      "resistances": [
+        306.0,
+        326.0,
+        339.0
+      ]
+    },
+    {
+      "ticker": "WY",
+      "close": 23.91,
+      "nearest_sr_pct": 0.3764,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        22.0,
+        24.0
+      ],
+      "resistances": [
+        25.0,
+        26.0
+      ]
+    },
+    {
+      "ticker": "HON",
+      "close": 222.84,
+      "nearest_sr_pct": 0.377,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        216.0,
+        222.0
+      ],
+      "resistances": [
+        231.0,
+        252.0
+      ]
+    },
+    {
+      "ticker": "AEP",
+      "close": 132.5,
+      "nearest_sr_pct": 0.3774,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        124.0,
+        125.0,
+        127.0
+      ],
+      "resistances": [
+        130.0,
+        132.0,
+        138.0,
+        141.0
+      ]
+    },
+    {
+      "ticker": "CARR",
+      "close": 68.74,
+      "nearest_sr_pct": 0.3782,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        61.0,
+        66.0
+      ],
+      "resistances": [
+        69.0,
+        77.0
+      ]
+    },
+    {
+      "ticker": "IBM",
+      "close": 211.2,
+      "nearest_sr_pct": 0.3788,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        212.0,
+        244.0
+      ],
+      "resistances": [
+        234.0,
+        312.0,
+        332.0
+      ]
+    },
+    {
+      "ticker": "EQR",
+      "close": 68.26,
+      "nearest_sr_pct": 0.3809,
+      "num_supports": 1,
+      "num_resistances": 4,
+      "supports": [
+        63.0
+      ],
+      "resistances": [
+        66.0,
+        67.0,
+        68.0,
+        72.0
+      ]
+    },
+    {
+      "ticker": "CI",
+      "close": 297.81,
+      "nearest_sr_pct": 0.3996,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        269.0,
+        272.0,
+        274.0
+      ],
+      "resistances": [
+        289.0,
+        292.0,
+        299.0,
+        302.0
+      ]
+    },
+    {
+      "ticker": "KEYS",
+      "close": 322.71,
+      "nearest_sr_pct": 0.3997,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        305.0,
+        315.0,
+        324.0,
+        326.0
+      ],
+      "resistances": [
+        359.0,
+        370.0,
+        375.0
+      ]
+    },
+    {
+      "ticker": "PLD",
+      "close": 143.42,
+      "nearest_sr_pct": 0.4044,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        135.0,
+        136.0,
+        137.0,
+        139.0
+      ],
+      "resistances": [
+        144.0,
+        147.0,
+        149.0
+      ]
+    },
+    {
+      "ticker": "O",
+      "close": 63.26,
+      "nearest_sr_pct": 0.411,
+      "num_supports": 4,
+      "num_resistances": 4,
+      "supports": [
+        59.0,
+        60.0,
+        61.0,
+        62.0
+      ],
+      "resistances": [
+        62.0,
+        63.0,
+        64.0,
+        65.0
+      ]
+    },
+    {
+      "ticker": "MA",
+      "close": 535.21,
+      "nearest_sr_pct": 0.4129,
+      "num_supports": 4,
+      "num_resistances": 2,
+      "supports": [
+        464.0,
+        482.0,
+        487.0,
+        489.0
+      ],
+      "resistances": [
+        512.0,
+        533.0
+      ]
+    },
+    {
+      "ticker": "BR",
+      "close": 147.39,
+      "nearest_sr_pct": 0.4139,
+      "num_supports": 3,
+      "num_resistances": 1,
+      "supports": [
+        134.0,
+        139.0,
+        148.0
+      ],
+      "resistances": [
+        159.0
+      ]
+    },
+    {
+      "ticker": "WMT",
+      "close": 112.53,
+      "nearest_sr_pct": 0.4177,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        107.0,
+        113.0,
+        126.0
+      ],
+      "resistances": [
+        123.0,
+        133.0,
+        135.0
+      ]
+    },
+    {
+      "ticker": "SO",
+      "close": 94.6,
+      "nearest_sr_pct": 0.4228,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        89.0,
+        91.0,
+        92.0
+      ],
+      "resistances": [
+        95.0,
+        97.0,
+        99.0
+      ]
+    },
+    {
+      "ticker": "DE",
+      "close": 589.48,
+      "nearest_sr_pct": 0.4275,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        514.0,
+        555.0,
+        556.0
+      ],
+      "resistances": [
+        592.0,
+        603.0,
+        639.0
+      ]
+    },
+    {
+      "ticker": "ROP",
+      "close": 348.51,
+      "nearest_sr_pct": 0.4333,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        305.0,
+        311.0,
+        319.0,
+        347.0
+      ],
+      "resistances": [
+        339.0,
+        346.0,
+        375.0
+      ]
+    },
+    {
+      "ticker": "EXR",
+      "close": 144.64,
+      "nearest_sr_pct": 0.4425,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        135.0,
+        137.0,
+        138.0,
+        143.0
+      ],
+      "resistances": [
+        144.0,
+        146.0,
+        150.0
+      ]
+    },
+    {
+      "ticker": "MSCI",
+      "close": 621.77,
+      "nearest_sr_pct": 0.4455,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        542.0,
+        553.0,
+        567.0
+      ],
+      "resistances": [
+        619.0,
+        645.0
+      ]
+    },
+    {
+      "ticker": "UBER",
+      "close": 72.67,
+      "nearest_sr_pct": 0.4541,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        67.0,
+        70.0,
+        73.0
+      ],
+      "resistances": [
+        78.0,
+        81.0
+      ]
+    },
+    {
+      "ticker": "SYK",
+      "close": 316.44,
+      "nearest_sr_pct": 0.4551,
+      "num_supports": 4,
+      "num_resistances": 2,
+      "supports": [
+        280.0,
+        290.0,
+        298.0,
+        307.0
+      ],
+      "resistances": [
+        315.0,
+        322.0
+      ]
+    },
+    {
+      "ticker": "MCK",
+      "close": 796.35,
+      "nearest_sr_pct": 0.4583,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        723.0,
+        729.0,
+        744.0,
+        745.0
+      ],
+      "resistances": [
+        782.0,
+        800.0,
+        824.0
+      ]
+    },
+    {
+      "ticker": "CAT",
+      "close": 914.3,
+      "nearest_sr_pct": 0.4703,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        846.0,
+        853.0,
+        855.0,
+        910.0
+      ],
+      "resistances": [
+        931.0,
+        947.0,
+        1073.0
+      ]
+    },
+    {
+      "ticker": "MDLZ",
+      "close": 58.72,
+      "nearest_sr_pct": 0.4768,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        58.0,
+        59.0,
+        60.0
+      ],
+      "resistances": [
+        61.0,
+        62.0,
+        64.0
+      ]
+    },
+    {
+      "ticker": "VRSK",
+      "close": 191.94,
+      "nearest_sr_pct": 0.4897,
+      "num_supports": 2,
+      "num_resistances": 4,
+      "supports": [
+        156.0,
+        168.0
+      ],
+      "resistances": [
+        178.0,
+        185.0,
+        191.0,
+        195.0
+      ]
+    },
+    {
+      "ticker": "MRK",
+      "close": 123.61,
+      "nearest_sr_pct": 0.4935,
+      "num_supports": 4,
+      "num_resistances": 4,
+      "supports": [
+        107.0,
+        110.0,
+        112.0,
+        114.0
+      ],
+      "resistances": [
+        114.0,
+        122.0,
+        123.0,
+        130.0
+      ]
+    },
+    {
+      "ticker": "DECK",
+      "close": 106.53,
+      "nearest_sr_pct": 0.4975,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        92.0,
+        99.0,
+        105.0
+      ],
+      "resistances": [
+        106.0,
+        116.0
+      ]
+    },
+    {
+      "ticker": "J",
+      "close": 129.66,
+      "nearest_sr_pct": 0.509,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        105.0,
+        117.0
+      ],
+      "resistances": [
+        129.0,
+        132.0,
+        137.0
+      ]
+    },
+    {
+      "ticker": "DLR",
+      "close": 176.07,
+      "nearest_sr_pct": 0.5282,
+      "num_supports": 4,
+      "num_resistances": 2,
+      "supports": [
+        172.0,
+        177.0,
+        184.0,
+        190.0
+      ],
+      "resistances": [
+        194.0,
+        197.0
+      ]
+    },
+    {
+      "ticker": "COF",
+      "close": 208.89,
+      "nearest_sr_pct": 0.5314,
+      "num_supports": 5,
+      "num_resistances": 3,
+      "supports": [
+        174.0,
+        177.0,
+        180.0,
+        187.0,
+        191.0
+      ],
+      "resistances": [
+        192.0,
+        195.0,
+        210.0
+      ]
+    },
+    {
+      "ticker": "CTVA",
+      "close": 84.45,
+      "nearest_sr_pct": 0.5329,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        74.0,
+        79.0
+      ],
+      "resistances": [
+        81.0,
+        84.0,
+        88.0
+      ]
+    },
+    {
+      "ticker": "REGN",
+      "close": 664.45,
+      "nearest_sr_pct": 0.5343,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        592.0,
+        595.0,
+        610.0,
+        668.0
+      ],
+      "resistances": [
+        641.0,
+        678.0,
+        730.0
+      ]
+    },
+    {
+      "ticker": "NKE",
+      "close": 42.77,
+      "nearest_sr_pct": 0.5378,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        40.0,
+        41.0,
+        43.0
+      ],
+      "resistances": [
+        45.0,
+        46.0,
+        47.0
+      ]
+    },
+    {
+      "ticker": "KO",
+      "close": 82.45,
+      "nearest_sr_pct": 0.5458,
+      "num_supports": 2,
+      "num_resistances": 4,
+      "supports": [
+        76.0,
+        79.0
+      ],
+      "resistances": [
+        80.0,
+        82.0,
+        84.0,
+        86.0
+      ]
+    },
+    {
+      "ticker": "ROL",
+      "close": 43.76,
+      "nearest_sr_pct": 0.5484,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        42.0,
+        44.0,
+        52.0
+      ],
+      "resistances": [
+        49.0,
+        55.0
+      ]
+    },
+    {
+      "ticker": "Q",
+      "close": 140.23,
+      "nearest_sr_pct": 0.5491,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        135.0,
+        141.0
+      ],
+      "resistances": [
+        167.0,
+        171.0,
+        177.0
+      ]
+    },
+    {
+      "ticker": "GOOGL",
+      "close": 370.92,
+      "nearest_sr_pct": 0.5608,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        330.0,
+        346.0,
+        383.0
+      ],
+      "resistances": [
+        373.0,
+        376.0,
+        408.0
+      ]
+    },
+    {
+      "ticker": "BDX",
+      "close": 154.88,
+      "nearest_sr_pct": 0.5682,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        140.0,
+        141.0,
+        142.0
+      ],
+      "resistances": [
+        150.0,
+        153.0,
+        154.0,
+        159.0
+      ]
+    },
+    {
+      "ticker": "EXC",
+      "close": 45.74,
+      "nearest_sr_pct": 0.5684,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        43.0,
+        44.0,
+        46.0
+      ],
+      "resistances": [
+        46.0,
+        47.0,
+        49.0
+      ]
+    },
+    {
+      "ticker": "CL",
+      "close": 91.47,
+      "nearest_sr_pct": 0.5794,
+      "num_supports": 1,
+      "num_resistances": 4,
+      "supports": [
+        84.0
+      ],
+      "resistances": [
+        89.0,
+        92.0,
+        93.0,
+        96.0
+      ]
+    },
+    {
+      "ticker": "CVNA",
+      "close": 70.59,
+      "nearest_sr_pct": 0.5808,
+      "num_supports": 3,
+      "num_resistances": 5,
+      "supports": [
+        61.0,
+        62.0,
+        74.0
+      ],
+      "resistances": [
+        71.0,
+        74.0,
+        75.0,
+        82.0,
+        84.0
+      ]
+    },
+    {
+      "ticker": "WFC",
+      "close": 87.51,
+      "nearest_sr_pct": 0.5828,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        73.0,
+        83.0
+      ],
+      "resistances": [
+        82.0,
+        87.0
+      ]
+    },
+    {
+      "ticker": "MAA",
+      "close": 131.77,
+      "nearest_sr_pct": 0.5844,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        124.0,
+        126.0,
+        129.0
+      ],
+      "resistances": [
+        130.0,
+        131.0,
+        139.0,
+        143.0
+      ]
+    },
+    {
+      "ticker": "CNC",
+      "close": 66.61,
+      "nearest_sr_pct": 0.5855,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        57.0,
+        60.0
+      ],
+      "resistances": [
+        61.0,
+        67.0,
+        69.0
+      ]
+    },
+    {
+      "ticker": "LNT",
+      "close": 74.55,
+      "nearest_sr_pct": 0.6036,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        70.0,
+        71.0
+      ],
+      "resistances": [
+        75.0,
+        76.0,
+        79.0
+      ]
+    },
+    {
+      "ticker": "INVH",
+      "close": 29.82,
+      "nearest_sr_pct": 0.6036,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        27.0,
+        28.0
+      ],
+      "resistances": [
+        29.0,
+        30.0,
+        31.0
+      ]
+    },
+    {
+      "ticker": "IBKR",
+      "close": 97.41,
+      "nearest_sr_pct": 0.6057,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        79.0,
+        87.0
+      ],
+      "resistances": [
+        88.0,
+        91.0,
+        98.0
+      ]
+    },
+    {
+      "ticker": "ULTA",
+      "close": 466.14,
+      "nearest_sr_pct": 0.6135,
+      "num_supports": 4,
+      "num_resistances": 4,
+      "supports": [
+        444.0,
+        449.0,
+        459.0,
+        469.0
+      ],
+      "resistances": [
+        482.0,
+        494.0,
+        527.0,
+        543.0
+      ]
+    },
+    {
+      "ticker": "TER",
+      "close": 342.12,
+      "nearest_sr_pct": 0.6197,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        302.0,
+        309.0,
+        328.0,
+        340.0
+      ],
+      "resistances": [
+        383.0,
+        421.0,
+        488.0
+      ]
+    },
+    {
+      "ticker": "KMI",
+      "close": 32.2,
+      "nearest_sr_pct": 0.6211,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        30.0,
+        31.0,
+        32.0
+      ],
+      "resistances": [
+        33.0,
+        35.0
+      ]
+    },
+    {
+      "ticker": "ED",
+      "close": 110.31,
+      "nearest_sr_pct": 0.6255,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        103.0,
+        104.0,
+        106.0
+      ],
+      "resistances": [
+        109.0,
+        111.0,
+        115.0
+      ]
+    },
+    {
+      "ticker": "BIIB",
+      "close": 197.24,
+      "nearest_sr_pct": 0.6287,
+      "num_supports": 3,
+      "num_resistances": 5,
+      "supports": [
+        185.0,
+        186.0,
+        193.0
+      ],
+      "resistances": [
+        196.0,
+        200.0,
+        203.0,
+        206.0,
+        220.0
+      ]
+    },
+    {
+      "ticker": "ZTS",
+      "close": 74.53,
+      "nearest_sr_pct": 0.6306,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        71.0,
+        72.0,
+        75.0
+      ],
+      "resistances": [
+        78.0,
+        82.0,
+        83.0
+      ]
+    },
+    {
+      "ticker": "MS",
+      "close": 228.55,
+      "nearest_sr_pct": 0.6344,
+      "num_supports": 4,
+      "num_resistances": 2,
+      "supports": [
+        184.0,
+        186.0,
+        206.0,
+        207.0
+      ],
+      "resistances": [
+        219.0,
+        230.0
+      ]
+    },
+    {
+      "ticker": "NI",
+      "close": 45.71,
+      "nearest_sr_pct": 0.6344,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        45.0,
+        46.0,
+        47.0
+      ],
+      "resistances": [
+        48.0,
+        49.0
+      ]
+    },
+    {
+      "ticker": "PG",
+      "close": 148.05,
+      "nearest_sr_pct": 0.6417,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        139.0,
+        140.0,
+        144.0
+      ],
+      "resistances": [
+        149.0,
+        153.0
+      ]
+    },
+    {
+      "ticker": "TJX",
+      "close": 150.97,
+      "nearest_sr_pct": 0.6425,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        146.0,
+        150.0,
+        152.0
+      ],
+      "resistances": [
+        156.0,
+        161.0,
+        170.0
+      ]
+    },
+    {
+      "ticker": "CNP",
+      "close": 42.72,
+      "nearest_sr_pct": 0.6554,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        41.0,
+        42.0
+      ],
+      "resistances": [
+        43.0,
+        44.0,
+        45.0
+      ]
+    },
+    {
+      "ticker": "CDW",
+      "close": 130.86,
+      "nearest_sr_pct": 0.6572,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        97.0,
+        123.0,
+        130.0
+      ],
+      "resistances": [
+        138.0,
+        141.0,
+        144.0
+      ]
+    },
+    {
+      "ticker": "LLY",
+      "close": 1156.63,
+      "nearest_sr_pct": 0.6597,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        849.0,
+        942.0,
+        1052.0,
+        1079.0
+      ],
+      "resistances": [
+        1149.0,
+        1183.0,
+        1249.0
+      ]
+    },
+    {
+      "ticker": "TRGP",
+      "close": 278.16,
+      "nearest_sr_pct": 0.6615,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        242.0,
+        253.0,
+        254.0,
+        256.0
+      ],
+      "resistances": [
+        262.0,
+        276.0,
+        280.0
+      ]
+    },
+    {
+      "ticker": "APH",
+      "close": 157.04,
+      "nearest_sr_pct": 0.6622,
+      "num_supports": 4,
+      "num_resistances": 2,
+      "supports": [
+        118.0,
+        138.0,
+        153.0,
+        156.0
+      ],
+      "resistances": [
+        155.0,
+        179.0
+      ]
+    },
+    {
+      "ticker": "HBAN",
+      "close": 18.12,
+      "nearest_sr_pct": 0.6623,
+      "num_supports": 3,
+      "num_resistances": 1,
+      "supports": [
+        15.0,
+        16.0,
+        17.0
+      ],
+      "resistances": [
+        18.0
+      ]
+    },
+    {
+      "ticker": "TECH",
+      "close": 71.48,
+      "nearest_sr_pct": 0.6715,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        43.0,
+        70.0
+      ],
+      "resistances": [
+        57.0,
+        71.0
+      ]
+    },
+    {
+      "ticker": "AVB",
+      "close": 190.29,
+      "nearest_sr_pct": 0.6779,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        175.0,
+        179.0
+      ],
+      "resistances": [
+        186.0,
+        189.0,
+        199.0
+      ]
+    },
+    {
+      "ticker": "MO",
+      "close": 70.52,
+      "nearest_sr_pct": 0.6807,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        67.0,
+        68.0,
+        71.0
+      ],
+      "resistances": [
+        73.0,
+        74.0
+      ]
+    },
+    {
+      "ticker": "EME",
+      "close": 769.72,
+      "nearest_sr_pct": 0.686,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        749.0,
+        775.0,
+        830.0
+      ],
+      "resistances": [
+        876.0,
+        879.0,
+        951.0
+      ]
+    },
+    {
+      "ticker": "IEX",
+      "close": 223.57,
+      "nearest_sr_pct": 0.7022,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        202.0,
+        212.0,
+        216.0
+      ],
+      "resistances": [
+        222.0,
+        229.0
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "close": 212.5,
+      "nearest_sr_pct": 0.7059,
+      "num_supports": 4,
+      "num_resistances": 4,
+      "supports": [
+        190.0,
+        195.0,
+        199.0,
+        209.0
+      ],
+      "resistances": [
+        214.0,
+        217.0,
+        232.0,
+        236.0
+      ]
+    },
+    {
+      "ticker": "PFE",
+      "close": 24.82,
+      "nearest_sr_pct": 0.7252,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        24.0,
+        25.0,
+        26.0
+      ],
+      "resistances": [
+        25.0,
+        26.0,
+        27.0
+      ]
+    },
+    {
+      "ticker": "AZO",
+      "close": 2970.57,
+      "nearest_sr_pct": 0.7261,
+      "num_supports": 2,
+      "num_resistances": 4,
+      "supports": [
+        2928.0,
+        2949.0
+      ],
+      "resistances": [
+        3177.0,
+        3239.0,
+        3497.0,
+        3730.0
+      ]
+    },
+    {
+      "ticker": "FE",
+      "close": 48.64,
+      "nearest_sr_pct": 0.7401,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        44.0,
+        45.0,
+        47.0
+      ],
+      "resistances": [
+        47.0,
+        48.0,
+        49.0
+      ]
+    },
+    {
+      "ticker": "WDC",
+      "close": 513.84,
+      "nearest_sr_pct": 0.7473,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        434.0,
+        481.0,
+        510.0
+      ],
+      "resistances": [
+        525.0,
+        602.0,
+        800.0
+      ]
+    },
+    {
+      "ticker": "FIX",
+      "close": 1736.7,
+      "nearest_sr_pct": 0.7658,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        1621.0,
+        1705.0,
+        1750.0,
+        1756.0
+      ],
+      "resistances": [
+        1973.0,
+        2072.0,
+        2073.0
+      ]
+    },
+    {
+      "ticker": "NSC",
+      "close": 328.54,
+      "nearest_sr_pct": 0.7731,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        297.0,
+        301.0,
+        309.0
+      ],
+      "resistances": [
+        316.0,
+        319.0,
+        326.0
+      ]
+    },
+    {
+      "ticker": "GEV",
+      "close": 1055.28,
+      "nearest_sr_pct": 0.7846,
+      "num_supports": 4,
+      "num_resistances": 4,
+      "supports": [
+        856.0,
+        980.0,
+        1028.0,
+        1047.0
+      ],
+      "resistances": [
+        1094.0,
+        1125.0,
+        1142.0,
+        1196.0
+      ]
+    },
+    {
+      "ticker": "NUE",
+      "close": 236.87,
+      "nearest_sr_pct": 0.7895,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        215.0,
+        219.0,
+        245.0
+      ],
+      "resistances": [
+        235.0,
+        264.0,
+        270.0
+      ]
+    },
+    {
+      "ticker": "LOW",
+      "close": 209.66,
+      "nearest_sr_pct": 0.7918,
+      "num_supports": 4,
+      "num_resistances": 2,
+      "supports": [
+        203.0,
+        208.0,
+        212.0,
+        223.0
+      ],
+      "resistances": [
+        227.0,
+        229.0
+      ]
+    },
+    {
+      "ticker": "FAST",
+      "close": 45.36,
+      "nearest_sr_pct": 0.7937,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        43.0,
+        44.0,
+        45.0
+      ],
+      "resistances": [
+        46.0,
+        48.0,
+        49.0
+      ]
+    },
+    {
+      "ticker": "PPL",
+      "close": 35.71,
+      "nearest_sr_pct": 0.8121,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        34.0,
+        35.0
+      ],
+      "resistances": [
+        36.0,
+        37.0,
+        39.0
+      ]
+    },
+    {
+      "ticker": "FSLR",
+      "close": 223.82,
+      "nearest_sr_pct": 0.8132,
+      "num_supports": 4,
+      "num_resistances": 2,
+      "supports": [
+        187.0,
+        219.0,
+        222.0,
+        249.0
+      ],
+      "resistances": [
+        241.0,
+        321.0
+      ]
+    },
+    {
+      "ticker": "PKG",
+      "close": 227.86,
+      "nearest_sr_pct": 0.8163,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        202.0,
+        213.0
+      ],
+      "resistances": [
+        226.0,
+        230.0,
+        244.0
+      ]
+    },
+    {
+      "ticker": "CEG",
+      "close": 258.11,
+      "nearest_sr_pct": 0.8194,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        229.0,
+        241.0,
+        256.0
+      ],
+      "resistances": [
+        283.0,
+        310.0,
+        328.0
+      ]
+    },
+    {
+      "ticker": "HST",
+      "close": 23.8,
+      "nearest_sr_pct": 0.8403,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        20.0,
+        23.0
+      ],
+      "resistances": [
+        22.0,
+        24.0
+      ]
+    },
+    {
+      "ticker": "PFG",
+      "close": 112.96,
+      "nearest_sr_pct": 0.8499,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        98.0,
+        101.0,
+        105.0
+      ],
+      "resistances": [
+        102.0,
+        112.0
+      ]
+    },
+    {
+      "ticker": "ADM",
+      "close": 82.3,
+      "nearest_sr_pct": 0.8505,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        72.0,
+        77.0
+      ],
+      "resistances": [
+        83.0,
+        85.0
+      ]
+    },
+    {
+      "ticker": "FTV",
+      "close": 60.52,
+      "nearest_sr_pct": 0.8592,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        57.0,
+        58.0,
+        59.0,
+        60.0
+      ],
+      "resistances": [
+        62.0,
+        63.0,
+        64.0
+      ]
+    },
+    {
+      "ticker": "VEEV",
+      "close": 193.67,
+      "nearest_sr_pct": 0.8623,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        150.0,
+        153.0,
+        155.0
+      ],
+      "resistances": [
+        170.0,
+        175.0,
+        192.0,
+        200.0
+      ]
+    },
+    {
+      "ticker": "LMT",
+      "close": 514.46,
+      "nearest_sr_pct": 0.8669,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        490.0,
+        497.0,
+        510.0
+      ],
+      "resistances": [
+        538.0,
+        547.0,
+        551.0
+      ]
+    },
+    {
+      "ticker": "PGR",
+      "close": 205.22,
+      "nearest_sr_pct": 0.8674,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        189.0,
+        192.0
+      ],
+      "resistances": [
+        207.0,
+        239.0
+      ]
+    },
+    {
+      "ticker": "ALLE",
+      "close": 135.82,
+      "nearest_sr_pct": 0.8688,
+      "num_supports": 4,
+      "num_resistances": 4,
+      "supports": [
+        124.0,
+        126.0,
+        129.0,
+        131.0
+      ],
+      "resistances": [
+        133.0,
+        137.0,
+        142.0,
+        149.0
+      ]
+    },
+    {
+      "ticker": "CVX",
+      "close": 181.6,
+      "nearest_sr_pct": 0.8811,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        165.0,
+        178.0,
+        180.0
+      ],
+      "resistances": [
+        192.0,
+        193.0,
+        199.0
+      ]
+    },
+    {
+      "ticker": "JBL",
+      "close": 319.18,
+      "nearest_sr_pct": 0.8835,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        310.0,
+        322.0,
+        325.0,
+        341.0
+      ],
+      "resistances": [
+        372.0,
+        385.0,
+        429.0
+      ]
+    },
+    {
+      "ticker": "CME",
+      "close": 245.18,
+      "nearest_sr_pct": 0.8891,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        218.0,
+        243.0,
+        279.0
+      ],
+      "resistances": [
+        270.0,
+        291.0,
+        306.0
+      ]
+    },
+    {
+      "ticker": "TTWO",
+      "close": 243.8,
+      "nearest_sr_pct": 0.9024,
+      "num_supports": 1,
+      "num_resistances": 5,
+      "supports": [
+        206.0
+      ],
+      "resistances": [
+        227.0,
+        246.0,
+        247.0,
+        251.0,
+        266.0
+      ]
+    },
+    {
+      "ticker": "SPG",
+      "close": 222.01,
+      "nearest_sr_pct": 0.9054,
+      "num_supports": 3,
+      "num_resistances": 5,
+      "supports": [
+        196.0,
+        200.0,
+        209.0
+      ],
+      "resistances": [
+        204.0,
+        207.0,
+        220.0,
+        229.0,
+        230.0
+      ]
+    },
+    {
+      "ticker": "WEC",
+      "close": 112.97,
+      "nearest_sr_pct": 0.9117,
+      "num_supports": 2,
+      "num_resistances": 4,
+      "supports": [
+        109.0,
+        111.0
+      ],
+      "resistances": [
+        114.0,
+        116.0,
+        118.0,
+        120.0
+      ]
+    },
+    {
+      "ticker": "EQIX",
+      "close": 1022.6,
+      "nearest_sr_pct": 0.9192,
+      "num_supports": 4,
+      "num_resistances": 4,
+      "supports": [
+        994.0,
+        1032.0,
+        1040.0,
+        1049.0
+      ],
+      "resistances": [
+        1089.0,
+        1092.0,
+        1107.0,
+        1124.0
+      ]
+    },
+    {
+      "ticker": "KDP",
+      "close": 30.28,
+      "nearest_sr_pct": 0.9247,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        28.0,
+        30.0
+      ],
+      "resistances": [
+        29.0,
+        32.0,
+        34.0
+      ]
+    },
+    {
+      "ticker": "SNDK",
+      "close": 1615.0,
+      "nearest_sr_pct": 0.9288,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        1277.0,
+        1485.0,
+        1514.0,
+        1861.0
+      ],
+      "resistances": [
+        1600.0,
+        1861.0,
+        2354.0
+      ]
+    },
+    {
+      "ticker": "ABNB",
+      "close": 148.38,
+      "nearest_sr_pct": 0.93,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        127.0,
+        128.0,
+        136.0,
+        141.0
+      ],
+      "resistances": [
+        138.0,
+        147.0,
+        150.0
+      ]
+    },
+    {
+      "ticker": "AWK",
+      "close": 129.21,
+      "nearest_sr_pct": 0.9365,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        121.0,
+        122.0,
+        123.0
+      ],
+      "resistances": [
+        128.0,
+        136.0,
+        138.0
+      ]
+    },
+    {
+      "ticker": "WM",
+      "close": 232.8,
+      "nearest_sr_pct": 0.945,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        209.0,
+        211.0,
+        212.0
+      ],
+      "resistances": [
+        226.0,
+        227.0,
+        235.0,
+        238.0
+      ]
+    },
+    {
+      "ticker": "INTC",
+      "close": 102.99,
+      "nearest_sr_pct": 0.9613,
+      "num_supports": 2,
+      "num_resistances": 4,
+      "supports": [
+        98.0,
+        102.0
+      ],
+      "resistances": [
+        127.0,
+        133.0,
+        141.0,
+        142.0
+      ]
+    },
+    {
+      "ticker": "HSIC",
+      "close": 87.16,
+      "nearest_sr_pct": 0.9637,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        69.0,
+        79.0
+      ],
+      "resistances": [
+        78.0,
+        82.0,
+        88.0
+      ]
+    },
+    {
+      "ticker": "RTX",
+      "close": 195.89,
+      "nearest_sr_pct": 0.9648,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        170.0,
+        173.0,
+        181.0
+      ],
+      "resistances": [
+        179.0,
+        182.0,
+        194.0,
+        204.0
+      ]
+    },
+    {
+      "ticker": "TAP",
+      "close": 39.61,
+      "nearest_sr_pct": 0.9846,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        38.0,
+        39.0,
+        40.0
+      ],
+      "resistances": [
+        41.0,
+        42.0,
+        43.0,
+        44.0
+      ]
+    },
+    {
+      "ticker": "XYZ",
+      "close": 81.81,
+      "nearest_sr_pct": 0.9901,
+      "num_supports": 5,
+      "num_resistances": 3,
+      "supports": [
+        65.0,
+        67.0,
+        68.0,
+        72.0,
+        75.0
+      ],
+      "resistances": [
+        77.0,
+        78.0,
+        81.0
+      ]
+    },
+    {
+      "ticker": "IVZ",
+      "close": 30.3,
+      "nearest_sr_pct": 0.9901,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        24.0,
+        26.0,
+        27.0
+      ],
+      "resistances": [
+        28.0,
+        29.0,
+        30.0
+      ]
+    },
+    {
+      "ticker": "KR",
+      "close": 56.56,
+      "nearest_sr_pct": 0.9901,
+      "num_supports": 5,
+      "num_resistances": 2,
+      "supports": [
+        54.0,
+        56.0,
+        61.0,
+        64.0,
+        65.0
+      ],
+      "resistances": [
+        65.0,
+        72.0
+      ]
+    },
+    {
+      "ticker": "WBD",
+      "close": 27.27,
+      "nearest_sr_pct": 0.9901,
+      "num_supports": 2,
+      "num_resistances": 1,
+      "supports": [
+        26.0,
+        27.0
+      ],
+      "resistances": [
+        27.0
+      ]
+    },
+    {
+      "ticker": "GPN",
+      "close": 78.22,
+      "nearest_sr_pct": 0.9972,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        61.0,
+        64.0,
+        66.0
+      ],
+      "resistances": [
+        70.0,
+        74.0,
+        76.0,
+        79.0
+      ]
+    },
+    {
+      "ticker": "HPQ",
+      "close": 23.75,
+      "nearest_sr_pct": 1.0526,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        19.0,
+        20.0,
+        22.0,
+        24.0
+      ],
+      "resistances": [
+        23.0,
+        26.0,
+        29.0
+      ]
+    },
+    {
+      "ticker": "PWR",
+      "close": 648.84,
+      "nearest_sr_pct": 1.0542,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        642.0,
+        683.0,
+        691.0
+      ],
+      "resistances": [
+        721.0,
+        743.0,
+        783.0,
+        789.0
+      ]
+    },
+    {
+      "ticker": "DG",
+      "close": 121.28,
+      "nearest_sr_pct": 1.0554,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        99.0,
+        101.0,
+        112.0
+      ],
+      "resistances": [
+        114.0,
+        119.0,
+        120.0
+      ]
+    },
+    {
+      "ticker": "SBUX",
+      "close": 105.11,
+      "nearest_sr_pct": 1.056,
+      "num_supports": 4,
+      "num_resistances": 2,
+      "supports": [
+        94.0,
+        96.0,
+        100.0,
+        102.0
+      ],
+      "resistances": [
+        104.0,
+        108.0
+      ]
+    },
+    {
+      "ticker": "BLK",
+      "close": 1093.4,
+      "nearest_sr_pct": 1.0609,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        947.0,
+        978.0,
+        1024.0,
+        1026.0
+      ],
+      "resistances": [
+        1077.0,
+        1079.0,
+        1105.0
+      ]
+    },
+    {
+      "ticker": "NWS",
+      "close": 31.66,
+      "nearest_sr_pct": 1.0739,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        28.0,
+        29.0
+      ],
+      "resistances": [
+        31.0,
+        32.0
+      ]
+    },
+    {
+      "ticker": "DUK",
+      "close": 124.34,
+      "nearest_sr_pct": 1.0777,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        120.0,
+        121.0,
+        123.0
+      ],
+      "resistances": [
+        126.0,
+        127.0,
+        130.0
+      ]
+    },
+    {
+      "ticker": "PODD",
+      "close": 159.28,
+      "nearest_sr_pct": 1.0799,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        139.0,
+        141.0,
+        146.0
+      ],
+      "resistances": [
+        161.0,
+        168.0
+      ]
+    },
+    {
+      "ticker": "UNH",
+      "close": 418.52,
+      "nearest_sr_pct": 1.08,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        356.0,
+        373.0,
+        399.0
+      ],
+      "resistances": [
+        402.0,
+        414.0
+      ]
+    },
+    {
+      "ticker": "ETR",
+      "close": 114.24,
+      "nearest_sr_pct": 1.0854,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        105.0,
+        108.0,
+        112.0
+      ],
+      "resistances": [
+        113.0,
+        117.0,
+        118.0
+      ]
+    },
+    {
+      "ticker": "EA",
+      "close": 207.27,
+      "nearest_sr_pct": 1.0952,
+      "num_supports": 3,
+      "num_resistances": 1,
+      "supports": [
+        199.0,
+        202.0,
+        205.0
+      ],
+      "resistances": [
+        204.0
+      ]
+    },
+    {
+      "ticker": "MAR",
+      "close": 369.05,
+      "nearest_sr_pct": 1.0974,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        345.0,
+        346.0,
+        365.0
+      ],
+      "resistances": [
+        364.0,
+        384.0,
+        388.0,
+        411.0
+      ]
+    },
+    {
+      "ticker": "VLTO",
+      "close": 91.0,
+      "nearest_sr_pct": 1.0989,
+      "num_supports": 4,
+      "num_resistances": 4,
+      "supports": [
+        80.0,
+        81.0,
+        84.0,
+        85.0
+      ],
+      "resistances": [
+        87.0,
+        88.0,
+        92.0,
+        94.0
+      ]
+    },
+    {
+      "ticker": "BEN",
+      "close": 33.63,
+      "nearest_sr_pct": 1.1002,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        29.0,
+        30.0,
+        32.0
+      ],
+      "resistances": [
+        32.0,
+        34.0,
+        35.0
+      ]
+    },
+    {
+      "ticker": "CSCO",
+      "close": 111.77,
+      "nearest_sr_pct": 1.1005,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        85.0,
+        113.0,
+        116.0
+      ],
+      "resistances": [
+        122.0,
+        130.0
+      ]
+    },
+    {
+      "ticker": "LH",
+      "close": 271.99,
+      "nearest_sr_pct": 1.1067,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        248.0,
+        249.0,
+        253.0
+      ],
+      "resistances": [
+        275.0,
+        291.0
+      ]
+    },
+    {
+      "ticker": "OTIS",
+      "close": 72.2,
+      "nearest_sr_pct": 1.108,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        69.0,
+        70.0,
+        71.0
+      ],
+      "resistances": [
+        73.0,
+        74.0,
+        75.0
+      ]
+    },
+    {
+      "ticker": "LIN",
+      "close": 514.15,
+      "nearest_sr_pct": 1.1378,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        487.0,
+        489.0,
+        507.0
+      ],
+      "resistances": [
+        520.0,
+        526.0,
+        548.0
+      ]
+    },
+    {
+      "ticker": "AOS",
+      "close": 60.31,
+      "nearest_sr_pct": 1.1441,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        54.0,
+        55.0,
+        57.0
+      ],
+      "resistances": [
+        59.0,
+        61.0,
+        63.0
+      ]
+    },
+    {
+      "ticker": "PSA",
+      "close": 314.68,
+      "nearest_sr_pct": 1.1694,
+      "num_supports": 4,
+      "num_resistances": 4,
+      "supports": [
+        287.0,
+        289.0,
+        292.0,
+        311.0
+      ],
+      "resistances": [
+        309.0,
+        310.0,
+        329.0,
+        331.0
+      ]
+    },
+    {
+      "ticker": "NTAP",
+      "close": 162.1,
+      "nearest_sr_pct": 1.1721,
+      "num_supports": 1,
+      "num_resistances": 2,
+      "supports": [
+        149.0
+      ],
+      "resistances": [
+        164.0,
+        192.0
+      ]
+    },
+    {
+      "ticker": "XYL",
+      "close": 121.43,
+      "nearest_sr_pct": 1.1776,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        105.0,
+        107.0,
+        109.0,
+        114.0
+      ],
+      "resistances": [
+        112.0,
+        120.0,
+        125.0
+      ]
+    },
+    {
+      "ticker": "VICI",
+      "close": 26.31,
+      "nearest_sr_pct": 1.1783,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        26.0,
+        27.0,
+        28.0
+      ],
+      "resistances": [
+        27.0,
+        28.0,
+        29.0
+      ]
+    },
+    {
+      "ticker": "DOC",
+      "close": 21.74,
+      "nearest_sr_pct": 1.196,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        16.0,
+        19.0
+      ],
+      "resistances": [
+        20.0,
+        21.0,
+        22.0
+      ]
+    },
+    {
+      "ticker": "DAL",
+      "close": 85.96,
+      "nearest_sr_pct": 1.2099,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        65.0,
+        68.0,
+        76.0
+      ],
+      "resistances": [
+        75.0,
+        84.0,
+        87.0,
+        95.0
+      ]
+    },
+    {
+      "ticker": "FOX",
+      "close": 50.39,
+      "nearest_sr_pct": 1.2106,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        44.0,
+        55.0,
+        57.0
+      ],
+      "resistances": [
+        51.0,
+        62.0
+      ]
+    },
+    {
+      "ticker": "IRM",
+      "close": 123.52,
+      "nearest_sr_pct": 1.2306,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        109.0,
+        114.0,
+        121.0,
+        122.0
+      ],
+      "resistances": [
+        130.0,
+        133.0,
+        135.0
+      ]
+    },
+    {
+      "ticker": "REG",
+      "close": 79.99,
+      "nearest_sr_pct": 1.2377,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        75.0,
+        77.0
+      ],
+      "resistances": [
+        79.0,
+        81.0,
+        82.0
+      ]
+    },
+    {
+      "ticker": "SPGI",
+      "close": 444.48,
+      "nearest_sr_pct": 1.2419,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        372.0,
+        378.0,
+        385.0,
+        393.0
+      ],
+      "resistances": [
+        408.0,
+        413.0,
+        450.0
+      ]
+    },
+    {
+      "ticker": "ROST",
+      "close": 225.81,
+      "nearest_sr_pct": 1.2444,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        206.0,
+        208.0,
+        222.0,
+        223.0
+      ],
+      "resistances": [
+        231.0,
+        237.0,
+        243.0
+      ]
+    },
+    {
+      "ticker": "APD",
+      "close": 293.69,
+      "nearest_sr_pct": 1.2564,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        268.0,
+        273.0,
+        290.0
+      ],
+      "resistances": [
+        286.0,
+        305.0,
+        306.0,
+        315.0
+      ]
+    },
+    {
+      "ticker": "CHRW",
+      "close": 197.5,
+      "nearest_sr_pct": 1.2658,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        150.0,
+        159.0,
+        172.0,
+        176.0
+      ],
+      "resistances": [
+        184.0,
+        190.0,
+        195.0
+      ]
+    },
+    {
+      "ticker": "GEHC",
+      "close": 63.2,
+      "nearest_sr_pct": 1.2658,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        59.0,
+        60.0,
+        61.0
+      ],
+      "resistances": [
+        64.0,
+        66.0
+      ]
+    },
+    {
+      "ticker": "TMUS",
+      "close": 187.62,
+      "nearest_sr_pct": 1.2685,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        166.0,
+        174.0,
+        181.0,
+        184.0
+      ],
+      "resistances": [
+        190.0,
+        195.0,
+        200.0
+      ]
+    },
+    {
+      "ticker": "AES",
+      "close": 14.81,
+      "nearest_sr_pct": 1.2829,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        14.0,
+        15.0
+      ],
+      "resistances": [
+        14.0,
+        15.0
+      ]
+    },
+    {
+      "ticker": "MLM",
+      "close": 569.32,
+      "nearest_sr_pct": 1.2857,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        525.0,
+        546.0,
+        562.0,
+        594.0
+      ],
+      "resistances": [
+        592.0,
+        628.0,
+        642.0
+      ]
+    },
+    {
+      "ticker": "SHW",
+      "close": 332.29,
+      "nearest_sr_pct": 1.291,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        290.0,
+        294.0,
+        306.0
+      ],
+      "resistances": [
+        316.0,
+        328.0,
+        354.0
+      ]
+    },
+    {
+      "ticker": "L",
+      "close": 112.52,
+      "nearest_sr_pct": 1.3153,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        102.0,
+        103.0,
+        107.0
+      ],
+      "resistances": [
+        109.0,
+        110.0,
+        114.0,
+        119.0
+      ]
+    },
+    {
+      "ticker": "BALL",
+      "close": 60.8,
+      "nearest_sr_pct": 1.3158,
+      "num_supports": 4,
+      "num_resistances": 2,
+      "supports": [
+        52.0,
+        54.0,
+        57.0,
+        60.0
+      ],
+      "resistances": [
+        57.0,
+        64.0
+      ]
+    },
+    {
+      "ticker": "CB",
+      "close": 337.44,
+      "nearest_sr_pct": 1.3158,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        308.0,
+        314.0
+      ],
+      "resistances": [
+        333.0,
+        365.0
+      ]
+    },
+    {
+      "ticker": "PLTR",
+      "close": 133.76,
+      "nearest_sr_pct": 1.3158,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        106.0,
+        129.0,
+        132.0
+      ],
+      "resistances": [
+        136.0,
+        139.0,
+        150.0,
+        164.0
+      ]
+    },
+    {
+      "ticker": "BA",
+      "close": 218.12,
+      "nearest_sr_pct": 1.3204,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        208.0,
+        214.0,
+        221.0
+      ],
+      "resistances": [
+        231.0,
+        232.0,
+        237.0,
+        244.0
+      ]
+    },
+    {
+      "ticker": "CMS",
+      "close": 74.02,
+      "nearest_sr_pct": 1.324,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        69.0,
+        72.0
+      ],
+      "resistances": [
+        75.0,
+        79.0
+      ]
+    },
+    {
+      "ticker": "DTE",
+      "close": 146.95,
+      "nearest_sr_pct": 1.327,
+      "num_supports": 1,
+      "num_resistances": 3,
+      "supports": [
+        139.0
+      ],
+      "resistances": [
+        145.0,
+        153.0,
+        156.0
+      ]
+    },
+    {
+      "ticker": "HSY",
+      "close": 170.27,
+      "nearest_sr_pct": 1.3332,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        168.0,
+        174.0,
+        179.0
+      ],
+      "resistances": [
+        183.0,
+        184.0,
+        200.0
+      ]
+    },
+    {
+      "ticker": "SW",
+      "close": 43.59,
+      "nearest_sr_pct": 1.3535,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        36.0,
+        38.0,
+        41.0
+      ],
+      "resistances": [
+        42.0,
+        43.0,
+        48.0
+      ]
+    },
+    {
+      "ticker": "MU",
+      "close": 904.28,
+      "nearest_sr_pct": 1.358,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        652.0,
+        854.0,
+        892.0,
+        991.0
+      ],
+      "resistances": [
+        819.0,
+        1089.0,
+        1255.0
+      ]
+    },
+    {
+      "ticker": "D",
+      "close": 70.97,
+      "nearest_sr_pct": 1.3668,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        60.0,
+        65.0,
+        67.0
+      ],
+      "resistances": [
+        65.0,
+        68.0,
+        70.0
+      ]
+    },
+    {
+      "ticker": "LYV",
+      "close": 178.44,
+      "nearest_sr_pct": 1.3674,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        158.0,
+        160.0,
+        166.0
+      ],
+      "resistances": [
+        171.0,
+        173.0,
+        176.0,
+        188.0
+      ]
+    },
+    {
+      "ticker": "UDR",
+      "close": 39.46,
+      "nearest_sr_pct": 1.3685,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        36.0,
+        37.0
+      ],
+      "resistances": [
+        38.0,
+        40.0,
+        42.0
+      ]
+    },
+    {
+      "ticker": "COP",
+      "close": 111.46,
+      "nearest_sr_pct": 1.3817,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        103.0,
+        113.0
+      ],
+      "resistances": [
+        122.0,
+        126.0,
+        127.0
+      ]
+    },
+    {
+      "ticker": "GLW",
+      "close": 174.41,
+      "nearest_sr_pct": 1.3818,
+      "num_supports": 5,
+      "num_resistances": 3,
+      "supports": [
+        148.0,
+        166.0,
+        170.0,
+        172.0,
+        178.0
+      ],
+      "resistances": [
+        209.0,
+        211.0,
+        272.0
+      ]
+    },
+    {
+      "ticker": "VTR",
+      "close": 92.29,
+      "nearest_sr_pct": 1.3978,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        78.0,
+        80.0,
+        85.0
+      ],
+      "resistances": [
+        85.0,
+        91.0,
+        95.0
+      ]
+    },
+    {
+      "ticker": "SYF",
+      "close": 74.04,
+      "nearest_sr_pct": 1.4046,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        68.0,
+        69.0
+      ],
+      "resistances": [
+        73.0,
+        80.0
+      ]
+    },
+    {
+      "ticker": "EG",
+      "close": 364.13,
+      "nearest_sr_pct": 1.4088,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        315.0,
+        332.0,
+        342.0
+      ],
+      "resistances": [
+        359.0,
+        379.0
+      ]
+    },
+    {
+      "ticker": "JPM",
+      "close": 346.91,
+      "nearest_sr_pct": 1.4154,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        292.0,
+        294.0,
+        324.0
+      ],
+      "resistances": [
+        309.0,
+        315.0,
+        342.0
+      ]
+    },
+    {
+      "ticker": "GWW",
+      "close": 1371.44,
+      "nearest_sr_pct": 1.4262,
+      "num_supports": 5,
+      "num_resistances": 3,
+      "supports": [
+        1132.0,
+        1220.0,
+        1222.0,
+        1304.0,
+        1329.0
+      ],
+      "resistances": [
+        1285.0,
+        1350.0,
+        1391.0
+      ]
+    },
+    {
+      "ticker": "OXY",
+      "close": 53.77,
+      "nearest_sr_pct": 1.432,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        48.0,
+        53.0,
+        55.0
+      ],
+      "resistances": [
+        60.0,
+        61.0
+      ]
+    },
+    {
+      "ticker": "ARE",
+      "close": 48.7,
+      "nearest_sr_pct": 1.4374,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        39.0,
+        44.0,
+        48.0
+      ],
+      "resistances": [
+        54.0,
+        55.0
+      ]
+    },
+    {
+      "ticker": "HUBB",
+      "close": 479.92,
+      "nearest_sr_pct": 1.4419,
+      "num_supports": 3,
+      "num_resistances": 1,
+      "supports": [
+        452.0,
+        465.0,
+        473.0
+      ],
+      "resistances": [
+        547.0
+      ]
+    },
+    {
+      "ticker": "MCHP",
+      "close": 86.26,
+      "nearest_sr_pct": 1.4607,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        82.0,
+        85.0,
+        89.0
+      ],
+      "resistances": [
+        100.0,
+        104.0,
+        105.0
+      ]
+    },
+    {
+      "ticker": "FDX",
+      "close": 313.42,
+      "nearest_sr_pct": 1.4613,
+      "num_supports": 4,
+      "num_resistances": 4,
+      "supports": [
+        284.0,
+        290.0,
+        306.0,
+        318.0
+      ],
+      "resistances": [
+        308.0,
+        324.0,
+        340.0,
+        344.0
+      ]
+    },
+    {
+      "ticker": "MNST",
+      "close": 97.57,
+      "nearest_sr_pct": 1.4656,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        75.0,
+        91.0
+      ],
+      "resistances": [
+        78.0,
+        89.0,
+        99.0
+      ]
+    },
+    {
+      "ticker": "CDNS",
+      "close": 371.5,
+      "nearest_sr_pct": 1.4805,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        332.0,
+        359.0,
+        366.0
+      ],
+      "resistances": [
+        365.0,
+        403.0,
+        417.0
+      ]
+    },
+    {
+      "ticker": "AME",
+      "close": 233.52,
+      "nearest_sr_pct": 1.5074,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        220.0,
+        221.0,
+        224.0,
+        227.0
+      ],
+      "resistances": [
+        230.0,
+        243.0,
+        245.0
+      ]
+    },
+    {
+      "ticker": "TFC",
+      "close": 52.8,
+      "nearest_sr_pct": 1.5152,
+      "num_supports": 4,
+      "num_resistances": 2,
+      "supports": [
+        46.0,
+        47.0,
+        48.0,
+        49.0
+      ],
+      "resistances": [
+        49.0,
+        52.0
+      ]
+    },
+    {
+      "ticker": "EQT",
+      "close": 49.25,
+      "nearest_sr_pct": 1.5228,
+      "num_supports": 2,
+      "num_resistances": 4,
+      "supports": [
+        50.0,
+        55.0
+      ],
+      "resistances": [
+        54.0,
+        56.0,
+        60.0,
+        61.0
+      ]
+    },
+    {
+      "ticker": "STX",
+      "close": 828.3,
+      "nearest_sr_pct": 1.5333,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        695.0,
+        786.0,
+        801.0
+      ],
+      "resistances": [
+        841.0,
+        966.0,
+        1144.0
+      ]
+    },
+    {
+      "ticker": "DOV",
+      "close": 212.26,
+      "nearest_sr_pct": 1.5358,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        205.0,
+        209.0
+      ],
+      "resistances": [
+        230.0,
+        234.0
+      ]
+    },
+    {
+      "ticker": "CCL",
+      "close": 26.59,
+      "nearest_sr_pct": 1.5419,
+      "num_supports": 4,
+      "num_resistances": 2,
+      "supports": [
+        23.0,
+        25.0,
+        26.0,
+        27.0
+      ],
+      "resistances": [
+        28.0,
+        32.0
+      ]
+    },
+    {
+      "ticker": "COHR",
+      "close": 299.38,
+      "nearest_sr_pct": 1.5432,
+      "num_supports": 5,
+      "num_resistances": 2,
+      "supports": [
+        291.0,
+        304.0,
+        335.0,
+        337.0,
+        344.0
+      ],
+      "resistances": [
+        413.0,
+        440.0
+      ]
+    },
+    {
+      "ticker": "ICE",
+      "close": 139.84,
+      "nearest_sr_pct": 1.5446,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        122.0,
+        136.0,
+        152.0
+      ],
+      "resistances": [
+        142.0,
+        158.0,
+        161.0
+      ]
+    },
+    {
+      "ticker": "FFIV",
+      "close": 421.47,
+      "nearest_sr_pct": 1.5493,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        291.0,
+        373.0,
+        374.0,
+        382.0
+      ],
+      "resistances": [
+        404.0,
+        412.0,
+        428.0
+      ]
+    },
+    {
+      "ticker": "FDXF",
+      "close": 141.8,
+      "nearest_sr_pct": 1.5515,
+      "num_supports": 1,
+      "num_resistances": 1,
+      "supports": [
+        144.0
+      ],
+      "resistances": [
+        194.0
+      ]
+    },
+    {
+      "ticker": "AMT",
+      "close": 168.63,
+      "nearest_sr_pct": 1.5596,
+      "num_supports": 4,
+      "num_resistances": 2,
+      "supports": [
+        160.0,
+        166.0,
+        173.0,
+        180.0
+      ],
+      "resistances": [
+        182.0,
+        194.0
+      ]
+    },
+    {
+      "ticker": "EBAY",
+      "close": 112.76,
+      "nearest_sr_pct": 1.5608,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        96.0,
+        105.0,
+        106.0
+      ],
+      "resistances": [
+        111.0,
+        119.0
+      ]
+    },
+    {
+      "ticker": "CRWD",
+      "close": 206.77,
+      "nearest_sr_pct": 1.5621,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        108.0,
+        154.0
+      ],
+      "resistances": [
+        196.0,
+        210.0
+      ]
+    },
+    {
+      "ticker": "ACGL",
+      "close": 98.54,
+      "nearest_sr_pct": 1.5628,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        87.0,
+        91.0,
+        93.0
+      ],
+      "resistances": [
+        97.0,
+        105.0
+      ]
+    },
+    {
+      "ticker": "JCI",
+      "close": 142.76,
+      "nearest_sr_pct": 1.5691,
+      "num_supports": 5,
+      "num_resistances": 4,
+      "supports": [
+        131.0,
+        133.0,
+        136.0,
+        137.0,
+        138.0
+      ],
+      "resistances": [
+        145.0,
+        147.0,
+        149.0,
+        151.0
+      ]
+    },
+    {
+      "ticker": "ECL",
+      "close": 270.25,
+      "nearest_sr_pct": 1.5726,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        242.0,
+        247.0,
+        254.0
+      ],
+      "resistances": [
+        266.0,
+        288.0
+      ]
+    },
+    {
+      "ticker": "AIG",
+      "close": 76.78,
+      "nearest_sr_pct": 1.589,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        72.0,
+        74.0
+      ],
+      "resistances": [
+        78.0,
+        79.0,
+        82.0
+      ]
+    },
+    {
+      "ticker": "EL",
+      "close": 82.31,
+      "nearest_sr_pct": 1.5915,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        75.0,
+        77.0,
+        81.0
+      ],
+      "resistances": [
+        87.0,
+        88.0,
+        92.0
+      ]
+    },
+    {
+      "ticker": "YUM",
+      "close": 152.57,
+      "nearest_sr_pct": 1.5927,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        145.0,
+        149.0,
+        150.0
+      ],
+      "resistances": [
+        155.0,
+        160.0,
+        163.0,
+        170.0
+      ]
+    },
+    {
+      "ticker": "IDXX",
+      "close": 557.02,
+      "nearest_sr_pct": 1.6193,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        519.0,
+        523.0,
+        544.0,
+        548.0
+      ],
+      "resistances": [
+        577.0,
+        581.0,
+        585.0
+      ]
+    },
+    {
+      "ticker": "ECHO",
+      "close": 96.57,
+      "nearest_sr_pct": 1.6258,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        95.0,
+        117.0
+      ],
+      "resistances": [
+        105.0,
+        131.0,
+        147.0
+      ]
+    },
+    {
+      "ticker": "AFL",
+      "close": 121.01,
+      "nearest_sr_pct": 1.661,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        109.0,
+        111.0,
+        114.0
+      ],
+      "resistances": [
+        116.0,
+        119.0
+      ]
+    },
+    {
+      "ticker": "EVRG",
+      "close": 85.42,
+      "nearest_sr_pct": 1.6624,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        80.0,
+        82.0
+      ],
+      "resistances": [
+        83.0,
+        84.0,
+        89.0
+      ]
+    },
+    {
+      "ticker": "LHX",
+      "close": 286.82,
+      "nearest_sr_pct": 1.6805,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        282.0,
+        295.0,
+        299.0
+      ],
+      "resistances": [
+        304.0,
+        314.0,
+        319.0
+      ]
+    },
+    {
+      "ticker": "FCX",
+      "close": 60.97,
+      "nearest_sr_pct": 1.6894,
+      "num_supports": 4,
+      "num_resistances": 2,
+      "supports": [
+        55.0,
+        56.0,
+        58.0,
+        62.0
+      ],
+      "resistances": [
+        69.0,
+        72.0
+      ]
+    },
+    {
+      "ticker": "ITW",
+      "close": 271.41,
+      "nearest_sr_pct": 1.6912,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        241.0,
+        243.0,
+        246.0
+      ],
+      "resistances": [
+        254.0,
+        261.0,
+        276.0
+      ]
+    },
+    {
+      "ticker": "CBRE",
+      "close": 141.41,
+      "nearest_sr_pct": 1.7043,
+      "num_supports": 4,
+      "num_resistances": 4,
+      "supports": [
+        122.0,
+        126.0,
+        129.0,
+        139.0
+      ],
+      "resistances": [
+        137.0,
+        138.0,
+        145.0,
+        149.0
+      ]
+    },
+    {
+      "ticker": "UPS",
+      "close": 112.94,
+      "nearest_sr_pct": 1.7177,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        94.0,
+        103.0
+      ],
+      "resistances": [
+        108.0,
+        111.0
+      ]
+    },
+    {
+      "ticker": "CSGP",
+      "close": 28.49,
+      "nearest_sr_pct": 1.7199,
+      "num_supports": 4,
+      "num_resistances": 1,
+      "supports": [
+        28.0,
+        31.0,
+        32.0,
+        33.0
+      ],
+      "resistances": [
+        35.0
+      ]
+    },
+    {
+      "ticker": "IFF",
+      "close": 75.31,
+      "nearest_sr_pct": 1.7395,
+      "num_supports": 4,
+      "num_resistances": 4,
+      "supports": [
+        68.0,
+        71.0,
+        72.0,
+        74.0
+      ],
+      "resistances": [
+        80.0,
+        81.0,
+        83.0,
+        84.0
+      ]
+    },
+    {
+      "ticker": "GM",
+      "close": 77.64,
+      "nearest_sr_pct": 1.7517,
+      "num_supports": 4,
+      "num_resistances": 2,
+      "supports": [
+        70.0,
+        74.0,
+        75.0,
+        79.0
+      ],
+      "resistances": [
+        79.0,
+        85.0
+      ]
+    },
+    {
+      "ticker": "MSI",
+      "close": 407.18,
+      "nearest_sr_pct": 1.7633,
+      "num_supports": 5,
+      "num_resistances": 4,
+      "supports": [
+        380.0,
+        389.0,
+        390.0,
+        400.0,
+        423.0
+      ],
+      "resistances": [
+        416.0,
+        418.0,
+        432.0,
+        443.0
+      ]
+    },
+    {
+      "ticker": "RCL",
+      "close": 292.17,
+      "nearest_sr_pct": 1.7695,
+      "num_supports": 5,
+      "num_resistances": 3,
+      "supports": [
+        231.0,
+        249.0,
+        266.0,
+        278.0,
+        279.0
+      ],
+      "resistances": [
+        287.0,
+        299.0,
+        333.0
+      ]
+    },
+    {
+      "ticker": "HUM",
+      "close": 407.78,
+      "nearest_sr_pct": 1.7706,
+      "num_supports": 1,
+      "num_resistances": 3,
+      "supports": [
+        352.0
+      ],
+      "resistances": [
+        315.0,
+        380.0,
+        415.0
+      ]
+    },
+    {
+      "ticker": "ANET",
+      "close": 171.92,
+      "nearest_sr_pct": 1.7915,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        135.0,
+        145.0,
+        155.0,
+        162.0
+      ],
+      "resistances": [
+        175.0,
+        177.0,
+        179.0
+      ]
+    },
+    {
+      "ticker": "MGM",
+      "close": 46.84,
+      "nearest_sr_pct": 1.7933,
+      "num_supports": 2,
+      "num_resistances": 4,
+      "supports": [
+        35.0,
+        46.0
+      ],
+      "resistances": [
+        41.0,
+        50.0,
+        51.0,
+        52.0
+      ]
+    },
+    {
+      "ticker": "NDAQ",
+      "close": 91.36,
+      "nearest_sr_pct": 1.7951,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        77.0,
+        87.0
+      ],
+      "resistances": [
+        93.0,
+        94.0
+      ]
+    },
+    {
+      "ticker": "CRM",
+      "close": 167.0,
+      "nearest_sr_pct": 1.7964,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        146.0,
+        164.0,
+        171.0
+      ],
+      "resistances": [
+        187.0,
+        190.0,
+        211.0
+      ]
+    },
+    {
+      "ticker": "EOG",
+      "close": 137.47,
+      "nearest_sr_pct": 1.7968,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        127.0,
+        129.0,
+        132.0
+      ],
+      "resistances": [
+        135.0,
+        143.0,
+        146.0
+      ]
+    },
+    {
+      "ticker": "ALGN",
+      "close": 181.26,
+      "nearest_sr_pct": 1.7985,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        152.0,
+        166.0,
+        167.0
+      ],
+      "resistances": [
+        178.0,
+        185.0,
+        191.0
+      ]
+    },
+    {
+      "ticker": "FOXA",
+      "close": 55.99,
+      "nearest_sr_pct": 1.8039,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        48.0,
+        61.0,
+        63.0
+      ],
+      "resistances": [
+        57.0,
+        65.0,
+        68.0,
+        69.0
+      ]
+    },
+    {
+      "ticker": "MKC",
+      "close": 50.92,
+      "nearest_sr_pct": 1.8068,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        44.0,
+        45.0
+      ],
+      "resistances": [
+        48.0,
+        50.0
+      ]
+    },
+    {
+      "ticker": "CMG",
+      "close": 34.63,
+      "nearest_sr_pct": 1.8192,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        28.0,
+        30.0,
+        32.0
+      ],
+      "resistances": [
+        33.0,
+        34.0
+      ]
+    },
+    {
+      "ticker": "MTB",
+      "close": 248.53,
+      "nearest_sr_pct": 1.8227,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        201.0,
+        210.0,
+        211.0,
+        232.0
+      ],
+      "resistances": [
+        218.0,
+        233.0,
+        244.0
+      ]
+    },
+    {
+      "ticker": "MDT",
+      "close": 80.47,
+      "nearest_sr_pct": 1.8268,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        73.0,
+        74.0,
+        77.0,
+        78.0
+      ],
+      "resistances": [
+        79.0,
+        82.0,
+        86.0
+      ]
+    },
+    {
+      "ticker": "FITB",
+      "close": 57.94,
+      "nearest_sr_pct": 1.8295,
+      "num_supports": 4,
+      "num_resistances": 4,
+      "supports": [
+        46.0,
+        48.0,
+        52.0,
+        56.0
+      ],
+      "resistances": [
+        50.0,
+        51.0,
+        55.0,
+        59.0
+      ]
+    },
+    {
+      "ticker": "FRT",
+      "close": 122.24,
+      "nearest_sr_pct": 1.8325,
+      "num_supports": 4,
+      "num_resistances": 2,
+      "supports": [
+        112.0,
+        118.0,
+        119.0,
+        120.0
+      ],
+      "resistances": [
+        116.0,
+        125.0
+      ]
+    },
+    {
+      "ticker": "HAS",
+      "close": 80.51,
+      "nearest_sr_pct": 1.8507,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        75.0,
+        82.0,
+        83.0
+      ],
+      "resistances": [
+        87.0,
+        98.0
+      ]
+    },
+    {
+      "ticker": "SJM",
+      "close": 109.02,
+      "nearest_sr_pct": 1.8529,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        99.0,
+        107.0
+      ],
+      "resistances": [
+        98.0,
+        117.0,
+        118.0
+      ]
+    },
+    {
+      "ticker": "HIG",
+      "close": 134.5,
+      "nearest_sr_pct": 1.8587,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        126.0,
+        127.0,
+        130.0
+      ],
+      "resistances": [
+        132.0,
+        137.0,
+        141.0
+      ]
+    },
+    {
+      "ticker": "EXE",
+      "close": 87.63,
+      "nearest_sr_pct": 1.8601,
+      "num_supports": 2,
+      "num_resistances": 4,
+      "supports": [
+        86.0,
+        94.0
+      ],
+      "resistances": [
+        93.0,
+        94.0,
+        101.0,
+        102.0
+      ]
+    },
+    {
+      "ticker": "ELV",
+      "close": 390.33,
+      "nearest_sr_pct": 1.8779,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        381.0,
+        383.0
+      ],
+      "resistances": [
+        406.0,
+        427.0
+      ]
+    },
+    {
+      "ticker": "CRH",
+      "close": 103.96,
+      "nearest_sr_pct": 1.8853,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        98.0,
+        100.0,
+        102.0,
+        110.0
+      ],
+      "resistances": [
+        111.0,
+        117.0,
+        119.0
+      ]
+    },
+    {
+      "ticker": "GDDY",
+      "close": 91.27,
+      "nearest_sr_pct": 1.8955,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        72.0,
+        81.0
+      ],
+      "resistances": [
+        93.0,
+        94.0
+      ]
+    },
+    {
+      "ticker": "PHM",
+      "close": 125.39,
+      "nearest_sr_pct": 1.9061,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        108.0,
+        115.0,
+        123.0
+      ],
+      "resistances": [
+        122.0,
+        140.0
+      ]
+    },
+    {
+      "ticker": "CHD",
+      "close": 97.14,
+      "nearest_sr_pct": 1.9148,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        90.0,
+        93.0,
+        94.0
+      ],
+      "resistances": [
+        99.0,
+        100.0
+      ]
+    },
+    {
+      "ticker": "VTRS",
+      "close": 16.68,
+      "nearest_sr_pct": 1.9185,
+      "num_supports": 2,
+      "num_resistances": 1,
+      "supports": [
+        15.0,
+        16.0
+      ],
+      "resistances": [
+        17.0
+      ]
+    },
+    {
+      "ticker": "BG",
+      "close": 115.72,
+      "nearest_sr_pct": 1.9703,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        104.0,
+        118.0,
+        121.0
+      ],
+      "resistances": [
+        133.0,
+        135.0
+      ]
+    },
+    {
+      "ticker": "EW",
+      "close": 87.27,
+      "nearest_sr_pct": 1.9824,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        76.0,
+        83.0
+      ],
+      "resistances": [
+        85.0,
+        89.0,
+        96.0
+      ]
+    },
+    {
+      "ticker": "CINF",
+      "close": 172.43,
+      "nearest_sr_pct": 1.9892,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        155.0,
+        158.0
+      ],
+      "resistances": [
+        169.0,
+        195.0
+      ]
+    },
+    {
+      "ticker": "KEY",
+      "close": 23.53,
+      "nearest_sr_pct": 1.9974,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        20.0,
+        21.0,
+        22.0
+      ],
+      "resistances": [
+        22.0,
+        24.0
+      ]
+    },
+    {
+      "ticker": "PPG",
+      "close": 115.31,
+      "nearest_sr_pct": 2.0033,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        100.0,
+        103.0
+      ],
+      "resistances": [
+        113.0,
+        124.0,
+        126.0
+      ]
+    },
+    {
+      "ticker": "STZ",
+      "close": 131.64,
+      "nearest_sr_pct": 2.0055,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        129.0,
+        135.0,
+        139.0
+      ],
+      "resistances": [
+        148.0,
+        151.0,
+        152.0
+      ]
+    },
+    {
+      "ticker": "JNJ",
+      "close": 247.02,
+      "nearest_sr_pct": 2.0322,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        219.0,
+        221.0,
+        228.0
+      ],
+      "resistances": [
+        234.0,
+        242.0,
+        269.0
+      ]
+    },
+    {
+      "ticker": "ADI",
+      "close": 390.96,
+      "nearest_sr_pct": 2.036,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        371.0,
+        380.0,
+        383.0
+      ],
+      "resistances": [
+        435.0,
+        440.0,
+        446.0
+      ]
+    },
+    {
+      "ticker": "TROW",
+      "close": 118.58,
+      "nearest_sr_pct": 2.0408,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        99.0,
+        100.0,
+        104.0
+      ],
+      "resistances": [
+        106.0,
+        111.0,
+        121.0
+      ]
+    },
+    {
+      "ticker": "ISRG",
+      "close": 388.97,
+      "nearest_sr_pct": 2.0644,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        397.0,
+        398.0,
+        418.0
+      ],
+      "resistances": [
+        431.0,
+        444.0,
+        450.0
+      ]
+    },
+    {
+      "ticker": "GEN",
+      "close": 26.45,
+      "nearest_sr_pct": 2.0794,
+      "num_supports": 1,
+      "num_resistances": 2,
+      "supports": [
+        22.0
+      ],
+      "resistances": [
+        27.0,
+        28.0
+      ]
+    },
+    {
+      "ticker": "TRMB",
+      "close": 51.92,
+      "nearest_sr_pct": 2.0801,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        48.0,
+        53.0
+      ],
+      "resistances": [
+        55.0,
+        58.0,
+        70.0
+      ]
+    },
+    {
+      "ticker": "CMCSA",
+      "close": 23.49,
+      "nearest_sr_pct": 2.086,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        22.0,
+        23.0,
+        24.0
+      ],
+      "resistances": [
+        24.0,
+        25.0,
+        27.0
+      ]
+    },
+    {
+      "ticker": "GIS",
+      "close": 37.22,
+      "nearest_sr_pct": 2.0956,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        31.0,
+        32.0
+      ],
+      "resistances": [
+        34.0,
+        35.0,
+        38.0
+      ]
+    },
+    {
+      "ticker": "NRG",
+      "close": 137.9,
+      "nearest_sr_pct": 2.103,
+      "num_supports": 5,
+      "num_resistances": 3,
+      "supports": [
+        120.0,
+        121.0,
+        127.0,
+        135.0,
+        148.0
+      ],
+      "resistances": [
+        143.0,
+        151.0,
+        159.0
+      ]
+    },
+    {
+      "ticker": "STE",
+      "close": 211.46,
+      "nearest_sr_pct": 2.1091,
+      "num_supports": 3,
+      "num_resistances": 1,
+      "supports": [
+        195.0,
+        198.0,
+        207.0
+      ],
+      "resistances": [
+        219.0
+      ]
+    },
+    {
+      "ticker": "CLX",
+      "close": 96.95,
+      "nearest_sr_pct": 2.1145,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        85.0,
+        88.0,
+        90.0
+      ],
+      "resistances": [
+        99.0,
+        101.0
+      ]
+    },
+    {
+      "ticker": "APA",
+      "close": 34.27,
+      "nearest_sr_pct": 2.1301,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        32.0,
+        35.0,
+        36.0
+      ],
+      "resistances": [
+        35.0,
+        39.0,
+        42.0
+      ]
+    },
+    {
+      "ticker": "C",
+      "close": 134.89,
+      "nearest_sr_pct": 2.1425,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        120.0,
+        125.0
+      ],
+      "resistances": [
+        132.0,
+        145.0,
+        148.0
+      ]
+    },
+    {
+      "ticker": "KHC",
+      "close": 25.45,
+      "nearest_sr_pct": 2.1611,
+      "num_supports": 1,
+      "num_resistances": 2,
+      "supports": [
+        22.0
+      ],
+      "resistances": [
+        24.0,
+        26.0
+      ]
+    },
+    {
+      "ticker": "BMY",
+      "close": 58.72,
+      "nearest_sr_pct": 2.1798,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        53.0,
+        54.0,
+        55.0
+      ],
+      "resistances": [
+        57.0,
+        60.0
+      ]
+    },
+    {
+      "ticker": "WAB",
+      "close": 259.71,
+      "nearest_sr_pct": 2.1986,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        251.0,
+        253.0,
+        254.0
+      ],
+      "resistances": [
+        268.0,
+        274.0,
+        285.0
+      ]
+    },
+    {
+      "ticker": "MMM",
+      "close": 160.53,
+      "nearest_sr_pct": 2.199,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        141.0,
+        148.0,
+        154.0
+      ],
+      "resistances": [
+        157.0,
+        170.0
+      ]
+    },
+    {
+      "ticker": "XEL",
+      "close": 79.25,
+      "nearest_sr_pct": 2.2082,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        76.0,
+        77.0
+      ],
+      "resistances": [
+        81.0,
+        83.0
+      ]
+    },
+    {
+      "ticker": "COST",
+      "close": 916.54,
+      "nearest_sr_pct": 2.2323,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        937.0,
+        984.0,
+        985.0
+      ],
+      "resistances": [
+        970.0,
+        995.0,
+        1031.0,
+        1096.0
+      ]
+    },
+    {
+      "ticker": "COO",
+      "close": 70.6,
+      "nearest_sr_pct": 2.2663,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        59.0,
+        65.0
+      ],
+      "resistances": [
+        63.0,
+        69.0,
+        74.0
+      ]
+    },
+    {
+      "ticker": "PM",
+      "close": 180.88,
+      "nearest_sr_pct": 2.2778,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        169.0,
+        171.0
+      ],
+      "resistances": [
+        185.0,
+        190.0,
+        191.0
+      ]
+    },
+    {
+      "ticker": "DPZ",
+      "close": 310.87,
+      "nearest_sr_pct": 2.2936,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        282.0,
+        296.0,
+        298.0
+      ],
+      "resistances": [
+        318.0,
+        320.0,
+        327.0
+      ]
+    },
+    {
+      "ticker": "ESS",
+      "close": 292.79,
+      "nearest_sr_pct": 2.3191,
+      "num_supports": 1,
+      "num_resistances": 3,
+      "supports": [
+        269.0
+      ],
+      "resistances": [
+        268.0,
+        286.0,
+        303.0
+      ]
+    },
+    {
+      "ticker": "GS",
+      "close": 1152.07,
+      "nearest_sr_pct": 2.3497,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        895.0,
+        1000.0,
+        1003.0
+      ],
+      "resistances": [
+        1098.0,
+        1125.0
+      ]
+    },
+    {
+      "ticker": "MET",
+      "close": 92.2,
+      "nearest_sr_pct": 2.3861,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        77.0,
+        81.0,
+        84.0
+      ],
+      "resistances": [
+        81.0,
+        85.0,
+        90.0
+      ]
+    },
+    {
+      "ticker": "SNA",
+      "close": 403.7,
+      "nearest_sr_pct": 2.4028,
+      "num_supports": 1,
+      "num_resistances": 3,
+      "supports": [
+        353.0
+      ],
+      "resistances": [
+        386.0,
+        394.0,
+        415.0
+      ]
+    },
+    {
+      "ticker": "BSX",
+      "close": 43.04,
+      "nearest_sr_pct": 2.4164,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        42.0,
+        47.0,
+        53.0
+      ],
+      "resistances": [
+        46.0,
+        50.0,
+        58.0,
+        59.0
+      ]
+    },
+    {
+      "ticker": "TDG",
+      "close": 1232.18,
+      "nearest_sr_pct": 2.4201,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        1128.0,
+        1143.0,
+        1202.0
+      ],
+      "resistances": [
+        1262.0,
+        1285.0,
+        1360.0,
+        1362.0
+      ]
+    },
+    {
+      "ticker": "WAT",
+      "close": 374.92,
+      "nearest_sr_pct": 2.4218,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        287.0,
+        324.0,
+        352.0
+      ],
+      "resistances": [
+        357.0,
+        384.0,
+        385.0
+      ]
+    },
+    {
+      "ticker": "A",
+      "close": 134.71,
+      "nearest_sr_pct": 2.4423,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        108.0,
+        110.0,
+        123.0,
+        127.0
+      ],
+      "resistances": [
+        120.0,
+        138.0,
+        141.0
+      ]
+    },
+    {
+      "ticker": "WELL",
+      "close": 233.29,
+      "nearest_sr_pct": 2.4476,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        195.0,
+        203.0,
+        208.0,
+        212.0
+      ],
+      "resistances": [
+        219.0,
+        222.0,
+        239.0
+      ]
+    },
+    {
+      "ticker": "UAL",
+      "close": 120.97,
+      "nearest_sr_pct": 2.4552,
+      "num_supports": 2,
+      "num_resistances": 4,
+      "supports": [
+        88.0,
+        102.0
+      ],
+      "resistances": [
+        104.0,
+        118.0,
+        125.0,
+        139.0
+      ]
+    },
+    {
+      "ticker": "AVGO",
+      "close": 394.28,
+      "nearest_sr_pct": 2.4653,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        356.0,
+        370.0,
+        404.0
+      ],
+      "resistances": [
+        415.0,
+        437.0,
+        442.0,
+        494.0
+      ]
+    },
+    {
+      "ticker": "WST",
+      "close": 359.0,
+      "nearest_sr_pct": 2.507,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        296.0,
+        322.0,
+        349.0
+      ],
+      "resistances": [
+        324.0,
+        331.0,
+        337.0,
+        368.0
+      ]
+    },
+    {
+      "ticker": "PH",
+      "close": 952.95,
+      "nearest_sr_pct": 2.5132,
+      "num_supports": 4,
+      "num_resistances": 2,
+      "supports": [
+        815.0,
+        839.0,
+        859.0,
+        929.0
+      ],
+      "resistances": [
+        880.0,
+        1004.0
+      ]
+    },
+    {
+      "ticker": "DRI",
+      "close": 196.06,
+      "nearest_sr_pct": 2.5196,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        188.0,
+        190.0
+      ],
+      "resistances": [
+        201.0,
+        209.0,
+        218.0
+      ]
+    },
+    {
+      "ticker": "CBOE",
+      "close": 277.11,
+      "nearest_sr_pct": 2.5658,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        227.0,
+        270.0
+      ],
+      "resistances": [
+        306.0,
+        370.0
+      ]
+    },
+    {
+      "ticker": "ARES",
+      "close": 124.79,
+      "nearest_sr_pct": 2.5723,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        106.0,
+        108.0,
+        118.0,
+        119.0
+      ],
+      "resistances": [
+        128.0,
+        130.0,
+        140.0
+      ]
+    },
+    {
+      "ticker": "LDOS",
+      "close": 108.21,
+      "nearest_sr_pct": 2.5783,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        99.0,
+        121.0
+      ],
+      "resistances": [
+        111.0,
+        134.0,
+        153.0
+      ]
+    },
+    {
+      "ticker": "DGX",
+      "close": 201.77,
+      "nearest_sr_pct": 2.5921,
+      "num_supports": 4,
+      "num_resistances": 2,
+      "supports": [
+        185.0,
+        187.0,
+        190.0,
+        192.0
+      ],
+      "resistances": [
+        207.0,
+        218.0
+      ]
+    },
+    {
+      "ticker": "HCA",
+      "close": 378.85,
+      "nearest_sr_pct": 2.6,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        356.0,
+        369.0,
+        420.0
+      ],
+      "resistances": [
+        399.0,
+        430.0
+      ]
+    },
+    {
+      "ticker": "MAS",
+      "close": 78.04,
+      "nearest_sr_pct": 2.614,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        63.0,
+        68.0,
+        76.0
+      ],
+      "resistances": [
+        72.0,
+        74.0,
+        76.0,
+        83.0
+      ]
+    },
+    {
+      "ticker": "JBHT",
+      "close": 276.28,
+      "nearest_sr_pct": 2.635,
+      "num_supports": 4,
+      "num_resistances": 2,
+      "supports": [
+        231.0,
+        237.0,
+        265.0,
+        269.0
+      ],
+      "resistances": [
+        294.0,
+        295.0
+      ]
+    },
+    {
+      "ticker": "CPRT",
+      "close": 27.28,
+      "nearest_sr_pct": 2.6393,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        28.0,
+        30.0,
+        32.0,
+        33.0
+      ],
+      "resistances": [
+        31.0,
+        34.0,
+        36.0
+      ]
+    },
+    {
+      "ticker": "CFG",
+      "close": 71.12,
+      "nearest_sr_pct": 2.6434,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        60.0,
+        68.0
+      ],
+      "resistances": [
+        64.0,
+        66.0,
+        73.0
+      ]
+    },
+    {
+      "ticker": "T",
+      "close": 21.43,
+      "nearest_sr_pct": 2.6598,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        20.0,
+        22.0,
+        24.0
+      ],
+      "resistances": [
+        23.0,
+        25.0
+      ]
+    },
+    {
+      "ticker": "WRB",
+      "close": 69.88,
+      "nearest_sr_pct": 2.6903,
+      "num_supports": 2,
+      "num_resistances": 1,
+      "supports": [
+        62.0,
+        64.0
+      ],
+      "resistances": [
+        68.0
+      ]
+    },
+    {
+      "ticker": "PSKY",
+      "close": 9.25,
+      "nearest_sr_pct": 2.7027,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        9.0,
+        10.0
+      ],
+      "resistances": [
+        10.0,
+        11.0
+      ]
+    },
+    {
+      "ticker": "VZ",
+      "close": 42.83,
+      "nearest_sr_pct": 2.7317,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        40.0,
+        44.0,
+        45.0
+      ],
+      "resistances": [
+        47.0,
+        48.0
+      ]
+    },
+    {
+      "ticker": "PNW",
+      "close": 107.07,
+      "nearest_sr_pct": 2.7365,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        97.0,
+        98.0,
+        102.0
+      ],
+      "resistances": [
+        103.0,
+        104.0,
+        110.0
+      ]
+    },
+    {
+      "ticker": "V",
+      "close": 355.14,
+      "nearest_sr_pct": 2.7764,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        309.0,
+        316.0
+      ],
+      "resistances": [
+        335.0,
+        341.0,
+        365.0
+      ]
+    },
+    {
+      "ticker": "GILD",
+      "close": 131.7,
+      "nearest_sr_pct": 2.8094,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        121.0,
+        127.0,
+        128.0
+      ],
+      "resistances": [
+        128.0,
+        136.0,
+        137.0,
+        138.0
+      ]
+    },
+    {
+      "ticker": "BXP",
+      "close": 68.94,
+      "nearest_sr_pct": 2.814,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        57.0,
+        58.0,
+        62.0
+      ],
+      "resistances": [
+        60.0,
+        67.0,
+        71.0
+      ]
+    },
+    {
+      "ticker": "BKNG",
+      "close": 182.8,
+      "nearest_sr_pct": 2.8446,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        150.0,
+        158.0
+      ],
+      "resistances": [
+        172.0,
+        177.0,
+        188.0
+      ]
+    },
+    {
+      "ticker": "FLEX",
+      "close": 128.72,
+      "nearest_sr_pct": 2.89,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        121.0,
+        125.0,
+        138.0
+      ],
+      "resistances": [
+        147.0,
+        166.0,
+        167.0
+      ]
+    },
+    {
+      "ticker": "CSX",
+      "close": 49.43,
+      "nearest_sr_pct": 2.893,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        44.0,
+        45.0
+      ],
+      "resistances": [
+        46.0,
+        47.0,
+        48.0
+      ]
+    },
+    {
+      "ticker": "PCG",
+      "close": 17.51,
+      "nearest_sr_pct": 2.9126,
+      "num_supports": 3,
+      "num_resistances": 1,
+      "supports": [
+        15.0,
+        16.0,
+        17.0
+      ],
+      "resistances": [
+        17.0
+      ]
+    },
+    {
+      "ticker": "TXN",
+      "close": 301.19,
+      "nearest_sr_pct": 2.9251,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        274.0,
+        276.0
+      ],
+      "resistances": [
+        310.0,
+        332.0,
+        334.0
+      ]
+    },
+    {
+      "ticker": "RVTY",
+      "close": 111.35,
+      "nearest_sr_pct": 3.0085,
+      "num_supports": 5,
+      "num_resistances": 4,
+      "supports": [
+        81.0,
+        93.0,
+        97.0,
+        98.0,
+        108.0
+      ],
+      "resistances": [
+        103.0,
+        105.0,
+        106.0,
+        116.0
+      ]
+    },
+    {
+      "ticker": "HD",
+      "close": 341.44,
+      "nearest_sr_pct": 3.0576,
+      "num_supports": 4,
+      "num_resistances": 1,
+      "supports": [
+        287.0,
+        305.0,
+        322.0,
+        331.0
+      ],
+      "resistances": [
+        359.0
+      ]
+    },
+    {
+      "ticker": "HOOD",
+      "close": 115.54,
+      "nearest_sr_pct": 3.0639,
+      "num_supports": 4,
+      "num_resistances": 4,
+      "supports": [
+        70.0,
+        73.0,
+        79.0,
+        93.0
+      ],
+      "resistances": [
+        82.0,
+        94.0,
+        112.0,
+        120.0
+      ]
+    },
+    {
+      "ticker": "ZBRA",
+      "close": 255.17,
+      "nearest_sr_pct": 3.0685,
+      "num_supports": 4,
+      "num_resistances": 1,
+      "supports": [
+        212.0,
+        214.0,
+        216.0,
+        234.0
+      ],
+      "resistances": [
+        263.0
+      ]
+    },
+    {
+      "ticker": "HONA",
+      "close": 212.55,
+      "nearest_sr_pct": 3.0816,
+      "num_supports": 1,
+      "num_resistances": 1,
+      "supports": [
+        206.0
+      ],
+      "resistances": [
+        267.0
+      ]
+    },
+    {
+      "ticker": "TYL",
+      "close": 303.52,
+      "nearest_sr_pct": 3.1365,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        271.0,
+        294.0
+      ],
+      "resistances": [
+        331.0,
+        332.0,
+        367.0
+      ]
+    },
+    {
+      "ticker": "STLD",
+      "close": 235.56,
+      "nearest_sr_pct": 3.1584,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        216.0,
+        219.0,
+        259.0
+      ],
+      "resistances": [
+        243.0,
+        288.0
+      ]
+    },
+    {
+      "ticker": "CCI",
+      "close": 79.47,
+      "nearest_sr_pct": 3.1836,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        74.0,
+        82.0,
+        84.0,
+        88.0
+      ],
+      "resistances": [
+        92.0,
+        93.0,
+        94.0
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "close": 529.14,
+      "nearest_sr_pct": 3.1863,
+      "num_supports": 4,
+      "num_resistances": 4,
+      "supports": [
+        393.0,
+        437.0,
+        495.0,
+        498.0
+      ],
+      "resistances": [
+        469.0,
+        546.0,
+        563.0,
+        585.0
+      ]
+    },
+    {
+      "ticker": "LITE",
+      "close": 752.0,
+      "nearest_sr_pct": 3.1915,
+      "num_supports": 6,
+      "num_resistances": 3,
+      "supports": [
+        680.0,
+        776.0,
+        780.0,
+        807.0,
+        845.0,
+        855.0
+      ],
+      "resistances": [
+        998.0,
+        1050.0,
+        1086.0
+      ]
+    },
+    {
+      "ticker": "WMB",
+      "close": 74.38,
+      "nearest_sr_pct": 3.1998,
+      "num_supports": 4,
+      "num_resistances": 2,
+      "supports": [
+        69.0,
+        70.0,
+        71.0,
+        72.0
+      ],
+      "resistances": [
+        77.0,
+        79.0
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "close": 327.5,
+      "nearest_sr_pct": 3.2061,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        265.0,
+        274.0,
+        287.0
+      ],
+      "resistances": [
+        302.0,
+        317.0
+      ]
+    },
+    {
+      "ticker": "AMCR",
+      "close": 43.4,
+      "nearest_sr_pct": 3.2258,
+      "num_supports": 4,
+      "num_resistances": 4,
+      "supports": [
+        36.0,
+        37.0,
+        40.0,
+        41.0
+      ],
+      "resistances": [
+        39.0,
+        41.0,
+        42.0,
+        45.0
+      ]
+    },
+    {
+      "ticker": "CHTR",
+      "close": 131.24,
+      "nearest_sr_pct": 3.2307,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        124.0,
+        127.0,
+        137.0
+      ],
+      "resistances": [
+        148.0,
+        151.0,
+        168.0
+      ]
+    },
+    {
+      "ticker": "DASH",
+      "close": 190.16,
+      "nearest_sr_pct": 3.2394,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        146.0,
+        147.0,
+        164.0
+      ],
+      "resistances": [
+        167.0,
+        184.0,
+        199.0
+      ]
+    },
+    {
+      "ticker": "TTD",
+      "close": 19.37,
+      "nearest_sr_pct": 3.2524,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        17.0,
+        20.0
+      ],
+      "resistances": [
+        24.0,
+        25.0
+      ]
+    },
+    {
+      "ticker": "NEE",
+      "close": 89.1,
+      "nearest_sr_pct": 3.2548,
+      "num_supports": 3,
+      "num_resistances": 1,
+      "supports": [
+        83.0,
+        86.0,
+        92.0
+      ],
+      "resistances": [
+        98.0
+      ]
+    },
+    {
+      "ticker": "FISV",
+      "close": 50.36,
+      "nearest_sr_pct": 3.2566,
+      "num_supports": 2,
+      "num_resistances": 4,
+      "supports": [
+        47.0,
+        52.0
+      ],
+      "resistances": [
+        55.0,
+        58.0,
+        59.0,
+        64.0
+      ]
+    },
+    {
+      "ticker": "ADBE",
+      "close": 224.56,
+      "nearest_sr_pct": 3.3131,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        190.0,
+        232.0,
+        237.0
+      ],
+      "resistances": [
+        259.0,
+        265.0,
+        275.0
+      ]
+    },
+    {
+      "ticker": "CMI",
+      "close": 666.13,
+      "nearest_sr_pct": 3.3222,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        628.0,
+        630.0,
+        635.0,
+        644.0
+      ],
+      "resistances": [
+        694.0,
+        716.0,
+        738.0
+      ]
+    },
+    {
+      "ticker": "APTV",
+      "close": 58.96,
+      "nearest_sr_pct": 3.3243,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        52.0,
+        57.0
+      ],
+      "resistances": [
+        63.0,
+        78.0
+      ]
+    },
+    {
+      "ticker": "EXPE",
+      "close": 267.11,
+      "nearest_sr_pct": 3.3282,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        206.0,
+        216.0,
+        233.0
+      ],
+      "resistances": [
+        232.0,
+        257.0,
+        276.0
+      ]
+    },
+    {
+      "ticker": "SOLV",
+      "close": 78.37,
+      "nearest_sr_pct": 3.3559,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        65.0,
+        73.0,
+        75.0
+      ],
+      "resistances": [
+        81.0,
+        83.0
+      ]
+    },
+    {
+      "ticker": "ADSK",
+      "close": 208.98,
+      "nearest_sr_pct": 3.3592,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        186.0,
+        217.0,
+        225.0
+      ],
+      "resistances": [
+        216.0,
+        250.0,
+        251.0,
+        255.0
+      ]
+    },
+    {
+      "ticker": "QCOM",
+      "close": 177.98,
+      "nearest_sr_pct": 3.3599,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        172.0,
+        190.0
+      ],
+      "resistances": [
+        233.0,
+        247.0,
+        259.0
+      ]
+    },
+    {
+      "ticker": "SWK",
+      "close": 87.96,
+      "nearest_sr_pct": 3.3652,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        71.0,
+        74.0,
+        85.0
+      ],
+      "resistances": [
+        80.0,
+        81.0,
+        95.0
+      ]
+    },
+    {
+      "ticker": "NEM",
+      "close": 95.21,
+      "nearest_sr_pct": 3.3715,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        91.0,
+        92.0,
+        104.0,
+        107.0
+      ],
+      "resistances": [
+        99.0,
+        112.0,
+        121.0
+      ]
+    },
+    {
+      "ticker": "TT",
+      "close": 480.2,
+      "nearest_sr_pct": 3.3736,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        439.0,
+        440.0,
+        464.0
+      ],
+      "resistances": [
+        502.0,
+        506.0
+      ]
+    },
+    {
+      "ticker": "HRL",
+      "close": 25.15,
+      "nearest_sr_pct": 3.3797,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        19.0,
+        24.0
+      ],
+      "resistances": [
+        24.0,
+        26.0
+      ]
+    },
+    {
+      "ticker": "ETN",
+      "close": 412.86,
+      "nearest_sr_pct": 3.4249,
+      "num_supports": 4,
+      "num_resistances": 4,
+      "supports": [
+        368.0,
+        375.0,
+        387.0,
+        388.0
+      ],
+      "resistances": [
+        427.0,
+        428.0,
+        434.0,
+        437.0
+      ]
+    },
+    {
+      "ticker": "ODFL",
+      "close": 225.23,
+      "nearest_sr_pct": 3.4498,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        187.0,
+        190.0,
+        212.0
+      ],
+      "resistances": [
+        233.0,
+        252.0
+      ]
+    },
+    {
+      "ticker": "COIN",
+      "close": 167.21,
+      "nearest_sr_pct": 3.4627,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        139.0,
+        148.0,
+        178.0,
+        183.0
+      ],
+      "resistances": [
+        173.0,
+        176.0,
+        222.0
+      ]
+    },
+    {
+      "ticker": "VRT",
+      "close": 304.57,
+      "nearest_sr_pct": 3.4705,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        275.0,
+        287.0,
+        294.0
+      ],
+      "resistances": [
+        345.0,
+        359.0,
+        380.0
+      ]
+    },
+    {
+      "ticker": "PRU",
+      "close": 115.04,
+      "nearest_sr_pct": 3.5118,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        99.0,
+        100.0,
+        105.0
+      ],
+      "resistances": [
+        104.0,
+        111.0
+      ]
+    },
+    {
+      "ticker": "MRSH",
+      "close": 176.22,
+      "nearest_sr_pct": 3.5297,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        157.0,
+        158.0,
+        160.0
+      ],
+      "resistances": [
+        169.0,
+        170.0
+      ]
+    },
+    {
+      "ticker": "PTC",
+      "close": 123.61,
+      "nearest_sr_pct": 3.5515,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        108.0,
+        111.0,
+        133.0,
+        138.0
+      ],
+      "resistances": [
+        128.0,
+        149.0,
+        154.0
+      ]
+    },
+    {
+      "ticker": "UNP",
+      "close": 288.36,
+      "nearest_sr_pct": 3.5927,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        255.0,
+        259.0,
+        260.0
+      ],
+      "resistances": [
+        269.0,
+        274.0,
+        275.0,
+        278.0
+      ]
+    },
+    {
+      "ticker": "OMC",
+      "close": 80.93,
+      "nearest_sr_pct": 3.6204,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        69.0,
+        70.0,
+        73.0
+      ],
+      "resistances": [
+        75.0,
+        76.0,
+        78.0
+      ]
+    },
+    {
+      "ticker": "DVA",
+      "close": 231.61,
+      "nearest_sr_pct": 3.6225,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        148.0,
+        187.0,
+        192.0
+      ],
+      "resistances": [
+        203.0,
+        240.0
+      ]
+    },
+    {
+      "ticker": "KIM",
+      "close": 25.09,
+      "nearest_sr_pct": 3.6269,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        23.0,
+        24.0
+      ],
+      "resistances": [
+        24.0,
+        26.0
+      ]
+    },
+    {
+      "ticker": "NFLX",
+      "close": 73.68,
+      "nearest_sr_pct": 3.6374,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        71.0,
+        85.0
+      ],
+      "resistances": [
+        78.0,
+        91.0,
+        95.0
+      ]
+    },
+    {
+      "ticker": "AIZ",
+      "close": 273.92,
+      "nearest_sr_pct": 3.6799,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        226.0,
+        245.0
+      ],
+      "resistances": [
+        260.0,
+        284.0
+      ]
+    },
+    {
+      "ticker": "CPT",
+      "close": 111.87,
+      "nearest_sr_pct": 3.6918,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        102.0,
+        104.0,
+        107.0
+      ],
+      "resistances": [
+        106.0,
+        116.0,
+        120.0
+      ]
+    },
+    {
+      "ticker": "SBAC",
+      "close": 187.09,
+      "nearest_sr_pct": 3.6934,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        174.0,
+        194.0,
+        196.0
+      ],
+      "resistances": [
+        211.0,
+        221.0
+      ]
+    },
+    {
+      "ticker": "NCLH",
+      "close": 19.73,
+      "nearest_sr_pct": 3.6999,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        15.0,
+        18.0,
+        19.0
+      ],
+      "resistances": [
+        19.0,
+        22.0
+      ]
+    },
+    {
+      "ticker": "MPWR",
+      "close": 1352.66,
+      "nearest_sr_pct": 3.7216,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        1232.0,
+        1403.0,
+        1411.0,
+        1486.0
+      ],
+      "resistances": [
+        1664.0,
+        1673.0,
+        1711.0
+      ]
+    },
+    {
+      "ticker": "EFX",
+      "close": 171.61,
+      "nearest_sr_pct": 3.7236,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        151.0,
+        156.0
+      ],
+      "resistances": [
+        178.0,
+        179.0,
+        180.0
+      ]
+    },
+    {
+      "ticker": "KVUE",
+      "close": 18.7,
+      "nearest_sr_pct": 3.7433,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        17.0,
+        18.0
+      ],
+      "resistances": [
+        18.0,
+        20.0
+      ]
+    },
+    {
+      "ticker": "TPR",
+      "close": 140.26,
+      "nearest_sr_pct": 3.7502,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        128.0,
+        135.0
+      ],
+      "resistances": [
+        146.0,
+        149.0,
+        157.0
+      ]
+    },
+    {
+      "ticker": "ES",
+      "close": 73.79,
+      "nearest_sr_pct": 3.781,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        66.0,
+        67.0
+      ],
+      "resistances": [
+        70.0,
+        71.0
+      ]
+    },
+    {
+      "ticker": "CRL",
+      "close": 228.22,
+      "nearest_sr_pct": 3.8472,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        146.0,
+        162.0,
+        179.0,
+        218.0
+      ],
+      "resistances": [
+        194.0,
+        195.0,
+        237.0
+      ]
+    },
+    {
+      "ticker": "TSCO",
+      "close": 30.17,
+      "nearest_sr_pct": 3.878,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        28.0,
+        29.0
+      ],
+      "resistances": [
+        32.0,
+        33.0
+      ]
+    },
+    {
+      "ticker": "COR",
+      "close": 296.57,
+      "nearest_sr_pct": 3.9013,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        244.0,
+        261.0,
+        269.0
+      ],
+      "resistances": [
+        277.0,
+        285.0,
+        310.0
+      ]
+    },
+    {
+      "ticker": "PANW",
+      "close": 354.02,
+      "nearest_sr_pct": 3.9489,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        251.0,
+        315.0
+      ],
+      "resistances": [
+        303.0,
+        368.0
+      ]
+    },
+    {
+      "ticker": "AON",
+      "close": 355.15,
+      "nearest_sr_pct": 3.9842,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        306.0,
+        311.0,
+        314.0
+      ],
+      "resistances": [
+        330.0,
+        341.0
+      ]
+    },
+    {
+      "ticker": "BLDR",
+      "close": 76.05,
+      "nearest_sr_pct": 4.0105,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        65.0,
+        72.0,
+        73.0
+      ],
+      "resistances": [
+        80.0,
+        91.0
+      ]
+    },
+    {
+      "ticker": "NVR",
+      "close": 6497.57,
+      "nearest_sr_pct": 4.0257,
+      "num_supports": 1,
+      "num_resistances": 2,
+      "supports": [
+        5501.0
+      ],
+      "resistances": [
+        6236.0,
+        6956.0
+      ]
+    },
+    {
+      "ticker": "CF",
+      "close": 117.82,
+      "nearest_sr_pct": 4.091,
+      "num_supports": 3,
+      "num_resistances": 1,
+      "supports": [
+        101.0,
+        111.0,
+        113.0
+      ],
+      "resistances": [
+        130.0
+      ]
+    },
+    {
+      "ticker": "WDAY",
+      "close": 141.82,
+      "nearest_sr_pct": 4.1038,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        112.0,
+        113.0
+      ],
+      "resistances": [
+        133.0,
+        136.0,
+        159.0
+      ]
+    },
+    {
+      "ticker": "SMCI",
+      "close": 26.89,
+      "nearest_sr_pct": 4.1279,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        25.0,
+        28.0,
+        29.0
+      ],
+      "resistances": [
+        36.0,
+        37.0,
+        51.0
+      ]
+    },
+    {
+      "ticker": "PSX",
+      "close": 196.16,
+      "nearest_sr_pct": 4.1599,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        164.0,
+        170.0
+      ],
+      "resistances": [
+        180.0,
+        185.0,
+        188.0
+      ]
+    },
+    {
+      "ticker": "MOS",
+      "close": 23.04,
+      "nearest_sr_pct": 4.1667,
+      "num_supports": 2,
+      "num_resistances": 1,
+      "supports": [
+        20.0,
+        21.0
+      ],
+      "resistances": [
+        24.0
+      ]
+    },
+    {
+      "ticker": "WYNN",
+      "close": 97.05,
+      "nearest_sr_pct": 4.1731,
+      "num_supports": 1,
+      "num_resistances": 3,
+      "supports": [
+        93.0
+      ],
+      "resistances": [
+        108.0,
+        109.0,
+        111.0
+      ]
+    },
+    {
+      "ticker": "BAC",
+      "close": 61.59,
+      "nearest_sr_pct": 4.2052,
+      "num_supports": 4,
+      "num_resistances": 2,
+      "supports": [
+        49.0,
+        50.0,
+        52.0,
+        57.0
+      ],
+      "resistances": [
+        54.0,
+        59.0
+      ]
+    },
+    {
+      "ticker": "VRTX",
+      "close": 477.08,
+      "nearest_sr_pct": 4.2089,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        412.0,
+        420.0,
+        426.0
+      ],
+      "resistances": [
+        453.0,
+        457.0,
+        534.0
+      ]
+    },
+    {
+      "ticker": "CTSH",
+      "close": 43.18,
+      "nearest_sr_pct": 4.2149,
+      "num_supports": 2,
+      "num_resistances": 1,
+      "supports": [
+        37.0,
+        45.0
+      ],
+      "resistances": [
+        58.0
+      ]
+    },
+    {
+      "ticker": "VST",
+      "close": 160.23,
+      "nearest_sr_pct": 4.2252,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        132.0,
+        138.0,
+        148.0,
+        153.0
+      ],
+      "resistances": [
+        167.0,
+        168.0,
+        171.0
+      ]
+    },
+    {
+      "ticker": "VRSN",
+      "close": 270.52,
+      "nearest_sr_pct": 4.2437,
+      "num_supports": 2,
+      "num_resistances": 1,
+      "supports": [
+        245.0,
+        282.0
+      ],
+      "resistances": [
+        312.0
+      ]
+    },
+    {
+      "ticker": "TSN",
+      "close": 57.47,
+      "nearest_sr_pct": 4.2979,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        55.0,
+        62.0
+      ],
+      "resistances": [
+        60.0,
+        69.0
+      ]
+    },
+    {
+      "ticker": "CTAS",
+      "close": 192.37,
+      "nearest_sr_pct": 4.351,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        161.0,
+        168.0
+      ],
+      "resistances": [
+        176.0,
+        184.0
+      ]
+    },
+    {
+      "ticker": "JKHY",
+      "close": 148.47,
+      "nearest_sr_pct": 4.3578,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        121.0,
+        132.0
+      ],
+      "resistances": [
+        133.0,
+        142.0,
+        155.0
+      ]
+    },
+    {
+      "ticker": "INCY",
+      "close": 115.09,
+      "nearest_sr_pct": 4.4226,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        92.0,
+        93.0,
+        94.0,
+        96.0
+      ],
+      "resistances": [
+        99.0,
+        103.0,
+        110.0
+      ]
+    },
+    {
+      "ticker": "FICO",
+      "close": 1205.79,
+      "nearest_sr_pct": 4.4958,
+      "num_supports": 2,
+      "num_resistances": 5,
+      "supports": [
+        1066.0,
+        1124.0
+      ],
+      "resistances": [
+        1095.0,
+        1134.0,
+        1260.0,
+        1323.0,
+        1336.0
+      ]
+    },
+    {
+      "ticker": "GNRC",
+      "close": 226.58,
+      "nearest_sr_pct": 4.5988,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        211.0,
+        237.0,
+        238.0
+      ],
+      "resistances": [
+        277.0,
+        294.0,
+        296.0
+      ]
+    },
+    {
+      "ticker": "SYY",
+      "close": 80.73,
+      "nearest_sr_pct": 4.6203,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        71.0,
+        73.0,
+        77.0
+      ],
+      "resistances": [
+        77.0,
+        85.0
+      ]
+    },
+    {
+      "ticker": "SNPS",
+      "close": 425.28,
+      "nearest_sr_pct": 4.6369,
+      "num_supports": 1,
+      "num_resistances": 3,
+      "supports": [
+        445.0
+      ],
+      "resistances": [
+        480.0,
+        520.0,
+        539.0
+      ]
+    },
+    {
+      "ticker": "CASY",
+      "close": 808.49,
+      "nearest_sr_pct": 4.637,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        739.0,
+        763.0,
+        771.0
+      ],
+      "resistances": [
+        901.0,
+        928.0
+      ]
+    },
+    {
+      "ticker": "AXON",
+      "close": 541.12,
+      "nearest_sr_pct": 4.6422,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        366.0,
+        374.0,
+        402.0
+      ],
+      "resistances": [
+        414.0,
+        439.0,
+        516.0,
+        665.0
+      ]
+    },
+    {
+      "ticker": "KLAC",
+      "close": 224.5,
+      "nearest_sr_pct": 4.6771,
+      "num_supports": 4,
+      "num_resistances": 2,
+      "supports": [
+        164.0,
+        169.0,
+        211.0,
+        235.0
+      ],
+      "resistances": [
+        191.0,
+        307.0
+      ]
+    },
+    {
+      "ticker": "BRO",
+      "close": 66.86,
+      "nearest_sr_pct": 4.6964,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        54.0,
+        55.0,
+        58.0
+      ],
+      "resistances": [
+        60.0,
+        62.0,
+        70.0
+      ]
+    },
+    {
+      "ticker": "RF",
+      "close": 31.48,
+      "nearest_sr_pct": 4.7014,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        26.0,
+        27.0,
+        30.0
+      ],
+      "resistances": [
+        28.0,
+        30.0
+      ]
+    },
+    {
+      "ticker": "EIX",
+      "close": 76.68,
+      "nearest_sr_pct": 4.7992,
+      "num_supports": 5,
+      "num_resistances": 2,
+      "supports": [
+        64.0,
+        66.0,
+        67.0,
+        68.0,
+        70.0
+      ],
+      "resistances": [
+        71.0,
+        73.0
+      ]
+    },
+    {
+      "ticker": "IR",
+      "close": 79.14,
+      "nearest_sr_pct": 4.8774,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        68.0,
+        70.0,
+        75.0
+      ],
+      "resistances": [
+        73.0,
+        83.0
+      ]
+    },
+    {
+      "ticker": "EXPD",
+      "close": 177.7,
+      "nearest_sr_pct": 4.8959,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        135.0,
+        148.0,
+        159.0
+      ],
+      "resistances": [
+        162.0,
+        169.0
+      ]
+    },
+    {
+      "ticker": "APP",
+      "close": 452.73,
+      "nearest_sr_pct": 5.0207,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        418.0,
+        430.0
+      ],
+      "resistances": [
+        513.0,
+        576.0,
+        622.0
+      ]
+    },
+    {
+      "ticker": "ADP",
+      "close": 247.47,
+      "nearest_sr_pct": 5.039,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        203.0,
+        214.0
+      ],
+      "resistances": [
+        215.0,
+        226.0,
+        235.0
+      ]
+    },
+    {
+      "ticker": "HPE",
+      "close": 47.39,
+      "nearest_sr_pct": 5.0433,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        27.0,
+        41.0,
+        45.0
+      ],
+      "resistances": [
+        35.0,
+        50.0,
+        64.0
+      ]
+    },
+    {
+      "ticker": "ATO",
+      "close": 174.98,
+      "nearest_sr_pct": 5.132,
+      "num_supports": 1,
+      "num_resistances": 1,
+      "supports": [
+        166.0
+      ],
+      "resistances": [
+        190.0
+      ]
+    },
+    {
+      "ticker": "KMB",
+      "close": 106.53,
+      "nearest_sr_pct": 5.191,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        92.0,
+        93.0,
+        100.0
+      ],
+      "resistances": [
+        99.0,
+        101.0,
+        117.0
+      ]
+    },
+    {
+      "ticker": "BAX",
+      "close": 22.15,
+      "nearest_sr_pct": 5.1919,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        16.0,
+        18.0,
+        19.0
+      ],
+      "resistances": [
+        18.0,
+        20.0,
+        21.0,
+        24.0
+      ]
+    },
+    {
+      "ticker": "SLB",
+      "close": 47.55,
+      "nearest_sr_pct": 5.3628,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        45.0,
+        52.0,
+        54.0
+      ],
+      "resistances": [
+        57.0,
+        58.0,
+        59.0
+      ]
+    },
+    {
+      "ticker": "IT",
+      "close": 133.76,
+      "nearest_sr_pct": 5.4127,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        124.0,
+        141.0,
+        142.0
+      ],
+      "resistances": [
+        144.0,
+        161.0,
+        165.0,
+        180.0
+      ]
+    },
+    {
+      "ticker": "RJF",
+      "close": 170.3,
+      "nearest_sr_pct": 5.461,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        141.0,
+        146.0,
+        149.0
+      ],
+      "resistances": [
+        156.0,
+        160.0,
+        161.0
+      ]
+    },
+    {
+      "ticker": "DDOG",
+      "close": 264.46,
+      "nearest_sr_pct": 5.498,
+      "num_supports": 2,
+      "num_resistances": 1,
+      "supports": [
+        213.0,
+        219.0
+      ],
+      "resistances": [
+        279.0
+      ]
+    },
+    {
+      "ticker": "PNC",
+      "close": 254.15,
+      "nearest_sr_pct": 5.5676,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        210.0,
+        215.0,
+        217.0
+      ],
+      "resistances": [
+        223.0,
+        226.0,
+        240.0
+      ]
+    },
+    {
+      "ticker": "ALL",
+      "close": 239.48,
+      "nearest_sr_pct": 5.6289,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        202.0,
+        208.0,
+        218.0
+      ],
+      "resistances": [
+        221.0,
+        225.0,
+        226.0,
+        258.0
+      ]
+    },
+    {
+      "ticker": "META",
+      "close": 681.31,
+      "nearest_sr_pct": 5.7698,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        540.0,
+        556.0,
+        592.0,
+        594.0
+      ],
+      "resistances": [
+        606.0,
+        624.0,
+        642.0
+      ]
+    },
+    {
+      "ticker": "F",
+      "close": 14.18,
+      "nearest_sr_pct": 5.7828,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        11.0,
+        13.0
+      ],
+      "resistances": [
+        15.0,
+        18.0
+      ]
+    },
+    {
+      "ticker": "TRV",
+      "close": 329.19,
+      "nearest_sr_pct": 5.8295,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        286.0,
+        291.0
+      ],
+      "resistances": [
+        309.0,
+        310.0,
+        349.0
+      ]
+    },
+    {
+      "ticker": "DHR",
+      "close": 200.79,
+      "nearest_sr_pct": 5.8718,
+      "num_supports": 2,
+      "num_resistances": 1,
+      "supports": [
+        161.0,
+        174.0
+      ],
+      "resistances": [
+        189.0
+      ]
+    },
+    {
+      "ticker": "NOW",
+      "close": 104.73,
+      "nearest_sr_pct": 5.9868,
+      "num_supports": 2,
+      "num_resistances": 4,
+      "supports": [
+        85.0,
+        89.0
+      ],
+      "resistances": [
+        96.0,
+        111.0,
+        114.0,
+        139.0
+      ]
+    },
+    {
+      "ticker": "GE",
+      "close": 360.35,
+      "nearest_sr_pct": 6.008,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        279.0,
+        281.0,
+        311.0
+      ],
+      "resistances": [
+        310.0,
+        382.0
+      ]
+    },
+    {
+      "ticker": "ABBV",
+      "close": 244.11,
+      "nearest_sr_pct": 6.1898,
+      "num_supports": 4,
+      "num_resistances": 4,
+      "supports": [
+        189.0,
+        199.0,
+        208.0,
+        214.0
+      ],
+      "resistances": [
+        213.0,
+        218.0,
+        229.0,
+        260.0
+      ]
+    },
+    {
+      "ticker": "STT",
+      "close": 186.59,
+      "nearest_sr_pct": 6.2115,
+      "num_supports": 2,
+      "num_resistances": 1,
+      "supports": [
+        147.0,
+        164.0
+      ],
+      "resistances": [
+        175.0
+      ]
+    },
+    {
+      "ticker": "PYPL",
+      "close": 55.52,
+      "nearest_sr_pct": 6.3401,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        40.0,
+        42.0,
+        43.0
+      ],
+      "resistances": [
+        45.0,
+        46.0,
+        52.0
+      ]
+    },
+    {
+      "ticker": "NTRS",
+      "close": 191.13,
+      "nearest_sr_pct": 6.3465,
+      "num_supports": 1,
+      "num_resistances": 2,
+      "supports": [
+        158.0
+      ],
+      "resistances": [
+        169.0,
+        179.0
+      ]
+    },
+    {
+      "ticker": "WTW",
+      "close": 285.12,
+      "nearest_sr_pct": 6.3552,
+      "num_supports": 4,
+      "num_resistances": 2,
+      "supports": [
+        240.0,
+        246.0,
+        248.0,
+        249.0
+      ],
+      "resistances": [
+        261.0,
+        267.0
+      ]
+    },
+    {
+      "ticker": "PAYX",
+      "close": 110.0,
+      "nearest_sr_pct": 6.3636,
+      "num_supports": 3,
+      "num_resistances": 1,
+      "supports": [
+        87.0,
+        93.0,
+        97.0
+      ],
+      "resistances": [
+        103.0
+      ]
+    },
+    {
+      "ticker": "HAL",
+      "close": 35.25,
+      "nearest_sr_pct": 6.383,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        33.0,
+        38.0,
+        39.0
+      ],
+      "resistances": [
+        41.0,
+        42.0,
+        43.0
+      ]
+    },
+    {
+      "ticker": "LRCX",
+      "close": 335.43,
+      "nearest_sr_pct": 6.6869,
+      "num_supports": 5,
+      "num_resistances": 1,
+      "supports": [
+        241.0,
+        264.0,
+        303.0,
+        313.0,
+        361.0
+      ],
+      "resistances": [
+        438.0
+      ]
+    },
+    {
+      "ticker": "TMO",
+      "close": 535.29,
+      "nearest_sr_pct": 6.7795,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        435.0,
+        458.0
+      ],
+      "resistances": [
+        481.0,
+        494.0,
+        499.0
+      ]
+    },
+    {
+      "ticker": "AXP",
+      "close": 358.44,
+      "nearest_sr_pct": 6.8184,
+      "num_supports": 4,
+      "num_resistances": 2,
+      "supports": [
+        299.0,
+        302.0,
+        311.0,
+        334.0
+      ],
+      "resistances": [
+        318.0,
+        324.0
+      ]
+    },
+    {
+      "ticker": "INTU",
+      "close": 279.7,
+      "nearest_sr_pct": 6.9002,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        252.0,
+        299.0
+      ],
+      "resistances": [
+        362.0,
+        416.0,
+        422.0
+      ]
+    },
+    {
+      "ticker": "ON",
+      "close": 92.54,
+      "nearest_sr_pct": 7.0672,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        86.0,
+        108.0
+      ],
+      "resistances": [
+        119.0,
+        132.0,
+        135.0
+      ]
+    },
+    {
+      "ticker": "LVS",
+      "close": 44.79,
+      "nearest_sr_pct": 7.1668,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        48.0,
+        51.0
+      ],
+      "resistances": [
+        54.0,
+        55.0
+      ]
+    },
+    {
+      "ticker": "IP",
+      "close": 36.74,
+      "nearest_sr_pct": 7.4578,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        29.0,
+        32.0
+      ],
+      "resistances": [
+        34.0,
+        40.0
+      ]
+    },
+    {
+      "ticker": "BBY",
+      "close": 85.37,
+      "nearest_sr_pct": 7.4616,
+      "num_supports": 4,
+      "num_resistances": 4,
+      "supports": [
+        54.0,
+        56.0,
+        69.0,
+        72.0
+      ],
+      "resistances": [
+        59.0,
+        77.0,
+        78.0,
+        79.0
+      ]
+    },
+    {
+      "ticker": "SCHW",
+      "close": 102.79,
+      "nearest_sr_pct": 7.5786,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        84.0,
+        88.0
+      ],
+      "resistances": [
+        93.0,
+        95.0
+      ]
+    },
+    {
+      "ticker": "DELL",
+      "close": 412.68,
+      "nearest_sr_pct": 7.5894,
+      "num_supports": 4,
+      "num_resistances": 4,
+      "supports": [
+        201.0,
+        227.0,
+        357.0,
+        379.0
+      ],
+      "resistances": [
+        222.0,
+        264.0,
+        444.0,
+        469.0
+      ]
+    },
+    {
+      "ticker": "LUV",
+      "close": 49.25,
+      "nearest_sr_pct": 7.6142,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        37.0,
+        41.0
+      ],
+      "resistances": [
+        42.0,
+        44.0,
+        53.0
+      ]
+    },
+    {
+      "ticker": "IQV",
+      "close": 206.81,
+      "nearest_sr_pct": 7.6447,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        154.0,
+        162.0
+      ],
+      "resistances": [
+        183.0,
+        191.0
+      ]
+    },
+    {
+      "ticker": "DXCM",
+      "close": 72.73,
+      "nearest_sr_pct": 7.8785,
+      "num_supports": 3,
+      "num_resistances": 1,
+      "supports": [
+        57.0,
+        58.0,
+        67.0
+      ],
+      "resistances": [
+        79.0
+      ]
+    },
+    {
+      "ticker": "DLTR",
+      "close": 127.03,
+      "nearest_sr_pct": 7.8958,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        86.0,
+        105.0,
+        108.0
+      ],
+      "resistances": [
+        99.0,
+        117.0
+      ]
+    },
+    {
+      "ticker": "AMP",
+      "close": 527.28,
+      "nearest_sr_pct": 8.0185,
+      "num_supports": 3,
+      "num_resistances": 5,
+      "supports": [
+        433.0,
+        444.0,
+        457.0
+      ],
+      "resistances": [
+        459.0,
+        477.0,
+        478.0,
+        480.0,
+        485.0
+      ]
+    },
+    {
+      "ticker": "CAH",
+      "close": 224.94,
+      "nearest_sr_pct": 8.0288,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        180.0,
+        194.0
+      ],
+      "resistances": [
+        204.0,
+        243.0
+      ]
+    },
+    {
+      "ticker": "FDS",
+      "close": 251.19,
+      "nearest_sr_pct": 8.2846,
+      "num_supports": 3,
+      "num_resistances": 1,
+      "supports": [
+        197.0,
+        202.0,
+        208.0
+      ],
+      "resistances": [
+        272.0
+      ]
+    },
+    {
+      "ticker": "BKR",
+      "close": 57.25,
+      "nearest_sr_pct": 8.2969,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        52.0,
+        62.0
+      ],
+      "resistances": [
+        66.0,
+        68.0,
+        70.0
+      ]
+    },
+    {
+      "ticker": "PNR",
+      "close": 64.33,
+      "nearest_sr_pct": 8.8139,
+      "num_supports": 3,
+      "num_resistances": 4,
+      "supports": [
+        70.0,
+        71.0,
+        73.0
+      ],
+      "resistances": [
+        76.0,
+        77.0,
+        78.0,
+        94.0
+      ]
+    },
+    {
+      "ticker": "FTNT",
+      "close": 164.51,
+      "nearest_sr_pct": 8.8201,
+      "num_supports": 1,
+      "num_resistances": 1,
+      "supports": [
+        133.0
+      ],
+      "resistances": [
+        150.0
+      ]
+    },
+    {
+      "ticker": "BNY",
+      "close": 162.35,
+      "nearest_sr_pct": 8.8389,
+      "num_supports": 4,
+      "num_resistances": 3,
+      "supports": [
+        130.0,
+        131.0,
+        138.0,
+        142.0
+      ],
+      "resistances": [
+        136.0,
+        145.0,
+        148.0
+      ]
+    },
+    {
+      "ticker": "AMAT",
+      "close": 579.43,
+      "nearest_sr_pct": 8.876,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        377.0,
+        397.0,
+        528.0
+      ],
+      "resistances": [
+        448.0,
+        740.0
+      ]
+    },
+    {
+      "ticker": "MPC",
+      "close": 299.18,
+      "nearest_sr_pct": 9.0848,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        233.0,
+        238.0,
+        241.0
+      ],
+      "resistances": [
+        261.0,
+        264.0,
+        272.0
+      ]
+    },
+    {
+      "ticker": "DOW",
+      "close": 29.7,
+      "nearest_sr_pct": 9.0909,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        27.0,
+        33.0,
+        36.0
+      ],
+      "resistances": [
+        36.0,
+        40.0,
+        41.0
+      ]
+    },
+    {
+      "ticker": "VLO",
+      "close": 292.66,
+      "nearest_sr_pct": 9.1095,
+      "num_supports": 2,
+      "num_resistances": 4,
+      "supports": [
+        226.0,
+        233.0
+      ],
+      "resistances": [
+        254.0,
+        263.0,
+        264.0,
+        266.0
+      ]
+    },
+    {
+      "ticker": "AKAM",
+      "close": 120.01,
+      "nearest_sr_pct": 9.1742,
+      "num_supports": 2,
+      "num_resistances": 1,
+      "supports": [
+        109.0,
+        138.0
+      ],
+      "resistances": [
+        165.0
+      ]
+    },
+    {
+      "ticker": "AJG",
+      "close": 247.77,
+      "nearest_sr_pct": 9.19,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        190.0,
+        199.0,
+        208.0
+      ],
+      "resistances": [
+        210.0,
+        218.0,
+        225.0
+      ]
+    },
+    {
+      "ticker": "WSM",
+      "close": 222.84,
+      "nearest_sr_pct": 9.9444,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        166.0,
+        175.0
+      ],
+      "resistances": [
+        189.0,
+        245.0
+      ]
+    },
+    {
+      "ticker": "LYB",
+      "close": 58.0,
+      "nearest_sr_pct": 10.3448,
+      "num_supports": 2,
+      "num_resistances": 2,
+      "supports": [
+        52.0,
+        70.0
+      ],
+      "resistances": [
+        68.0,
+        78.0
+      ]
+    },
+    {
+      "ticker": "GPC",
+      "close": 121.0,
+      "nearest_sr_pct": 11.5702,
+      "num_supports": 1,
+      "num_resistances": 2,
+      "supports": [
+        90.0
+      ],
+      "resistances": [
+        100.0,
+        135.0
+      ]
+    },
+    {
+      "ticker": "ACN",
+      "close": 137.02,
+      "nearest_sr_pct": 12.3923,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        117.0,
+        120.0,
+        154.0
+      ],
+      "resistances": [
+        182.0,
+        183.0,
+        196.0
+      ]
+    },
+    {
+      "ticker": "MRNA",
+      "close": 68.28,
+      "nearest_sr_pct": 13.5911,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        44.0,
+        46.0
+      ],
+      "resistances": [
+        52.0,
+        59.0,
+        86.0
+      ]
+    },
+    {
+      "ticker": "ALB",
+      "close": 124.74,
+      "nearest_sr_pct": 17.0435,
+      "num_supports": 2,
+      "num_resistances": 3,
+      "supports": [
+        146.0,
+        165.0
+      ],
+      "resistances": [
+        174.0,
+        180.0,
+        220.0
+      ]
+    },
+    {
+      "ticker": "MRVL",
+      "close": 206.26,
+      "nearest_sr_pct": 18.2973,
+      "num_supports": 3,
+      "num_resistances": 3,
+      "supports": [
+        147.0,
+        158.0,
+        244.0
+      ],
+      "resistances": [
+        300.0,
+        324.0,
+        330.0
+      ]
+    },
+    {
+      "ticker": "SWKS",
+      "close": 57.51,
+      "nearest_sr_pct": 19.9791,
+      "num_supports": 1,
+      "num_resistances": 3,
+      "supports": [
+        69.0
+      ],
+      "resistances": [
+        72.0,
+        79.0,
+        85.0
+      ]
+    },
+    {
+      "ticker": "ORCL",
+      "close": 132.49,
+      "nearest_sr_pct": 20.7638,
+      "num_supports": 3,
+      "num_resistances": 2,
+      "supports": [
+        160.0,
+        175.0,
+        178.0
+      ],
+      "resistances": [
+        200.0,
+        249.0
+      ]
+    }
+  ]
+}

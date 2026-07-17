@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S&P 500 Trading Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-base: #060b14;
+      --bg-surface: #0c1524;
+      --bg-card: #111e30;
+      --bg-card-hover: #162436;
+      --border: rgba(255,255,255,0.07);
+      --border-bright: rgba(255,255,255,0.13);
+      --accent: #00d4aa;
+      --accent-dim: rgba(0,212,170,0.12);
+      --accent-glow: rgba(0,212,170,0.25);
+      --up: #00d4aa;
+      --down: #ff4757;
+      --up-dim: rgba(0,212,170,0.12);
+      --down-dim: rgba(255,71,87,0.12);
+      --text-primary: #e8edf5;
+      --text-secondary: #7a8ba0;
+      --text-muted: #4a5a70;
+      --font-display: 'Syne', system-ui, sans-serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-base);
+      color: var(--text-primary);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ─────────────────────────────────────── */
+    .header {
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(6,11,20,0.92);
+      backdrop-filter: blur(12px);
+    }
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand-icon {
+      width: 28px;
+      height: 28px;
+      background: var(--accent);
+      border-radius: 6px;
+      display: grid;
+      place-items: center;
+    }
+    .brand-icon svg { width: 16px; height: 16px; }
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+    }
+    .brand-name span { color: var(--accent); }
+    .header-meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .live-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .live-dot {
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+    .data-timestamp {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+
+    /* ── Main ────────────────────────────────────────── */
+    main { max-width: 1280px; margin: 0 auto; padding: 28px 24px 60px; }
+
+    /* ── Ticker Hero ─────────────────────────────────── */
+    .ticker-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .ticker-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .ticker-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--accent);
+      opacity: 0.6;
+    }
+    .ticker-card.up::before { background: var(--up); opacity: 0.7; }
+    .ticker-card.down::before { background: var(--down); opacity: 0.7; }
+    .ticker-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .ticker-value {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .ticker-sub {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+    }
+    .ticker-change {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 6px;
+      margin-top: 6px;
+    }
+    .ticker-change.up { background: var(--up-dim); color: var(--up); }
+    .ticker-change.down { background: var(--down-dim); color: var(--down); }
+
+    /* ── Section Title ───────────────────────────────── */
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── Controls ────────────────────────────────────── */
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+    .search-wrap {
+      position: relative;
+      flex: 1;
+      min-width: 180px;
+    }
+    .search-wrap svg {
+      position: absolute;
+      left: 11px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px; height: 14px;
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+    .search-input {
+      width: 100%;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 8px 12px 8px 34px;
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      color: var(--text-primary);
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .search-input::placeholder { color: var(--text-muted); }
+    .search-input:focus { border-color: var(--border-bright); }
+
+    .filter-btn {
+      padding: 7px 13px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+    .filter-btn:hover { border-color: var(--border-bright); color: var(--text-primary); }
+    .filter-btn.active-support { background: var(--up-dim); border-color: var(--up); color: var(--up); }
+    .filter-btn.active-resistance { background: var(--down-dim); border-color: var(--down); color: var(--down); }
+    .filter-btn.active-all { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+
+    /* ── SR Table ────────────────────────────────────── */
+    .sr-table-wrap {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .sr-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .sr-table thead th {
+      padding: 11px 16px;
+      text-align: left;
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-card);
+      white-space: nowrap;
+      cursor: pointer;
+      user-select: none;
+      transition: color 0.1s;
+    }
+    .sr-table thead th:hover { color: var(--text-secondary); }
+    .sr-table thead th.sorted { color: var(--accent); }
+    .sr-table thead th .sort-icon { margin-left: 4px; opacity: 0.5; font-size: 0.55rem; }
+    .sr-table thead th.sorted .sort-icon { opacity: 1; }
+
+    .sr-table tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background 0.1s;
+    }
+    .sr-table tbody tr:last-child { border-bottom: none; }
+    .sr-table tbody tr:hover { background: var(--bg-card-hover); }
+
+    .sr-table tbody td {
+      padding: 12px 16px;
+      font-size: 0.82rem;
+      vertical-align: middle;
+    }
+
+    .ticker-cell {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+    .ticker-badge {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 2px 7px;
+      white-space: nowrap;
+    }
+    .ticker-price {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+
+    .type-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 5px;
+      white-space: nowrap;
+    }
+    .type-badge.support { background: var(--up-dim); color: var(--up); }
+    .type-badge.resistance { background: var(--down-dim); color: var(--down); }
+
+    .level-cell {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+    .dist-cell {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 5px;
+      display: inline-block;
+      min-width: 56px;
+      text-align: center;
+    }
+    .dist-cell.tight { background: rgba(255,200,50,0.1); color: #ffc832; }
+    .dist-cell.near { background: var(--up-dim); color: var(--up); }
+    .dist-cell.mid { background: rgba(255,255,255,0.05); color: var(--text-secondary); }
+
+    .count-cell {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+    }
+
+    .sr-levels-cell {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .sr-levels-cell .level-item {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+    .sr-levels-cell .level-item strong {
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    /* ── Pagination ──────────────────────────────────── */
+    .pagination {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+      border-top: 1px solid var(--border);
+    }
+    .page-info {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+    .page-btns {
+      display: flex;
+      gap: 6px;
+    }
+    .page-btn {
+      padding: 5px 11px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-secondary);
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .page-btn:hover:not(:disabled) { border-color: var(--border-bright); color: var(--text-primary); }
+    .page-btn:disabled { opacity: 0.35; cursor: default; }
+    .page-btn.primary { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+
+    /* ── Empty / Loading ────────────────────────────── */
+    .state-message {
+      text-align: center;
+      padding: 60px 24px;
+      color: var(--text-muted);
+    }
+    .state-message .spinner {
+      width: 32px; height: 32px;
+      border: 2px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 14px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .state-message p { font-size: 0.82rem; }
+
+    /* ── Mobile Cards ────────────────────────────────── */
+    .mobile-cards { display: none; }
+
+    /* ── Responsive ─────────────────────────────────── */
+    @media (max-width: 768px) {
+      .header { padding: 0 16px; }
+      main { padding: 20px 16px 50px; }
+      .ticker-hero { grid-template-columns: 1fr; gap: 10px; }
+      .ticker-value { font-size: 1.5rem; }
+      .sr-table-wrap { display: none; }
+      .mobile-cards { display: flex; flex-direction: column; gap: 10px; }
+      .controls { gap: 8px; }
+      .filter-btn { padding: 6px 10px; font-size: 0.72rem; }
+      .header-meta .data-timestamp { display: none; }
+    }
+
+    @media (max-width: 480px) {
+      .brand-name { font-size: 0.9rem; }
+      .brand-icon { width: 24px; height: 24px; }
+    }
+
+    /* ── Scrollbar ───────────────────────────────────── */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 3px; }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="header-brand">
+    <div class="brand-icon">
+      <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polyline points="1,11 5,7 8,9 13,3" stroke="#060b14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="13" cy="3" r="1.5" fill="#060b14"/>
+      </svg>
+    </div>
+    <div class="brand-name">SP<span>500</span> Dashboard</div>
+  </div>
+  <div class="header-meta">
+    <div class="live-badge">
+      <div class="live-dot"></div>
+      Live
+    </div>
+    <div class="data-timestamp" id="ts">—</div>
+  </div>
+</header>
+
+<main>
+
+  <!-- Ticker Hero -->
+  <div class="ticker-hero" id="ticker-hero">
+    <div class="ticker-card" id="spx-card">
+      <div class="ticker-label">S&P 500 Index</div>
+      <div class="ticker-value" id="spx-price">—</div>
+      <div class="ticker-sub">SPX</div>
+      <div id="spx-change"></div>
+    </div>
+    <div class="ticker-card" id="spy-card">
+      <div class="ticker-label">SPDR S&P 500 ETF</div>
+      <div class="ticker-value" id="spy-price">—</div>
+      <div class="ticker-sub">NYSE</div>
+      <div id="spy-change"></div>
+    </div>
+    <div class="ticker-card" id="vix-card">
+      <div class="ticker-label">CBOE Volatility Index</div>
+      <div class="ticker-value" id="vix-price">—</div>
+      <div class="ticker-sub">VIX</div>
+      <div id="vix-change"></div>
+    </div>
+  </div>
+
+  <!-- S/R Levels -->
+  <div class="section-title">Support &amp; Resistance Levels</div>
+
+  <div class="controls">
+    <div class="search-wrap">
+      <svg viewBox="0 0 16 16" fill="none"><circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 10.5L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <input class="search-input" id="search" type="text" placeholder="Search ticker…">
+    </div>
+    <button class="filter-btn active-all" id="filter-all">All</button>
+    <button class="filter-btn" id="filter-support">Support</button>
+    <button class="filter-btn" id="filter-resistance">Resistance</button>
+  </div>
+
+  <!-- Desktop Table -->
+  <div class="sr-table-wrap">
+    <table class="sr-table">
+      <thead>
+        <tr>
+          <th data-sort="ticker">Ticker <span class="sort-icon">↕</span></th>
+          <th data-sort="price">Price <span class="sort-icon">↕</span></th>
+          <th data-sort="type">Type <span class="sort-icon">↕</span></th>
+          <th data-sort="level">Level <span class="sort-icon">↕</span></th>
+          <th data-sort="dist">% Dist <span class="sort-icon">↕</span></th>
+          <th data-sort="other">Other S/R</th>
+        </tr>
+      </thead>
+      <tbody id="sr-tbody"></tbody>
+    </table>
+    <div class="pagination">
+      <div class="page-info" id="page-info"></div>
+      <div class="page-btns">
+        <button class="page-btn" id="prev-btn">← Prev</button>
+        <button class="page-btn primary" id="next-btn">Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Cards -->
+  <div class="mobile-cards" id="mobile-cards"></div>
+
+</main>
+
+<script>
+// ── State ──────────────────────────────────────────────
+let allRows = [];
+let filteredRows = [];
+let currentFilter = 'all';  // all | support | resistance
+let currentSort = { col: 'dist', dir: 'asc' };
+let currentPage = 1;
+const PAGE_SIZE = 50;
+
+// ── Fetch S&P 500 live data via Yahoo Finance ───────────
+async function fetchLiveData() {
+  try {
+    const resp = await fetch(
+      'https://query1.finance.yahoo.com/v8/finance/chart/SPY?interval=1d&range=2d',
+      { headers: { 'User-Agent': 'Mozilla/5.0' } }
+    );
+    const json = await resp.json();
+    const result = json?.chart?.result?.[0];
+    if (!result) throw new Error('No chart result');
+    const meta = result.meta;
+    const price = meta.regularMarketPrice;
+    const prevClose = meta.previousClose ?? meta.chartPreviousClose;
+    const change = price - prevClose;
+    const changePct = (change / prevClose) * 100;
+    const isUp = change >= 0;
+
+    document.getElementById('spy-price').textContent = price?.toFixed(2) ?? '—';
+    const spyChangeEl = document.getElementById('spy-change');
+    spyChangeEl.innerHTML = `<span class="ticker-change ${isUp ? 'up' : 'down'}">${isUp ? '▲' : '▼'} ${Math.abs(change).toFixed(2)} (${isUp ? '+' : ''}${changePct.toFixed(2)}%)</span>`;
+    document.getElementById('spy-card').className = `ticker-card ${isUp ? 'up' : 'down'}`;
+
+    // SPX from ^SPX
+    const spxResp = await fetch(
+      'https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPX?interval=1d&range=2d',
+      { headers: { 'User-Agent': 'Mozilla/5.0' } }
+    );
+    const spxJson = await spxResp.json();
+    const spxResult = spxJson?.chart?.result?.[0];
+    if (spxResult) {
+      const spxMeta = spxResult.meta;
+      const spxPrice = spxMeta.regularMarketPrice;
+      const spxPrev = spxMeta.previousClose ?? spxMeta.chartPreviousClose;
+      const spxChange = spxPrice - spxPrev;
+      const spxPct = (spxChange / spxPrev) * 100;
+      const spxUp = spxChange >= 0;
+      document.getElementById('spx-price').textContent = spxPrice?.toFixed(2) ?? '—';
+      const spxEl = document.getElementById('spx-change');
+      spxEl.innerHTML = `<span class="ticker-change ${spxUp ? 'up' : 'down'}">${spxUp ? '▲' : '▼'} ${Math.abs(spxChange).toFixed(2)} (${spxUp ? '+' : ''}${spxPct.toFixed(2)}%)</span>`;
+      document.getElementById('spx-card').className = `ticker-card ${spxUp ? 'up' : 'down'}`;
+    }
+
+    // VIX from ^VIX
+    const vixResp = await fetch(
+      'https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?interval=1d&range=2d',
+      { headers: { 'User-Agent': 'Mozilla/5.0' } }
+    );
+    const vixJson = await vixResp.json();
+    const vixResult = vixJson?.chart?.result?.[0];
+    if (vixResult) {
+      const vixMeta = vixResult.meta;
+      const vixPrice = vixMeta.regularMarketPrice;
+      const vixPrev = vixMeta.previousClose ?? vixMeta.chartPreviousClose;
+      const vixChange = vixPrice - vixPrev;
+      const vixPct = (vixChange / vixPrev) * 100;
+      const vixUp = vixChange >= 0;
+      document.getElementById('vix-price').textContent = vixPrice?.toFixed(2) ?? '—';
+      const vixEl = document.getElementById('vix-change');
+      vixEl.innerHTML = `<span class="ticker-change ${vixUp ? 'up' : 'down'}">${vixUp ? '▲' : '▼'} ${Math.abs(vixChange).toFixed(2)} (${vixUp ? '+' : ''}${vixPct.toFixed(2)}%)</span>`;
+      document.getElementById('vix-card').className = `ticker-card ${vixUp ? 'up' : 'down'}`;
+    }
+
+    const now = new Date();
+    document.getElementById('ts').textContent = 'Updated ' + now.toLocaleTimeString();
+  } catch (e) {
+    console.warn('Live data fetch failed, using fallback:', e.message);
+    // Fallback values shown while data loads
+    document.getElementById('spy-price').textContent = '—';
+    document.getElementById('spx-price').textContent = '—';
+    document.getElementById('vix-price').textContent = '—';
+    document.getElementById('ts').textContent = 'Market closed';
+  }
+}
+
+// ── Load S/R data ───────────────────────────────────────
+async function loadSRData() {
+  try {
+    const resp = await fetch('./data/results.json');
+    const data = await resp.json();
+    document.getElementById('ts').textContent =
+      'S/R Data: ' + new Date(data.generated_at).toLocaleString() + ' UTC';
+    buildRows(data.results);
+    applyFilter();
+  } catch (e) {
+    document.getElementById('sr-tbody').innerHTML =
+      '<tr><td colspan="6" class="state-message"><div class="spinner"></div><p>Failed to load S/R data.</p></td></tr>';
+  }
+}
+
+// ── Build flat rows from S/R data ─────────────────────
+function buildRows(results) {
+  allRows = [];
+  results.forEach(r => {
+    r.supports.forEach(lv => {
+      const distPct = Math.abs((lv - r.close) / r.close);
+      allRows.push({ ticker: r.ticker, price: r.close, type: 'support', level: lv, distPct, raw: r });
+    });
+    r.resistances.forEach(lv => {
+      const distPct = Math.abs((lv - r.close) / r.close);
+      allRows.push({ ticker: r.ticker, price: r.close, type: 'resistance', level: lv, distPct, raw: r });
+    });
+  });
+}
+
+// ── Filter ─────────────────────────────────────────────
+function applyFilter() {
+  const q = document.getElementById('search').value.toLowerCase().trim();
+  filteredRows = allRows.filter(row => {
+    if (currentFilter === 'support' && row.type !== 'support') return false;
+    if (currentFilter === 'resistance' && row.type !== 'resistance') return false;
+    if (q && !row.ticker.toLowerCase().includes(q)) return false;
+    return true;
+  });
+  currentPage = 1;
+  render();
+}
+
+// ── Sort ────────────────────────────────────────────────
+function applySort(col) {
+  if (currentSort.col === col) {
+    currentSort.dir = currentSort.dir === 'asc' ? 'desc' : 'asc';
+  } else {
+    currentSort.col = col;
+    currentSort.dir = col === 'ticker' ? 'asc' : 'asc';
+  }
+  filteredRows.sort((a, b) => {
+    let av, bv;
+    if (col === 'ticker') { av = a.ticker; bv = b.ticker; return currentSort.dir === 'asc' ? av.localeCompare(bv) : bv.localeCompare(av); }
+    if (col === 'price') { av = a.price; bv = b.price; }
+    if (col === 'type') { av = a.type; bv = b.type; return currentSort.dir === 'asc' ? av.localeCompare(bv) : bv.localeCompare(av); }
+    if (col === 'level') { av = a.level; bv = b.level; }
+    if (col === 'dist') { av = a.distPct; bv = b.distPct; }
+    return currentSort.dir === 'asc' ? av - bv : bv - av;
+  });
+  document.querySelectorAll('thead th').forEach(th => {
+    th.classList.toggle('sorted', th.dataset.sort === currentSort.col);
+    const icon = th.querySelector('.sort-icon');
+    if (icon) icon.textContent = th.dataset.sort === currentSort.col ? (currentSort.dir === 'asc' ? '↑' : '↓') : '↕';
+  });
+  currentPage = 1;
+  render();
+}
+
+// ── Render ─────────────────────────────────────────────
+function render() {
+  const totalPages = Math.max(1, Math.ceil(filteredRows.length / PAGE_SIZE));
+  if (currentPage > totalPages) currentPage = totalPages;
+  const start = (currentPage - 1) * PAGE_SIZE;
+  const page = filteredRows.slice(start, start + PAGE_SIZE);
+
+  const tbody = document.getElementById('sr-tbody');
+  const mobileCards = document.getElementById('mobile-cards');
+
+  if (filteredRows.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="6" class="state-message"><p>No matching levels found.</p></td></tr>`;
+    mobileCards.innerHTML = '';
+  } else {
+    tbody.innerHTML = page.map(row => {
+      const distClass = row.distPct < 0.01 ? 'tight' : row.distPct < 0.025 ? 'near' : 'mid';
+      const otherLevels = row.type === 'support'
+        ? row.raw.supports.filter(l => l !== row.level)
+        : row.raw.resistances.filter(l => l !== row.level);
+      const otherHtml = otherLevels.length
+        ? otherLevels.slice(0, 3).map(l => `<div class="level-item"><strong>${l}</strong></div>`).join('')
+        : '<div class="level-item">—</div>';
+      return `<tr>
+        <td><div class="ticker-cell">
+          <span class="ticker-badge">${row.ticker}</span>
+          <span class="ticker-price">$${row.price.toFixed(2)}</span>
+        </div></td>
+        <td><span class="level-cell">$${row.price.toFixed(2)}</span></td>
+        <td><span class="type-badge ${row.type}">${row.type === 'support' ? '▲ Support' : '▼ Resistance'}</span></td>
+        <td><span class="level-cell">$${row.level.toFixed(2)}</span></td>
+        <td><span class="dist-cell ${distClass}">${(row.distPct * 100).toFixed(2)}%</span></td>
+        <td><div class="sr-levels-cell">${otherHtml}</div></td>
+      </tr>`;
+    }).join('');
+
+    mobileCards.innerHTML = page.map(row => {
+      const distClass = row.distPct < 0.01 ? 'tight' : row.distPct < 0.025 ? 'near' : 'mid';
+      return `<div class="mobile-card" style="background:var(--bg-surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px;">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px;">
+          <div>
+            <div style="font-family:var(--font-mono);font-size:0.9rem;font-weight:500;">${row.ticker}</div>
+            <div style="font-size:0.72rem;color:var(--text-muted);margin-top:2px;">$${row.price.toFixed(2)}</div>
+          </div>
+          <span class="type-badge ${row.type}">${row.type === 'support' ? '▲ Support' : '▼ Resistance'}</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div>
+            <div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;">Level</div>
+            <div style="font-family:var(--font-mono);font-size:0.95rem;font-weight:500;margin-top:2px;">$${row.level.toFixed(2)}</div>
+          </div>
+          <div>
+            <div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;">Distance</div>
+            <div style="font-family:var(--font-mono);font-size:0.82rem;font-weight:500;margin-top:2px;">
+              <span class="dist-cell ${distClass}">${(row.distPct * 100).toFixed(2)}%</span>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  document.getElementById('page-info').textContent =
+    `${start + 1}–${Math.min(start + PAGE_SIZE, filteredRows.length)} of ${filteredRows.length}`;
+  document.getElementById('prev-btn').disabled = currentPage <= 1;
+  document.getElementById('next-btn').disabled = currentPage >= totalPages;
+}
+
+// ── Init ────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  loadSRData();
+  fetchLiveData();
+  // Refresh live data every 60s
+  setInterval(fetchLiveData, 60000);
+});
+
+// ── Event Listeners ─────────────────────────────────────
+document.getElementById('search').addEventListener('input', applyFilter);
+
+document.getElementById('filter-all').addEventListener('click', () => {
+  currentFilter = 'all';
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active-all','active-support','active-resistance'));
+  document.getElementById('filter-all').classList.add('active-all');
+  applyFilter();
+});
+document.getElementById('filter-support').addEventListener('click', () => {
+  currentFilter = 'support';
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active-all','active-support','active-resistance'));
+  document.getElementById('filter-support').classList.add('active-support');
+  applyFilter();
+});
+document.getElementById('filter-resistance').addEventListener('click', () => {
+  currentFilter = 'resistance';
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active-all','active-support','active-resistance'));
+  document.getElementById('filter-resistance').classList.add('active-resistance');
+  applyFilter();
+});
+
+document.querySelectorAll('thead th[data-sort]').forEach(th => {
+  th.addEventListener('click', () => applySort(th.dataset.sort));
+});
+
+document.getElementById('prev-btn').addEventListener('click', () => {
+  if (currentPage > 1) { currentPage--; render(); }
+});
+document.getElementById('next-btn').addEventListener('click', () => {
+  const totalPages = Math.max(1, Math.ceil(filteredRows.length / PAGE_SIZE));
+  if (currentPage < totalPages) { currentPage++; render(); }
+});
+</script>
+</body>
+</html>
