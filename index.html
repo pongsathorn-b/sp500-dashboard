@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lightweight-charts@3.8.0/dist/lightweight-charts.standalone.production.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -443,6 +444,75 @@
     ::-webkit-scrollbar { width: 6px; height: 6px; }
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 3px; }
+
+    /* ── Chart Section ──────────────────────────────── */
+    .chart-section {
+      margin-bottom: 28px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .chart-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .chart-ticker-label {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+    }
+    .chart-ticker-label span { color: var(--accent); }
+    .chart-meta {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+    #tv-chart-container {
+      width: 100%;
+      height: 340px;
+      position: relative;
+    }
+    #tv-chart-container canvas { display: block; }
+    .chart-loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+    .chart-loading .spinner {
+      width: 28px; height: 28px;
+      border: 2px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    .chart-error {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 6px;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+    .chart-error svg { opacity: 0.4; }
+
+    /* ── Clickable rows ─────────────────────────────── */
+    .sr-table tbody tr { cursor: pointer; }
+    .mobile-cards .mobile-card { cursor: pointer; }
   </style>
 </head>
 <body>
@@ -488,6 +558,20 @@
       <div class="ticker-value" id="vix-price">—</div>
       <div class="ticker-sub">VIX</div>
       <div id="vix-change"></div>
+    </div>
+  </div>
+
+  <!-- TradingView Chart -->
+  <div class="chart-section">
+    <div class="chart-header">
+      <div class="chart-ticker-label" id="chart-ticker-label"><span>SPY</span> — Candlestick</div>
+      <div class="chart-meta" id="chart-meta">Loading…</div>
+    </div>
+    <div id="tv-chart-container">
+      <div class="chart-loading" id="chart-loading">
+        <div class="spinner"></div>
+        <p>Loading chart…</p>
+      </div>
     </div>
   </div>
 
@@ -541,6 +625,12 @@ let currentFilter = 'all';  // all | support | resistance
 let currentSort = { col: 'dist', dir: 'asc' };
 let currentPage = 1;
 const PAGE_SIZE = 50;
+
+// Chart state
+let currentTicker = 'SPY';
+let srDataMap = {};  // ticker -> { supports, resistances, close }
+let chart = null;
+let candleSeries = null;
 
 // ── Fetch S&P 500 live data via Yahoo Finance ───────────
 async function fetchLiveData() {
@@ -616,7 +706,169 @@ async function fetchLiveData() {
   }
 }
 
-// ── Load S/R data ───────────────────────────────────────
+// ── TradingView Chart ─────────────────────────────────
+function initChart() {
+  const container = document.getElementById('tv-chart-container');
+  chart = LightweightCharts.createChart(container, {
+    layout: {
+      backgroundColor: '#0c1524',
+      textColor: '#7a8ba0',
+    },
+    grid: {
+      vertLines: { color: 'rgba(255,255,255,0.04)' },
+      horzLines: { color: 'rgba(255,255,255,0.04)' },
+    },
+    crosshair: {
+      mode: LightweightCharts.CrosshairMode.Normal,
+      vertLine: { color: 'rgba(0,212,170,0.4)', width: 1, style: 2 },
+      horzLine: { color: 'rgba(0,212,170,0.4)', width: 1, style: 2 },
+    },
+    rightPriceScale: {
+      borderColor: 'rgba(255,255,255,0.07)',
+      scaleMargins: { top: 0.1, bottom: 0.1 },
+    },
+    timeScale: {
+      borderColor: 'rgba(255,255,255,0.07)',
+      timeVisible: true,
+      secondsVisible: false,
+    },
+    width: container.clientWidth,
+    height: 340,
+  });
+
+  candleSeries = chart.addCandlestickSeries({
+    upColor: '#00d4aa',
+    downColor: '#ff4757',
+    borderUpColor: '#00d4aa',
+    borderDownColor: '#ff4757',
+    wickUpColor: '#00d4aa',
+    wickDownColor: '#ff4757',
+  });
+
+  // Resize observer for mobile
+  const ro = new ResizeObserver(() => {
+    if (chart && container) {
+      chart.resize(container.clientWidth, 340);
+    }
+  });
+  ro.observe(container);
+
+  return { chart, candleSeries };
+}
+
+function drawSRLines(series, ticker) {
+  if (!series) return;
+  const info = srDataMap[ticker];
+  if (!info) return;
+
+  const close = info.close;
+  const allLevels = [...(info.supports || []), ...(info.resistances || [])];
+  const uniqueLevels = [...new Set(allLevels)].sort((a, b) => a - b);
+
+  uniqueLevels.forEach(level => {
+    const isSupport = (info.supports || []).includes(level);
+    const color = isSupport ? 'rgba(0,212,170,0.65)' : 'rgba(255,71,87,0.65)';
+    const priceLine = series.createPriceLine({
+      price: level,
+      color: color,
+      lineWidth: 1,
+      lineStyle: LightweightCharts.LineStyle.Solid,
+      axisLabelVisible: true,
+      title: isSupport ? ' S' : ' R',
+    });
+    // Store reference for cleanup
+    if (!series._srPriceLines) series._srPriceLines = [];
+    series._srPriceLines.push(priceLine);
+  });
+}
+
+function clearSRLines(series) {
+  if (!series || !series._srPriceLines) return;
+  series._srPriceLines.forEach(pl => series.removePriceLine(pl));
+  series._srPriceLines = [];
+}
+
+async function drawChart(ticker) {
+  const loadingEl = document.getElementById('chart-loading');
+  const metaEl = document.getElementById('chart-meta');
+  const labelEl = document.getElementById('chart-ticker-label');
+
+  if (!chart) initChart();
+  clearSRLines(candleSeries);
+
+  labelEl.innerHTML = `<span>${ticker}</span> — Candlestick`;
+  metaEl.textContent = 'Loading…';
+  if (loadingEl) loadingEl.style.display = 'flex';
+
+  try {
+    // Fetch 6 months daily data via Yahoo Finance
+    const resp = await fetch(
+      `https://query1.finance.yahoo.com/v8/finance/chart/${ticker}?interval=1d&range=6mo`,
+      { headers: { 'User-Agent': 'Mozilla/5.0' } }
+    );
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const json = await resp.json();
+    const result = json?.chart?.result?.[0];
+    if (!result) throw new Error('No chart result');
+
+    const timestamps = result.timestamp || [];
+    const quote = result.indicators?.quote?.[0] || {};
+    const closes  = quote.close  || [];
+    const opens   = quote.open   || [];
+    const highs   = quote.high   || [];
+    const lows    = quote.low    || [];
+    const volumes = quote.volume || [];
+
+    if (!timestamps || timestamps.length === 0) throw new Error('No price data');
+
+    const candleData = timestamps.map((t, i) => ({
+      time: Math.floor(t),
+      low:    lows[i]  ?? closes[i] ?? 0,
+      open:   opens[i]  ?? closes[i] ?? 0,
+      high:   highs[i]  ?? closes[i] ?? 0,
+      close:  closes[i] ?? 0,
+    })).filter(d => d.close > 0);
+
+    candleSeries.setData(candleData);
+
+    // Volume histogram as a histogram series
+    let volSeries;
+    try {
+      volSeries = chart.getSeries('volume');
+    } catch (_) {}
+    if (!volSeries) {
+      volSeries = chart.addHistogramSeries({
+        color: 'rgba(0,212,170,0.25)',
+        priceFormat: { type: 'volume' },
+        priceScaleId: '',
+      });
+      volSeries.priceScale().applyOptions({
+        scaleMargins: { top: 0.85, bottom: 0 },
+      });
+    }
+    volSeries.setData(timestamps.map((t, i) => ({
+      time: Math.floor(t),
+      value: volumes[i] || 0,
+      color: (closes[i] >= (opens[i] || closes[i])) ? 'rgba(0,212,170,0.3)' : 'rgba(255,71,87,0.3)',
+    })).filter(d => d.value > 0));
+
+    // Draw S/R vertical lines
+    drawSRLines(candleSeries, ticker);
+
+    chart.timeScale().fitContent();
+    chart.timeScale().scrollToRealTime();
+
+    const last = candleData[candleData.length - 1];
+    if (last) {
+      metaEl.textContent = `${ticker} · 6M Daily · Last: $${last.close.toFixed(2)}`;
+    }
+  } catch (e) {
+    metaEl.textContent = `Failed to load ${ticker}: ${e.message}`;
+    console.warn('Chart fetch error:', e);
+  } finally {
+    if (loadingEl) loadingEl.style.display = 'none';
+  }
+}
 async function loadSRData() {
   try {
     const resp = await fetch('./data/results.json');
@@ -635,6 +887,12 @@ async function loadSRData() {
 function buildRows(results) {
   allRows = [];
   results.forEach(r => {
+    // Build srDataMap for chart vertical lines
+    srDataMap[r.ticker] = {
+      supports: r.supports,
+      resistances: r.resistances,
+      close: r.close
+    };
     r.supports.forEach(lv => {
       const distPct = Math.abs((lv - r.close) / r.close);
       allRows.push({ ticker: r.ticker, price: r.close, type: 'support', level: lv, distPct, raw: r });
@@ -707,7 +965,7 @@ function render() {
       const otherHtml = otherLevels.length
         ? otherLevels.slice(0, 3).map(l => `<div class="level-item"><strong>${l}</strong></div>`).join('')
         : '<div class="level-item">—</div>';
-      return `<tr>
+      return `<tr data-ticker="${row.ticker}">
         <td><div class="ticker-cell">
           <span class="ticker-badge">${row.ticker}</span>
           <span class="ticker-price">$${row.price.toFixed(2)}</span>
@@ -722,7 +980,7 @@ function render() {
 
     mobileCards.innerHTML = page.map(row => {
       const distClass = row.distPct < 0.01 ? 'tight' : row.distPct < 0.025 ? 'near' : 'mid';
-      return `<div class="mobile-card" style="background:var(--bg-surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px;">
+      return `<div class="mobile-card" data-ticker="${row.ticker}" style="background:var(--bg-surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px;">
         <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px;">
           <div>
             <div style="font-family:var(--font-mono);font-size:0.9rem;font-weight:500;">${row.ticker}</div>
@@ -758,6 +1016,8 @@ document.addEventListener('DOMContentLoaded', () => {
   fetchLiveData();
   // Refresh live data every 60s
   setInterval(fetchLiveData, 60000);
+  // Init chart with SPY by default
+  drawChart('SPY');
 });
 
 // ── Event Listeners ─────────────────────────────────────
@@ -792,6 +1052,20 @@ document.getElementById('prev-btn').addEventListener('click', () => {
 document.getElementById('next-btn').addEventListener('click', () => {
   const totalPages = Math.max(1, Math.ceil(filteredRows.length / PAGE_SIZE));
   if (currentPage < totalPages) { currentPage++; render(); }
+});
+
+// ── Table & mobile card row click → update chart ─────────
+document.getElementById('sr-tbody').addEventListener('click', e => {
+  const row = e.target.closest('tr');
+  if (!row) return;
+  const ticker = row.dataset.ticker;
+  if (ticker) drawChart(ticker);
+});
+document.getElementById('mobile-cards').addEventListener('click', e => {
+  const card = e.target.closest('.mobile-card');
+  if (!card) return;
+  const ticker = card.dataset.ticker;
+  if (ticker) drawChart(ticker);
 });
 </script>
 </body>
