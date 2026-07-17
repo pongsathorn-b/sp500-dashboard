@@ -765,43 +765,18 @@ const PAGE_SIZE = 50;
 
 // ── Fetch live prices for top 50 via Yahoo Finance ──────
 async function fetchTop50Prices() {
-  const symbols = TOP50.map(s => s.ticker).join(',');
-  try {
-    // Yahoo Finance quote endpoint for multiple symbols
-    const resp = await fetch(
-      `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${encodeURIComponent(symbols)}`,
-      { headers: { 'User-Agent': 'Mozilla/5.0', 'Accept': 'application/json' } }
-    );
-    const json = await resp.json();
-    const quotes = json?.quoteResponse?.result || [];
-
-    quotes.forEach(q => {
-      const price = q.regularMarketPrice ?? 0;
-      const prevClose = q.regularMarketPreviousClose ?? q.chartPreviousClose ?? 0;
-      const change = q.regularMarketChange ?? 0;
-      const changePct = prevClose > 0 ? (change / prevClose) * 100 : 0;
-      stockPrices[q.symbol] = { price, prevClose, change, changePct };
-    });
-
-    renderStockTable();
-    updateTimestamp();
-  } catch (e) {
-    console.warn('Top 50 fetch failed, trying individual:', e.message);
-    // Fallback: fetch individually in parallel batches
-    await fetchTop50Individually();
-  }
-}
-
-async function fetchTop50Individually() {
-  const batchSize = 5;
-  for (let i = 0; i < TOP50.length; i += batchSize) {
-    const batch = TOP50.slice(i, i + batchSize);
-    await Promise.all(batch.map(async (s) => {
+  // Use the /chart endpoint for each ticker (CORS-compatible in browser)
+  // Batch in groups of 8 to balance parallelism with reliability
+  const BATCH = 8;
+  for (let i = 0; i < TOP50.length; i += BATCH) {
+    const batch = TOP50.slice(i, i + BATCH);
+    await Promise.allSettled(batch.map(async (s) => {
       try {
         const resp = await fetch(
           `https://query1.finance.yahoo.com/v8/finance/chart/${s.ticker}?interval=1d&range=2d`,
           { headers: { 'User-Agent': 'Mozilla/5.0' } }
         );
+        if (!resp.ok) return;
         const json = await resp.json();
         const result = json?.chart?.result?.[0];
         if (!result) return;
