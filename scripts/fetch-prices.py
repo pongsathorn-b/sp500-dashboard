@@ -2,9 +2,13 @@
 """Pre-fetch top 50 S&P 500 stock prices and save to JSON for the dashboard."""
 
 import json
+import time
 import urllib.request
 import urllib.error
-import time
+from datetime import datetime, timezone
+
+def iso_now():
+    return datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%S+00:00')
 
 TOP50 = [
     'AAPL','MSFT','NVDA','AMZN','META','GOOGL','GOOG','BRK.B','LLY','AVGO',
@@ -52,7 +56,7 @@ def main():
 
     # Save to data/live-prices.json
     output = {
-        'generated_at': time.strftime('%Y-%m-%dT%H:%M:%S') + '+00:00Z',
+        'generated_at': iso_now(),
         'prices': prices
     }
     out_path = 'data/live-prices.json'

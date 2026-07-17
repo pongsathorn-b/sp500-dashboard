@@ -985,8 +985,13 @@ async function loadSRData() {
   try {
     const resp = await fetch('./data/results.json');
     const data = await resp.json();
+    let srDate = data.generated_at;
+    // Fix malformed ISO strings like "2026-07-16T18:11:53.815999+00:00Z" (conflicting Z suffix)
+    srDate = srDate.replace(/(\+\d{2}:\d{2})Z$/, '$1');
+    const srTs = new Date(srDate);
+    const srStr = isNaN(srTs.getTime()) ? '—' : srTs.toLocaleString() + ' UTC';
     document.getElementById('ts').textContent =
-      'Updated ' + new Date().toLocaleTimeString() + ' · S/R: ' + new Date(data.generated_at).toLocaleString() + ' UTC';
+      'Updated ' + new Date().toLocaleTimeString() + ' · S/R: ' + srStr;
     buildRows(data.results);
     applyFilter();
     if (typeof drawSRLines === 'function' && typeof currentTicker !== 'undefined') {
