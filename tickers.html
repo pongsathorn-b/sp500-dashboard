@@ -148,6 +148,7 @@
 
     .stocks-table tbody tr:last-child { border-bottom: none; }
     .stocks-table tbody tr:hover { background: var(--bg-card-hover); }
+
     .stocks-table tbody td { padding: 14px 16px; vertical-align: middle; }
 
     .ticker-cell {
@@ -205,6 +206,14 @@
     .footer a { color: var(--text-muted); text-decoration: none; }
     .footer a:hover { color: var(--accent); }
 
+    /* Loading / error states */
+    .state-message {
+      text-align: center;
+      padding: 40px 24px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
     @media (max-width: 480px) {
       .ticker-name { display: none; }
       .stocks-table thead th { padding: 10px 12px; font-size: 0.6rem; }
@@ -228,126 +237,88 @@
     <div class="page-intro">
       <h1>Top 10 <em>S&amp;P 500</em><br>Stocks by Symbol</h1>
       <p>Real-time prices sourced from Yahoo Finance. Sorted alphabetically by ticker symbol.</p>
-      <p class="updated">Prices as of 2026-07-17 19:37 UTC</p>
+      <p class="updated" id="updated-time">Loading...</p>
     </div>
 
-    <table class="stocks-table">
-      <thead>
-        <tr>
-          <th>Ticker</th>
-          <th>Price</th>
-          <th>Day Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <div class="ticker-cell">
-              <span class="ticker-symbol">AAPL</span>
-              <span class="ticker-name">Apple Inc.</span>
-            </div>
-          </td>
-          <td class="price-cell">$333.07</td>
-          <td class="change-cell change-positive">—</td>
-        </tr>
-        <tr>
-          <td>
-            <div class="ticker-cell">
-              <span class="ticker-symbol">AMZN</span>
-              <span class="ticker-name">Amazon.com, Inc.</span>
-            </div>
-          </td>
-          <td class="price-cell">$246.66</td>
-          <td class="change-cell change-positive">—</td>
-        </tr>
-        <tr>
-          <td>
-            <div class="ticker-cell">
-              <span class="ticker-symbol">AVGO</span>
-              <span class="ticker-name">Broadcom Inc.</span>
-            </div>
-          </td>
-          <td class="price-cell">$372.91</td>
-          <td class="change-cell change-positive">—</td>
-        </tr>
-        <tr>
-          <td>
-            <div class="ticker-cell">
-              <span class="ticker-symbol">BRK-B</span>
-              <span class="ticker-name">Berkshire Hathaway Inc.</span>
-            </div>
-          </td>
-          <td class="price-cell">$490.86</td>
-          <td class="change-cell change-positive">—</td>
-        </tr>
-        <tr>
-          <td>
-            <div class="ticker-cell">
-              <span class="ticker-symbol">GOOGL</span>
-              <span class="ticker-name">Alphabet Inc.</span>
-            </div>
-          </td>
-          <td class="price-cell">$344.27</td>
-          <td class="change-cell change-positive">—</td>
-        </tr>
-        <tr>
-          <td>
-            <div class="ticker-cell">
-              <span class="ticker-symbol">JPM</span>
-              <span class="ticker-name">JPMorgan Chase & Co.</span>
-            </div>
-          </td>
-          <td class="price-cell">$340.70</td>
-          <td class="change-cell change-positive">—</td>
-        </tr>
-        <tr>
-          <td>
-            <div class="ticker-cell">
-              <span class="ticker-symbol">LLY</span>
-              <span class="ticker-name">Eli Lilly and Company</span>
-            </div>
-          </td>
-          <td class="price-cell">$1175.86</td>
-          <td class="change-cell change-positive">—</td>
-        </tr>
-        <tr>
-          <td>
-            <div class="ticker-cell">
-              <span class="ticker-symbol">META</span>
-              <span class="ticker-name">Meta Platforms, Inc.</span>
-            </div>
-          </td>
-          <td class="price-cell">$643.01</td>
-          <td class="change-cell change-positive">—</td>
-        </tr>
-        <tr>
-          <td>
-            <div class="ticker-cell">
-              <span class="ticker-symbol">MSFT</span>
-              <span class="ticker-name">Microsoft Corporation</span>
-            </div>
-          </td>
-          <td class="price-cell">$395.19</td>
-          <td class="change-cell change-positive">—</td>
-        </tr>
-        <tr>
-          <td>
-            <div class="ticker-cell">
-              <span class="ticker-symbol">NVDA</span>
-              <span class="ticker-name">NVIDIA Corporation</span>
-            </div>
-          </td>
-          <td class="price-cell">$203.30</td>
-          <td class="change-cell change-positive">—</td>
-        </tr>
-
-      </tbody>
-    </table>
+    <div id="content">
+      <p class="state-message">Fetching latest prices...</p>
+    </div>
 
     <footer class="footer">
       Data from <a href="https://finance.yahoo.com" target="_blank" rel="noopener">Yahoo Finance</a> &mdash; no API key required
     </footer>
   </main>
+
+  <script>
+    const TICKERS = ['AAPL', 'AMZN', 'AVGO', 'BRK-B', 'GOOGL', 'JPM', 'LLY', 'META', 'MSFT', 'NVDA'];
+
+    function fmtPrice(v) {
+      if (v == null) return '—';
+      return '$' + v.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    function fmtChange(change, pct) {
+      if (change == null) return '<span class="change-cell">—</span>';
+      const sign = change >= 0 ? '+' : '';
+      const cls = change >= 0 ? 'change-positive' : 'change-negative';
+      return `<span class="change-cell ${cls}">${sign}${change.toFixed(2)} (${sign}${pct.toFixed(2)}%)</span>`;
+    }
+
+    async function load() {
+      const container = document.getElementById('content');
+      const timeEl = document.getElementById('updated-time');
+
+      try {
+        const res = await fetch('data/top10-prices.json');
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const json = await res.json();
+
+        const rows = TICKERS.map(ticker => {
+          const d = json.prices[ticker] || {};
+          const change = d.change != null ? d.change : (d.price - d.prevClose);
+          const pct = d.changePct != null ? d.changePct :
+            (d.prevClose ? ((d.price - d.prevClose) / d.prevClose * 100) : 0);
+          return `
+          <tr>
+            <td>
+              <div class="ticker-cell">
+                <span class="ticker-symbol">${ticker}</span>
+                <span class="ticker-name">${d.name || ticker}</span>
+              </div>
+            </td>
+            <td class="price-cell">${fmtPrice(d.price)}</td>
+            <td>${fmtChange(change, pct)}</td>
+          </tr>`;
+        }).join('\n');
+
+        container.innerHTML = `
+          <table class="stocks-table">
+            <thead>
+              <tr>
+                <th>Ticker</th>
+                <th>Price</th>
+                <th>Day Change</th>
+              </tr>
+            </thead>
+            <tbody>${rows}</tbody>
+          </table>`;
+
+        // Parse and display UTC timestamp
+        if (json.generated_at) {
+          const d = new Date(json.generated_at);
+          timeEl.textContent = 'Prices as of ' + d.toLocaleString('en-US', {
+            month: 'short', day: 'numeric', year: 'numeric',
+            hour: '2-digit', minute: '2-digit', timeZone: 'UTC', timeZoneName: 'short'
+          });
+        }
+      } catch (err) {
+        container.innerHTML = `<p class="state-message">Failed to load prices: ${err.message}</p>`;
+        timeEl.textContent = '';
+      }
+    }
+
+    load();
+  </script>
 
 </body>
 </html>
