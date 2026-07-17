@@ -359,6 +359,9 @@
       `;
     }
 
+    // allorigins acts as a CORS proxy — fetches server-side so browser has no CORS issues
+    const PROXY = 'https://api.allorigins.win/raw?url=';
+
     async function fetchStocks() {
       tableBody.innerHTML = buildSkeleton();
       errorState.style.display = 'none';
@@ -366,8 +369,12 @@
       try {
         const rows = await Promise.all(
           TICKERS.map(async (ticker) => {
-            const url = `https://query1.finance.yahoo.com/v8/finance/chart/${ticker}?interval=1d&range=1d`;
-            const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+            const target = encodeURIComponent(
+              `https://query1.finance.yahoo.com/v8/finance/chart/${ticker}?interval=1d&range=1d`
+            );
+            const res = await fetch(PROXY + target, {
+              headers: { 'User-Agent': 'Mozilla/5.0', 'Accept': 'application/json' }
+            });
             if (!res.ok) throw new Error(`HTTP ${res.status} for ${ticker}`);
             const data = await res.json();
             const result = data.chart.result[0];
